@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,9 @@ public class PauseMenu : MonoBehaviour
 {
     [Header("Settings reference")]
     [SerializeField] Settings settings;
+
+    [Header("Input Action Reference")]
+    [SerializeField] InputActionReference inputReference;
 
     [Header("Canvas elements")]
     [SerializeField] GameObject canvasMenu;
@@ -26,22 +30,25 @@ public class PauseMenu : MonoBehaviour
         canvasMenu.GetComponent<Canvas>().enabled = false;
     }
 
-    bool pauseOpen = false;
-    private void Update()
+    private void OnEnable()
     {
-        //cambiar
-        if (Keyboard.current.escapeKey.wasPressedThisFrame && !pauseOpen)
-        {
-            pauseOpen = true;
+        inputReference.action.Enable();
+        inputReference.action.started += OnPause;
+    }
 
-            OpenMenu();
-        }
-        else if (Keyboard.current.escapeKey.wasPressedThisFrame && pauseOpen)
-        {
-            pauseOpen = false;
+    private void OnDisable()
+    {
+        inputReference.action.Disable();
+        inputReference.action.started -= OnPause;
+    }
 
-            CloseMenu();
-        }
+    bool pauseOpen = false;
+    private void OnPause(InputAction.CallbackContext ctx)
+    {
+        pauseOpen = !pauseOpen;
+
+        if (pauseOpen) OpenMenu();
+        else CloseMenu();
     }
 
     public void OpenMenu()
@@ -54,6 +61,8 @@ public class PauseMenu : MonoBehaviour
 
     public void CloseMenu()
     {
+        if (settingsOpen) OnCloseSettings();
+
         canvasMenu.GetComponent<Canvas>().enabled = false;
         source.PlayOneShot(closeMenu);
 
@@ -69,10 +78,12 @@ public class PauseMenu : MonoBehaviour
         CloseMenu();
     }
 
+    bool settingsOpen = false;
     public void OpenSettings()
     {
         source.PlayOneShot(clickSFX);
 
+        settingsOpen = true;
         settingsMenu.SetActive(true);
         pauseContent.SetActive(false);
 
@@ -83,6 +94,7 @@ public class PauseMenu : MonoBehaviour
     {
         source.PlayOneShot(clickSFX);
 
+        settingsOpen = false;
         settingsMenu.SetActive(false);
         pauseContent.SetActive(true);
 
