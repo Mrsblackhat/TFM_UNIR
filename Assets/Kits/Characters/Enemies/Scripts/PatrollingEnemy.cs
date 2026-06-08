@@ -8,11 +8,22 @@ public class PatrollingEnemy : EnemyBase
 
     [SerializeField] float detectionRadius = 5;
 
+    bool playerDetected = false;
+
     private void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
-        CheckForPlayer();
+        BuscarPlayer();
+
+        if(PlayerEscondido())
+        {
+            playerDetected = false;
+        }
+        else 
+        { 
+            CheckForPlayer();
+        }
 
         if (!playerDetected) DecideNextPoint();
 
@@ -51,7 +62,6 @@ public class PatrollingEnemy : EnemyBase
         }
     }
 
-    bool playerDetected = false;
     void CheckForPlayer()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);

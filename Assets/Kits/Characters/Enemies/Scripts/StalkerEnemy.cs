@@ -18,11 +18,19 @@ public class StalkerEnemy : EnemyBase
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
+        BuscarPlayer();
+
         Move();
     }
 
     private void Move()
     {
+        if(PlayerEscondido())
+        {
+            agent.SetDestination(puntoInicialTarget.position);
+            return;
+        }
+
         if (Vector2.Distance(target.position, this.transform.position) <= safeDistance)
         {
             agent.speed = safeSpeed;
