@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animation")]
     [SerializeField] private Animator anim;
+    [SerializeField] private float deadZone = 0.1f;
 
     private Rigidbody2D rb2D;
 
@@ -39,9 +40,6 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         inputReference.action.Enable();
-        inputReference.action.started += OnMove;
-        inputReference.action.performed += OnMove;
-        inputReference.action.canceled += OnMove;
 
         interactInputReference.action.Enable();
         interactInputReference.action.performed += OnInteract;
@@ -49,9 +47,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
-        inputReference.action.started -= OnMove;
-        inputReference.action.performed -= OnMove;
-        inputReference.action.canceled -= OnMove;
         inputReference.action.Disable();
 
         interactInputReference.action.performed -= OnInteract;
@@ -60,6 +55,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        moveDirection = inputReference.action.ReadValue<Vector2>();
+
+        if (moveDirection.sqrMagnitude < deadZone * deadZone)
+        {
+            moveDirection = Vector2.zero;
+        }
+
+
         if (!canMove) 
         {
             ActualizarAnimacion(Vector2.zero); 
@@ -71,11 +74,6 @@ public class PlayerController : MonoBehaviour
         ActualizarAnimacion(moveDirection);
     }
 
-
-    private void OnMove(InputAction.CallbackContext context)
-    {
-        moveDirection = context.ReadValue<Vector2>();
-    }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
@@ -108,7 +106,9 @@ public class PlayerController : MonoBehaviour
 
     private void ActualizarAnimacion(Vector2 direccion)
     {
-        bool moviendose = direccion != Vector2.zero;
+        bool moviendose = direccion.sqrMagnitude > deadZone * deadZone;
+
+        Debug.Log("direccion: " + direccion + " | moviendose: " + moviendose);
 
         anim.SetBool("moving", moviendose);
 
