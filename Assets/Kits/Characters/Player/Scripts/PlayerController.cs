@@ -12,20 +12,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference interactInputReference;
 
     [Header("Interaction")]
-    [SerializeField] private float radioDeteccion = 0.4f;
-    [SerializeField] private float distanciaInteraccion = 0.8f;
+    [SerializeField] private float radioDeteccion = 0.2f;
+    [SerializeField] private float distanciaInteraccion = 0.4f;
     [SerializeField] private LayerMask queEsInteractuable;
 
-    Rigidbody2D rb2D;
+    [Header("Animation")]
+    [SerializeField] private Animator anim;
+
+    private Rigidbody2D rb2D;
 
     private Vector2 moveDirection = Vector2.zero;
-    private Vector2 direccionMirada = Vector2.down;
+    private Vector2 lastDirection = Vector2.down; 
 
     private bool canMove = true;
 
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
     }
 
     private void OnEnable()
@@ -39,39 +47,39 @@ public class PlayerController : MonoBehaviour
         interactInputReference.action.performed += OnInteract;
     }
 
-    private void Update()
-    {
-        if (!canMove) { return; }
-
-        rb2D.position += moveDirection * speed * Time.deltaTime;
-
-        Debug.Log(moveDirection);
-    }
-
     private void OnDisable()
     {
-        inputReference.action.Disable();
         inputReference.action.started -= OnMove;
         inputReference.action.performed -= OnMove;
         inputReference.action.canceled -= OnMove;
+        inputReference.action.Disable();
 
-        interactInputReference.action.Disable();
         interactInputReference.action.performed -= OnInteract;
+        interactInputReference.action.Disable();
     }
+
+    private void Update()
+    {
+        if (!canMove) 
+        {
+            ActualizarAnimacion(Vector2.zero); 
+            return; 
+        }
+
+        rb2D.position += moveDirection * speed * Time.deltaTime;
+
+        ActualizarAnimacion(moveDirection);
+    }
+
 
     private void OnMove(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>();
-
-        if (moveDirection != Vector2.zero)
-        {
-            direccionMirada = moveDirection.normalized;
-        }
     }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        Vector2 puntoInteraccion = (Vector2)transform.position + direccionMirada.normalized * distanciaInteraccion;
+        Vector2 puntoInteraccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
 
         Collider2D collider = Physics2D.OverlapCircle(puntoInteraccion, radioDeteccion, queEsInteractuable);
 
@@ -94,12 +102,29 @@ public class PlayerController : MonoBehaviour
         {
             moveDirection = Vector2.zero;
             rb2D.linearVelocity = Vector2.zero;
+            ActualizarAnimacion(Vector2.zero);
         }
+    }
+
+    private void ActualizarAnimacion(Vector2 direccion)
+    {
+        bool moviendose = direccion != Vector2.zero;
+
+        anim.SetBool("moving", moviendose);
+
+        if (moviendose)
+        {
+            lastDirection.x = Mathf.Round(direccion.x);
+            lastDirection.y = Mathf.Round(direccion.y);
+        }
+
+        anim.SetFloat("x", lastDirection.x);
+        anim.SetFloat("y", lastDirection.y);
     }
 
     private void OnDrawGizmos()
     {
-        Vector2 direccion = (Vector2)transform.position + direccionMirada.normalized * distanciaInteraccion;
+        Vector2 direccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
 
         Gizmos.DrawSphere(direccion, radioDeteccion);
     }
