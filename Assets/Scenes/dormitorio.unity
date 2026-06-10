@@ -2167,6 +2167,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 1.5
   inputReference: {fileID: -250269663766313543, guid: 6af1842b982ed534e9d15c6d0030c1b0, type: 3}
+  interactInputReference: {fileID: 1600738475524259222, guid: 6af1842b982ed534e9d15c6d0030c1b0, type: 3}
+  radioDeteccion: 0.2
+  distanciaInteraccion: 0.4
+  queEsInteractuable:
+    serializedVersion: 2
+    m_Bits: 0
+  anim: {fileID: 0}
+  deadZone: 0.1
 --- !u!50 &1745023099
 Rigidbody2D:
   serializedVersion: 5
@@ -2232,7 +2240,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.75, y: 1.96875}
+    oldSize: {x: 1.71875, y: 1.96875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
