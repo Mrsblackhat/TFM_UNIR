@@ -16,6 +16,7 @@ public class PlayerHide : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
+
     public void EntrarArmario(Armario armario)
     {
         estaEscondido = true;

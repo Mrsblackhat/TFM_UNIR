@@ -10,6 +10,9 @@ public class EnemyBase : MonoBehaviour
     protected PlayerHide playerHide;
     protected Transform puntoInicialTarget;
 
+    [Header("Daño")]
+    [SerializeField] protected float danho;
+
     protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -44,11 +47,12 @@ public class EnemyBase : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.collider.TryGetComponent<Danable>(out Danable danable))
         {
             if (Vector2.Distance(target.position, transform.position) <= agent.stoppingDistance)
             {
                 Debug.Log("Te pillé");
+                danable.DanarJugador(danho);
             }
         }
     }
