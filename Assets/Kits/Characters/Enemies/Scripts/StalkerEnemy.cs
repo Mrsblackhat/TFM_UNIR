@@ -14,7 +14,7 @@ public class StalkerEnemy : EnemyBase
         originSpeed = agent.speed;
     }
 
-    private void Update()
+    protected override void LogicaEnemigo()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyBase : MonoBehaviour
+public abstract class EnemyBase : MonoBehaviour
 {
     protected Transform target;
     protected NavMeshAgent agent;
@@ -27,9 +27,28 @@ public class EnemyBase : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
+    protected virtual void Update()
+    {
+        bool debePararsePorDialogo = DialogoManager.HayDialogoAbierto;
+
+        agent.isStopped = debePararsePorDialogo;
+
+        if (debePararsePorDialogo)
+        {
+            agent.velocity = Vector3.zero;
+            return;
+        }
+
+        LogicaEnemigo();
+    }
+
+    protected abstract void LogicaEnemigo();
+
+
     protected void BuscarPlayer()
     {
-        if (playerHide != null) return;
+        if (playerHide != null)
+        { return; }
 
         playerHide = FindFirstObjectByType<PlayerHide>();
 
@@ -41,7 +60,7 @@ public class EnemyBase : MonoBehaviour
 
     protected bool PlayerEscondido()
     {
-        return playerHide != null && playerHide.estaEscondido;
+        return playerHide != null && playerHide.EstaEscondido;
     }
 
 

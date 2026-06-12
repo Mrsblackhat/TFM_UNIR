@@ -62,11 +62,12 @@ public class PlayerController : MonoBehaviour
             moveDirection = Vector2.zero;
         }
 
-
-        if (!canMove) 
+        if (!canMove || DialogoManager.BloqueaJugador)
         {
-            ActualizarAnimacion(Vector2.zero); 
-            return; 
+            moveDirection = Vector2.zero;
+            rb2D.linearVelocity = Vector2.zero;
+            ActualizarAnimacion(Vector2.zero);
+            return;
         }
 
         rb2D.position += moveDirection * speed * Time.deltaTime;
@@ -75,11 +76,18 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void OnInteract(InputAction.CallbackContext context)
+    private void OnInteract(InputAction.CallbackContext context) //TODO LO INTERACTUABLE TIENE QUE ESTAR EN EL LAYER INTERACTUABLE
     {
+        if (DialogoManager.HayDialogoAbierto)
+        {
+            DialogoManager.Instance.SiguienteFrase();
+            return;
+        }
+
         Vector2 puntoInteraccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
 
         Collider2D collider = Physics2D.OverlapCircle(puntoInteraccion, radioDeteccion, queEsInteractuable);
+        //Debug.Log("Choco con" + collider.name);
 
         if(collider != null)
         {
@@ -95,13 +103,6 @@ public class PlayerController : MonoBehaviour
     public void SetCanMove(bool value)
     {
         canMove = value;
-
-        if (!canMove)
-        {
-            moveDirection = Vector2.zero;
-            rb2D.linearVelocity = Vector2.zero;
-            ActualizarAnimacion(Vector2.zero);
-        }
     }
 
     private void ActualizarAnimacion(Vector2 direccion)

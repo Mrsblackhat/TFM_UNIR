@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerHide : MonoBehaviour
 {
-    public bool estaEscondido;
+    private bool estaEscondido;
+    public bool EstaEscondido => estaEscondido;
 
     private PlayerController playerController;
     private SpriteRenderer spriteRenderer;

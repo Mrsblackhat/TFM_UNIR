@@ -11,7 +11,7 @@ public class Armario : MonoBehaviour, Interactuable
             playerHide = FindFirstObjectByType<PlayerHide>();
         }
 
-        if (playerHide.estaEscondido)
+        if (playerHide.EstaEscondido)
         {
             playerHide.SalirArmario();
         }
