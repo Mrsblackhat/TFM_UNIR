@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Armario : MonoBehaviour, Interactuable
 {
-    private PlayerHide playerHide;
-
-    public void Interactuar()
+    public void Interactuar(GameObject playerGameObject)
     {
+        PlayerHide playerHide = playerGameObject.GetComponent<PlayerHide>();
+
         if (playerHide == null)
         {
             playerHide = FindFirstObjectByType<PlayerHide>();
