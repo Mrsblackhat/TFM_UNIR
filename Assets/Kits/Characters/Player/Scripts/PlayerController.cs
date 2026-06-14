@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,11 +22,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private float deadZone = 0.1f;
 
-    private Rigidbody2D rb2D;
-
+    [Header("Batería")]
     private BateriaPlayer player;
     [SerializeField] private float danoPorSegundo = 1f; //Hay que ajustarlo
     private bool danarJugador = false;
+    [SerializeField] private Image camara;
+
+    private Rigidbody2D rb2D;
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 lastDirection = Vector2.down; 
@@ -42,6 +45,8 @@ public class PlayerController : MonoBehaviour
         }
 
         player = GetComponent<BateriaPlayer>();
+
+        camara.gameObject.SetActive(false);
     }
 
     private void OnEnable()
@@ -101,10 +106,12 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed)
         {
+            camara.gameObject.SetActive(true);
             danarJugador = true;
         }
         else
         {
+            camara.gameObject.SetActive(false);
             danarJugador = false;
         }
     }
