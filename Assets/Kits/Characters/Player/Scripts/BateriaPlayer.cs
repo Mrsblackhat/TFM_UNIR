@@ -17,6 +17,7 @@ public class BateriaPlayer : MonoBehaviour, Danable
     public void DanarJugador(float dano)
     {
         vida -= dano;
+        Debug.Log(vida);
 
         bateriaUI.ActualizarBateriaHUD(vida);
 

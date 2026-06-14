@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [Header("Input")]
     [SerializeField] InputActionReference inputReference;
     [SerializeField] InputActionReference interactInputReference;
+    [SerializeField] InputActionReference cameraInputReference;
 
     [Header("Interaction")]
     [SerializeField] private float radioDeteccion = 0.2f;
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float deadZone = 0.1f;
 
     private Rigidbody2D rb2D;
+
+    private BateriaPlayer player;
+    [SerializeField] private float danoPorSegundo = 1f; //Hay que ajustarlo
+    private bool danarJugador = false;
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 lastDirection = Vector2.down; 
@@ -35,6 +40,8 @@ public class PlayerController : MonoBehaviour
         {
             anim = GetComponent<Animator>();
         }
+
+        player = GetComponent<BateriaPlayer>();
     }
 
     private void OnEnable()
@@ -43,6 +50,10 @@ public class PlayerController : MonoBehaviour
 
         interactInputReference.action.Enable();
         interactInputReference.action.performed += OnInteract;
+
+        cameraInputReference.action.Enable();
+        cameraInputReference.action.performed += OnCamera;
+        cameraInputReference.action.canceled += OnCamera;
     }
 
     private void OnDisable()
@@ -51,7 +62,12 @@ public class PlayerController : MonoBehaviour
 
         interactInputReference.action.performed -= OnInteract;
         interactInputReference.action.Disable();
+
+        cameraInputReference.action.performed -= OnCamera;
+        cameraInputReference.action.canceled -= OnCamera;
+        cameraInputReference.action.Disable();
     }
+
 
     private void Update()
     {
@@ -73,6 +89,24 @@ public class PlayerController : MonoBehaviour
         rb2D.position += moveDirection * speed * Time.deltaTime;
 
         ActualizarAnimacion(moveDirection);
+
+        if(danarJugador)
+        {
+            player.DanarJugador(danoPorSegundo * Time.deltaTime);
+        }
+    }
+
+
+    private void OnCamera(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            danarJugador = true;
+        }
+        else
+        {
+            danarJugador = false;
+        }
     }
 
 
