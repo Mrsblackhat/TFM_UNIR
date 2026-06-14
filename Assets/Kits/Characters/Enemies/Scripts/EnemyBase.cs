@@ -6,6 +6,7 @@ public class EnemyBase : MonoBehaviour
 {
     protected Transform target;
     protected NavMeshAgent agent;
+    protected Animator anim;
 
     protected PlayerHide playerHide;
     protected Transform puntoInicialTarget;
@@ -13,6 +14,7 @@ public class EnemyBase : MonoBehaviour
     protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
 
         puntoInicialTarget = new GameObject("PuntoInicial_" + gameObject.name).transform;
         puntoInicialTarget.position = transform.position;
