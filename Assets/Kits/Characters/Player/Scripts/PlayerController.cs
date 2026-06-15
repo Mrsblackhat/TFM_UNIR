@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float deadZone = 0.1f;
 
     [Header("Batería")]
+    public bool hasCamera = false;
     private BateriaPlayer player;
     [SerializeField] private float danoPorSegundo = 1f; //Hay que ajustarlo
     private bool danarJugador = false;
@@ -118,7 +119,6 @@ public class PlayerController : MonoBehaviour
             danarJugador = false;
         }
     }
-
 
     private void OnInteract(InputAction.CallbackContext context) //TODO LO INTERACTUABLE TIENE QUE ESTAR EN EL LAYER INTERACTUABLE
     {

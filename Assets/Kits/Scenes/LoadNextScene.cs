@@ -8,7 +8,10 @@ public class LoadNextScene : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nombre);
+            if (collision.gameObject.GetComponent<PlayerController>().hasCamera)
+            {
+                SceneManager.LoadScene(nombre);
+            }
         }
     }
 }
