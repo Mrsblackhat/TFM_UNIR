@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c71d551f230164d8ae3abe1dd72790, type: 3}
   m_Name: Espejo
   m_EditorClassIdentifier: Assembly-CSharp::DialogoData
-  nombrePersonaje: Prota
+  nombrePersonaje: Iris
   frases:
   - Supongo que todo siempre cambia

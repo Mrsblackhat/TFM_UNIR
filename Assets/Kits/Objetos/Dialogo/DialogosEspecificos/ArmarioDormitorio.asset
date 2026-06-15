@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c71d551f230164d8ae3abe1dd72790, type: 3}
   m_Name: ArmarioDormitorio
   m_EditorClassIdentifier: Assembly-CSharp::DialogoData
-  nombrePersonaje: Prota
+  nombrePersonaje: Iris
   frases:
   - "No tengo intenci\xF3n de cambiarme ahora mismo"
   - Deberia bajar a la cocina
