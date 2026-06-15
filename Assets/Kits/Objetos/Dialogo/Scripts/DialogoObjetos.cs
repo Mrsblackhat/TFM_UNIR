@@ -4,7 +4,7 @@ public class DialogoObjetos : MonoBehaviour, Interactuable
 {
     [SerializeField] private DialogoData dialogoData;
 
-    public void Interactuar()
+    public void Interactuar(GameObject playerGameObject)
     {
         if (DialogoManager.Instance == null)
         {

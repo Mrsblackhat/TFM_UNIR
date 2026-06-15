@@ -1940,6 +1940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e5a24a0209e984682f121f6749057e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PatrollingEnemy
+  danho: 0
   patrollPoints:
   - {fileID: 914746838}
   - {fileID: 1705111308}
@@ -4106,6 +4107,7 @@ MonoBehaviour:
   speed: 1.5
   inputReference: {fileID: -250269663766313543, guid: 6af1842b982ed534e9d15c6d0030c1b0, type: 3}
   interactInputReference: {fileID: 1600738475524259222, guid: 6af1842b982ed534e9d15c6d0030c1b0, type: 3}
+  cameraInputReference: {fileID: 0}
   radioDeteccion: 0.2
   distanciaInteraccion: 0.4
   queEsInteractuable:
@@ -4114,6 +4116,8 @@ MonoBehaviour:
   pickUpPoint: {fileID: 1906415455}
   anim: {fileID: 1257827082}
   deadZone: 0.1
+  danoPorSegundo: 1
+  camara: {fileID: 0}
 --- !u!50 &1257827080
 Rigidbody2D:
   serializedVersion: 5
@@ -4153,7 +4157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3317d5d5debbc409786fe8aa2cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHide
-  estaEscondido: 0
 --- !u!95 &1257827082
 Animator:
   serializedVersion: 7
