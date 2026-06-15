@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
     {
         source.PlayOneShot(clickSFX);
 
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("dormitorio");
     }
 
     public void OpenSettings()
