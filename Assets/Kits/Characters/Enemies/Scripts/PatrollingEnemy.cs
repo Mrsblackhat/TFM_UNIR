@@ -10,7 +10,7 @@ public class PatrollingEnemy : EnemyBase
 
     bool playerDetected = false;
 
-    private void Update()
+    protected override void LogicaEnemigo()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Input")]
     [SerializeField] InputActionReference inputReference;
     [SerializeField] InputActionReference interactInputReference;
+    [SerializeField] InputActionReference cameraInputReference;
 
     [Header("Interaction")]
     [SerializeField] private float radioDeteccion = 0.2f;
@@ -19,6 +21,12 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private Animator anim;
     [SerializeField] private float deadZone = 0.1f;
+
+    [Header("Batería")]
+    private BateriaPlayer player;
+    [SerializeField] private float danoPorSegundo = 1f; //Hay que ajustarlo
+    private bool danarJugador = false;
+    [SerializeField] private Image camara;
 
     private Rigidbody2D rb2D;
 
@@ -35,6 +43,10 @@ public class PlayerController : MonoBehaviour
         {
             anim = GetComponent<Animator>();
         }
+
+        player = GetComponent<BateriaPlayer>();
+
+        camara.gameObject.SetActive(false);
     }
 
     private void OnEnable()
@@ -43,6 +55,10 @@ public class PlayerController : MonoBehaviour
 
         interactInputReference.action.Enable();
         interactInputReference.action.performed += OnInteract;
+
+        cameraInputReference.action.Enable();
+        cameraInputReference.action.performed += OnCamera;
+        cameraInputReference.action.canceled += OnCamera;
     }
 
     private void OnDisable()
@@ -51,7 +67,12 @@ public class PlayerController : MonoBehaviour
 
         interactInputReference.action.performed -= OnInteract;
         interactInputReference.action.Disable();
+
+        cameraInputReference.action.performed -= OnCamera;
+        cameraInputReference.action.canceled -= OnCamera;
+        cameraInputReference.action.Disable();
     }
+
 
     private void Update()
     {
@@ -62,24 +83,52 @@ public class PlayerController : MonoBehaviour
             moveDirection = Vector2.zero;
         }
 
-
-        if (!canMove) 
+        if (!canMove || DialogoManager.BloqueaJugador)
         {
-            ActualizarAnimacion(Vector2.zero); 
-            return; 
+            moveDirection = Vector2.zero;
+            rb2D.linearVelocity = Vector2.zero;
+            ActualizarAnimacion(Vector2.zero);
+            return;
         }
 
         rb2D.position += moveDirection * speed * Time.deltaTime;
 
         ActualizarAnimacion(moveDirection);
+
+        if(danarJugador)
+        {
+            player.DanarJugador(danoPorSegundo * Time.deltaTime);
+        }
     }
 
 
-    private void OnInteract(InputAction.CallbackContext context)
+    private void OnCamera(InputAction.CallbackContext context)
     {
+        if(context.performed)
+        {
+            camara.gameObject.SetActive(true);
+            danarJugador = true;
+        }
+        else
+        {
+            camara.gameObject.SetActive(false);
+            danarJugador = false;
+        }
+    }
+
+
+    private void OnInteract(InputAction.CallbackContext context) //TODO LO INTERACTUABLE TIENE QUE ESTAR EN EL LAYER INTERACTUABLE
+    {
+        if (DialogoManager.HayDialogoAbierto)
+        {
+            DialogoManager.Instance.SiguienteFrase();
+            return;
+        }
+
         Vector2 puntoInteraccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
 
         Collider2D collider = Physics2D.OverlapCircle(puntoInteraccion, radioDeteccion, queEsInteractuable);
+        //Debug.Log("Choco con" + collider.name);
 
         if(collider != null)
         {
@@ -95,13 +144,6 @@ public class PlayerController : MonoBehaviour
     public void SetCanMove(bool value)
     {
         canMove = value;
-
-        if (!canMove)
-        {
-            moveDirection = Vector2.zero;
-            rb2D.linearVelocity = Vector2.zero;
-            ActualizarAnimacion(Vector2.zero);
-        }
     }
 
     private void ActualizarAnimacion(Vector2 direccion)

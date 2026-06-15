@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerHide : MonoBehaviour
 {
-    public bool estaEscondido;
+    private bool estaEscondido;
+    public bool EstaEscondido => estaEscondido;
 
     private PlayerController playerController;
     private SpriteRenderer spriteRenderer;
@@ -15,6 +16,7 @@ public class PlayerHide : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
+
 
     public void EntrarArmario(Armario armario)
     {
