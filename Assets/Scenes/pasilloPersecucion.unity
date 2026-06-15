@@ -1379,6 +1379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a70549c8d090e4a95df119b6b48055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextScene
+  nombre: sala
 --- !u!61 &120176779
 BoxCollider2D:
   m_ObjectHideFlags: 0

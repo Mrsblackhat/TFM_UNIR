@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/pasilloPersecucion.unity
     guid: bbd4be6bbdfbf3a4cb87c66c69e3e0db
+  - enabled: 1
+    path: Assets/Scenes/dormitorio.unity
+    guid: ebc3d4abc8faba4439835b1a9f832d80
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
