@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float distanciaInteraccion = 0.4f;
     [SerializeField] private LayerMask queEsInteractuable;
 
+    [Header("Items pickup")]
+    [SerializeField] Transform pickUpPoint;
+    Item currentItem;
+
     [Header("Animation")]
     [SerializeField] private Animator anim;
     [SerializeField] private float deadZone = 0.1f;
@@ -101,7 +105,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void OnCamera(InputAction.CallbackContext context)
     {
         if(context.performed)
@@ -127,17 +130,48 @@ public class PlayerController : MonoBehaviour
 
         Vector2 puntoInteraccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
 
-        Collider2D collider = Physics2D.OverlapCircle(puntoInteraccion, radioDeteccion, queEsInteractuable);
-        //Debug.Log("Choco con" + collider.name);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(puntoInteraccion, radioDeteccion, queEsInteractuable);
+        float minDistance = Mathf.Infinity;
+        Interactuable nearestInteractuable = null;
 
-        if(collider != null)
+        // Se interactuará con el más cercano
+        foreach (Collider2D col in colliders)
         {
-            Interactuable interactuable = collider.GetComponent<Interactuable>();
+            Interactuable interactuable = col.GetComponent<Interactuable>();
 
-            if(interactuable != null)
+            if (interactuable != null)
             {
-                interactuable.Interactuar();
+                float distanceToPlayer = Vector2.Distance(transform.position, col.transform.position);
+
+                if (distanceToPlayer < minDistance)
+                {
+                    minDistance = distanceToPlayer;
+                    nearestInteractuable = interactuable;
+                }
             }
+        }
+
+        if (nearestInteractuable != null)
+        {
+            nearestInteractuable.Interactuar(gameObject);
+        }
+    }
+
+    public void PickUpItem(Item newItem)
+    {
+        if (currentItem == null)
+        {
+            currentItem = newItem;
+            currentItem.SetParent(pickUpPoint);
+        }
+    }
+
+    public void DropItem()
+    {
+        if (currentItem != null)
+        {
+            currentItem.DropDown();
+            currentItem = null;
         }
     }
 

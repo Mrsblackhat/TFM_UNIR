@@ -41,5 +41,10 @@ public class StalkerEnemy : EnemyBase
         }
 
         agent.SetDestination(target.position);
+
+        anim.SetBool("Moving", !agent.isStopped);
+
+        if (Mathf.Clamp(target.position.x - transform.position.x, -1, 1) < 0) transform.localScale = new Vector2(-1, 1);
+        else transform.localScale = new Vector2(1, 1);
     }
 }
