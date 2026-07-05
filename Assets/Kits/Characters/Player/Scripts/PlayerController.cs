@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -108,15 +109,31 @@ public class PlayerController : MonoBehaviour
 
     private void OnCamera(InputAction.CallbackContext context)
     {
-        if(context.performed)
-        {
-            camara.gameObject.SetActive(true);
-            danarJugador = true;
+        if (hasCamera)
+        { 
+            if(context.performed)
+            {
+                camara.gameObject.SetActive(true);
+                danarJugador = true;
+                AvisarAfectados(true);
+            }
+            else
+            {
+                camara.gameObject.SetActive(false);
+                danarJugador = false;
+                AvisarAfectados(false);
+            }
         }
-        else
+    }
+        private void AvisarAfectados(bool camaraActiva)
+    {
+        MonoBehaviour[] scripts = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include,FindObjectsSortMode.None);
+        foreach (MonoBehaviour script in scripts)
         {
-            camara.gameObject.SetActive(false);
-            danarJugador = false;
+            if (script is IAfectadoPorCamara afectado)
+            {
+                afectado.CambiarEstadoCamara(camaraActiva);
+            }
         }
     }
 
