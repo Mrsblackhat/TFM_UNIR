@@ -1,10 +1,7 @@
-//No se si alguien lo lleva pero esto lo controla el playerController
-//Esto deduzco es de los enemigos, lo implementan los enemigos concretos (base no porque a la antagonista no le afecta) - Mirar PararConCamara (y ponerselo a quien lo necesite)
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class UsoCamaraControl : MonoBehaviour
+public class PararConCamara : MonoBehaviour, IAfectadoPorCamara
 {
     private Rigidbody2D rb;
     private Collider2D Collider2D;
@@ -17,9 +14,10 @@ public class UsoCamaraControl : MonoBehaviour
         Collider2D = GetComponent<Collider2D>();
     }
 
-    void Update()
+
+    public void CambiarEstadoCamara(bool camaraActiva)
     {
-        if (Mouse.current.leftButton.isPressed)
+        if (camaraActiva)
         {
             Collider2D.enabled = false;
             script.enabled = false;
