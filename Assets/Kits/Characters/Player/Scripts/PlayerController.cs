@@ -116,12 +116,24 @@ public class PlayerController : MonoBehaviour
                 camara.gameObject.SetActive(true);
                 danarJugador = true;
                 AvisarAfectados(true);
+
+                PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                foreach (PauseEnemy enemigo in enemigos)
+                {
+                    enemigo.pause();
+                }
             }
             else
             {
                 camara.gameObject.SetActive(false);
                 danarJugador = false;
                 AvisarAfectados(false);
+
+                PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                foreach (PauseEnemy enemigo in enemigos)
+                {
+                    enemigo.move();
+                }
             }
         }
     }

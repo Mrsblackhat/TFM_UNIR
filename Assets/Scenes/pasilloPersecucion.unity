@@ -6692,6 +6692,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2275320461355574181, guid: b8e3d9203a614324a942d1b1fa359b95, type: 3}
   m_PrefabInstance: {fileID: 1049946364}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &993310277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993310276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303cb40b3a6dbb544a866a179a078910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseEnemy
 --- !u!1001 &1049946364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6751,7 +6763,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2275320461355574181, guid: b8e3d9203a614324a942d1b1fa359b95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 993310277}
   m_SourcePrefab: {fileID: 100100000, guid: b8e3d9203a614324a942d1b1fa359b95, type: 3}
 --- !u!1 &1051775868
 GameObject:
