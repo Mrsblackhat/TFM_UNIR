@@ -122,6 +122,12 @@ public class PlayerController : MonoBehaviour
                 {
                     enemigo.pause();
                 }
+
+                PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                foreach (PauseSecrets secret in secretos)
+                {
+                    secret.Mostrar();
+                }
             }
             else
             {
@@ -133,6 +139,12 @@ public class PlayerController : MonoBehaviour
                 foreach (PauseEnemy enemigo in enemigos)
                 {
                     enemigo.move();
+                }
+
+                PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                foreach (PauseSecrets secret in secretos)
+                {
+                    secret.Ocultar();
                 }
             }
         }
