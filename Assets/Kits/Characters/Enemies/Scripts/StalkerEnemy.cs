@@ -31,20 +31,23 @@ public class StalkerEnemy : EnemyBase
             return;
         }
 
-        if (Vector2.Distance(target.position, this.transform.position) <= safeDistance)
+        if (target != null)
         {
-            agent.speed = safeSpeed;
+            if (Vector2.Distance(target.position, this.transform.position) <= safeDistance)
+            {
+                agent.speed = safeSpeed;
+            }
+            else
+            {
+                agent.speed = originSpeed;
+            }
+
+            agent.SetDestination(target.position);
+
+            anim.SetBool("Moving", !agent.isStopped);
+
+            if (Mathf.Clamp(target.position.x - transform.position.x, -1, 1) < 0) transform.localScale = new Vector2(-1, 1);
+            else transform.localScale = new Vector2(1, 1);
         }
-        else
-        {
-            agent.speed = originSpeed;
-        }
-
-        agent.SetDestination(target.position);
-
-        anim.SetBool("Moving", !agent.isStopped);
-
-        if (Mathf.Clamp(target.position.x - transform.position.x, -1, 1) < 0) transform.localScale = new Vector2(-1, 1);
-        else transform.localScale = new Vector2(1, 1);
     }
 }
