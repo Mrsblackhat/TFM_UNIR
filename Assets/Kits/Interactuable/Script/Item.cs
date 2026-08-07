@@ -9,22 +9,19 @@ public class Item : MonoBehaviour, Interactuable
 
     public void Interactuar(GameObject playerGameObject)
     {
-        if (canInteract)
-        {
-            PlayerController player = playerGameObject.GetComponent<PlayerController>();
+        PlayerController player = playerGameObject.GetComponent<PlayerController>();
 
-            if (!pickedUp)
-            {
-                pickedUp = true;
-                gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                player.PickUpItem(this);
-            }
-            else
-            {
-                pickedUp = false;
-                gameObject.GetComponent<SpriteRenderer>().enabled = true;
-                player.DropItem();
-            }
+        if (!pickedUp)
+        {
+            pickedUp = true;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            player.PickUpItem(this);
+        }
+        else
+        {
+            pickedUp = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            player.DropItem();
         }
     }
 
@@ -41,13 +38,11 @@ public class Item : MonoBehaviour, Interactuable
         transform.SetParent(null);
     }
 
-    bool canInteract = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             canvas.SetActive(true);
-            canInteract = true;
         }
     }
 
@@ -56,7 +51,22 @@ public class Item : MonoBehaviour, Interactuable
         if (collision.CompareTag("Player"))
         {
             canvas.SetActive(false);
-            canInteract = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            canvas.SetActive(true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            canvas.SetActive(false);
         }
     }
 }

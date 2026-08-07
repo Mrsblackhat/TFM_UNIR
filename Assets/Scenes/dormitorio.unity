@@ -1961,7 +1961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044814556730581136, guid: fc6506fb240544842a234afc53ee39a9, type: 3}
       propertyPath: m_text
-      value: '[F]'
+      value: '[E]'
       objectReference: {fileID: 0}
     - target: {fileID: 6044814556730581136, guid: fc6506fb240544842a234afc53ee39a9, type: 3}
       propertyPath: m_fontSize
@@ -1977,15 +1977,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044814556730581136, guid: fc6506fb240544842a234afc53ee39a9, type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6044814556730581136, guid: fc6506fb240544842a234afc53ee39a9, type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6044814556730581136, guid: fc6506fb240544842a234afc53ee39a9, type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6044814556730581136, guid: fc6506fb240544842a234afc53ee39a9, type: 3}
       propertyPath: m_fontSizeBase
