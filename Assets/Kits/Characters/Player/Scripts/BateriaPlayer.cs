@@ -31,6 +31,6 @@ public class BateriaPlayer : MonoBehaviour, Danable
     {
         Debug.Log("tamuertoo");
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        FinalMenu.instance.Defeat();
     }
 }

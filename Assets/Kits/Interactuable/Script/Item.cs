@@ -1,7 +1,10 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Item : MonoBehaviour, Interactuable
 {
+    [SerializeField] GameObject canvas;
     bool pickedUp = false;
 
     public void Interactuar(GameObject playerGameObject)
@@ -33,5 +36,37 @@ public class Item : MonoBehaviour, Interactuable
         pickedUp = false;
 
         transform.SetParent(null);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            canvas.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            canvas.SetActive(false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            canvas.SetActive(true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            canvas.SetActive(false);
+        }
     }
 }
