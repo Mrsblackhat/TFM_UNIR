@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,12 +44,18 @@ public class FinalMenu : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        AsyncOperation operation = SceneManager.LoadSceneAsync("PantallaCarga", LoadSceneMode.Additive);
+        StartCoroutine(EsperaCarga());
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void VictoryRestart()
     {
         Time.timeScale = 1;
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync("PantallaCarga", LoadSceneMode.Additive);
+        StartCoroutine(EsperaCarga());
 
         SceneManager.LoadScene("dormitorio");
     }
@@ -57,6 +64,18 @@ public class FinalMenu : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        AsyncOperation operation = SceneManager.LoadSceneAsync("PantallaCarga", LoadSceneMode.Additive);
+        StartCoroutine(EsperaCarga());
+
         SceneManager.LoadScene("MainMenu");
+    }
+
+
+    IEnumerator EsperaCarga()
+    {
+        yield return new WaitForSeconds(3);
+
+        SceneManager.UnloadSceneAsync("PantallaCarga");
+
     }
 }
