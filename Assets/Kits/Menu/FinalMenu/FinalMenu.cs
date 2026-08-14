@@ -73,7 +73,7 @@ public class FinalMenu : MonoBehaviour
 
     IEnumerator EsperaCarga()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
 
         SceneManager.UnloadSceneAsync("PantallaCarga");
 
