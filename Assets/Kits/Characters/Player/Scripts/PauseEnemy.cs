@@ -5,24 +5,17 @@ public class PauseEnemy : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Animator animator;
-    private StalkerEnemy stalkerScript;
     private PatrollingEnemy patrollingScript;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        stalkerScript = GetComponent<StalkerEnemy>();
         patrollingScript = GetComponent<PatrollingEnemy>();
     }
 
     public void pause()
     {
-        if (stalkerScript != null)
-        {
-            stalkerScript.enabled = false;
-        }
-
         if (patrollingScript != null)
         {
             patrollingScript.enabled = false;
@@ -37,11 +30,6 @@ public class PauseEnemy : MonoBehaviour
 
     public void move()
     {
-        if (stalkerScript != null)
-        {
-            stalkerScript.enabled = true;
-        }
-
         if (patrollingScript != null)
         {
             patrollingScript.enabled = true;
