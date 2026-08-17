@@ -28,7 +28,7 @@ public class LoadNextScene : MonoBehaviour
 
     IEnumerator EsperaCarga()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2.5f);
 
         SceneManager.UnloadSceneAsync("PantallaCarga");
         SceneManager.LoadScene(nombre);
