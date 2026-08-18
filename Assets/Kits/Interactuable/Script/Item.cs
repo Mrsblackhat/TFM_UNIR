@@ -5,20 +5,19 @@ using UnityEngine.InputSystem;
 public class Item : MonoBehaviour, Interactuable
 {
     [SerializeField] GameObject canvas;
-    public bool canBePicked = true;
-    public bool pickedUp = false;
+    bool pickedUp = false;
 
     public void Interactuar(GameObject playerGameObject)
     {
         PlayerController player = playerGameObject.GetComponent<PlayerController>();
 
-        if (!pickedUp && canBePicked)
+        if (!pickedUp)
         {
             pickedUp = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             player.PickUpItem(this);
         }
-        else if (pickedUp)
+        else
         {
             pickedUp = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
@@ -41,7 +40,7 @@ public class Item : MonoBehaviour, Interactuable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (canBePicked && collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             canvas.SetActive(true);
         }
@@ -49,7 +48,7 @@ public class Item : MonoBehaviour, Interactuable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (canBePicked && collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             canvas.SetActive(false);
         }
@@ -57,7 +56,7 @@ public class Item : MonoBehaviour, Interactuable
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (canBePicked && collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             canvas.SetActive(true);
         }
@@ -65,7 +64,7 @@ public class Item : MonoBehaviour, Interactuable
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (canBePicked && collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             canvas.SetActive(false);
         }

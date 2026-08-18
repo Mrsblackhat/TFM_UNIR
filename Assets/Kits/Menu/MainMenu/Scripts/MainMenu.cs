@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,17 +25,7 @@ public class MainMenu : MonoBehaviour
     {
         source.PlayOneShot(clickSFX);
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync("PantallaCarga", LoadSceneMode.Additive);
-        StartCoroutine(EsperaCarga());
-    }
-
-    IEnumerator EsperaCarga()
-    {
-        yield return new WaitForSeconds(0f);
         SceneManager.LoadScene("dormitorio");
-        SceneManager.UnloadSceneAsync("PantallaCarga");
-
-
     }
 
     public void OpenSettings()
