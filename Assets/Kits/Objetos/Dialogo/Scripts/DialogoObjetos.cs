@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DialogoObjetos : MonoBehaviour, Interactuable
 {
+    [SerializeField] GameObject canvas;
     [SerializeField] private DialogoData dialogoData;
 
     public void Interactuar(GameObject playerGameObject)
@@ -13,5 +14,21 @@ public class DialogoObjetos : MonoBehaviour, Interactuable
         }
 
         DialogoManager.Instance.IniciarDialogo(dialogoData, gameObject.transform);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            canvas.SetActive(true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            canvas.SetActive(false);
+        }
     }
 }
