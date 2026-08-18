@@ -16,3 +16,4 @@ MonoBehaviour:
   frases:
   - "No tengo intenci\xF3n de cambiarme ahora mismo"
   - Deberia bajar a la cocina
+  imagenPersonaje: {fileID: 21300000, guid: f0eedd2813ded8a42a4367b1d7e94f01, type: 3}

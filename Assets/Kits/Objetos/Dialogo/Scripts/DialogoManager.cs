@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogoManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DialogoManager : MonoBehaviour
     [SerializeField] private GameObject panelDialogo;
     [SerializeField] private TMP_Text nombreTexto;
     [SerializeField] private TMP_Text fraseTexto;
+    [SerializeField] private Image imagenPersonaje;
 
     [Header("Velocidad")]
     [SerializeField] private float letrasPorSegundo = 40f;
@@ -92,6 +94,7 @@ public class DialogoManager : MonoBehaviour
         panelDialogo.SetActive(true);
 
         nombreTexto.text = dialogoData.NombrePersonaje;
+        imagenPersonaje.sprite = dialogoData.ImagenPersonaje;
         fraseTexto.text = "";
 
         frases.Clear();
@@ -169,6 +172,7 @@ public class DialogoManager : MonoBehaviour
 
         nombreTexto.text = "";
         fraseTexto.text = "";
+        imagenPersonaje.sprite = null;
 
         frases.Clear();
 

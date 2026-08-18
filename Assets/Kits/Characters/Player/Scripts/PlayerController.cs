@@ -34,12 +34,17 @@ public class PlayerController : MonoBehaviour
     private bool danarJugador = false;
     [SerializeField] private Image camara;
 
+    [Header("LlaveBuhardilla")]
+    public bool hasLlave = false;
+
     private Rigidbody2D rb2D;
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 lastDirection = Vector2.down; 
 
     private bool canMove = true;
+
+
 
     private void Awake()
     {
@@ -105,6 +110,9 @@ public class PlayerController : MonoBehaviour
         {
             player.DanarJugador(danoPorSegundo * Time.deltaTime);
         }
+
+        if(hasLlave)
+        { Debug.Log("tengo la llave"); }
     }
 
     private void OnCamera(InputAction.CallbackContext context)
@@ -175,7 +183,7 @@ public class PlayerController : MonoBehaviour
         float minDistance = Mathf.Infinity;
         Interactuable nearestInteractuable = null;
 
-        // Se interactuará con el más cercano
+        // Se interactuara con el mas cercano
         foreach (Collider2D col in colliders)
         {
             Interactuable interactuable = col.GetComponent<Interactuable>();
