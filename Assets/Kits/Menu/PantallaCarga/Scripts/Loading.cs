@@ -13,13 +13,14 @@ public class Loading : MonoBehaviour
         StartCoroutine(WaitForScene());
     }
 
+    float timeOffset = 0.5f;
     IEnumerator WaitForScene()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(timeOffset);
 
         video.Pause();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(timeOffset);
 
         video.Play();
     }

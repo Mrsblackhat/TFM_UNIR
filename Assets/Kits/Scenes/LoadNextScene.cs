@@ -13,7 +13,9 @@ public class LoadNextScene : MonoBehaviour
         {
             PlayerController player = collision.GetComponent<PlayerController>();
 
-            if (PuedeCambiarEscena(player))
+            PuedeCambiarEscena(player);
+
+            if (canChange)
             {
                 AsyncOperation operation = SceneManager.LoadSceneAsync("PantallaCarga", LoadSceneMode.Additive);
                 StartCoroutine(EsperaCarga());
@@ -21,15 +23,17 @@ public class LoadNextScene : MonoBehaviour
             else
             {
                 if (DialogoManager.Instance == null) return;
-                DialogoManager.Instance.IniciarDialogo(dialogo, gameObject.transform);
+
+                if (dialogo != null)
+                {
+                    DialogoManager.Instance.IniciarDialogo(dialogo, gameObject.transform);
+                }
             }
         }
     }
 
-    protected virtual bool PuedeCambiarEscena(PlayerController player)
-    {
-        return player.hasCamera;
-    }
+    protected bool canChange = true;
+    protected virtual void PuedeCambiarEscena(PlayerController player) { }
 
     IEnumerator EsperaCarga()
     {
