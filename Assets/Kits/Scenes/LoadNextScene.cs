@@ -1,35 +1,24 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadNextScene : MonoBehaviour
 {
-    [SerializeField] public string nombre;
-    [SerializeField] DialogoData dialogo;
-
+    [SerializeField] protected string nombre;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if (collision.gameObject.GetComponent<PlayerController>().hasCamera)
-            {
-                AsyncOperation operation = SceneManager.LoadSceneAsync("PantallaCarga", LoadSceneMode.Additive);
-                StartCoroutine(EsperaCarga());
-            }
-            else
-            {
-                if (DialogoManager.Instance == null) return;
+            PlayerController player = collision.GetComponent<PlayerController>();
 
-                DialogoManager.Instance.IniciarDialogo(dialogo, gameObject.transform);
+            if (PuedeCambiarEscena(player))
+            {
+                SceneManager.LoadScene(nombre);
             }
         }
     }
-
-    IEnumerator EsperaCarga()
+    protected virtual bool PuedeCambiarEscena(PlayerController player)
     {
-        yield return new WaitForSeconds(0.5f);
-
-        SceneManager.LoadScene(nombre);
-        SceneManager.UnloadSceneAsync("PantallaCarga");
+        return player.hasCamera;
     }
+
 }
