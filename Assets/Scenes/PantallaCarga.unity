@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 312548276}
   - component: {fileID: 312548275}
   - component: {fileID: 312548274}
+  - component: {fileID: 312548277}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -165,7 +166,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312548272}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: e6302f4bedf671143a25266a5a649950, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d2d822e49db06f841b24e34bdb648f6e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -228,6 +229,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312548272}
   m_CullTransparentMesh: 1
+--- !u!114 &312548277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312548272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773088075b823144db46c34c6a4387d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Loading
 --- !u!1 &964444522
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,11 +330,11 @@ GameObject:
   - component: {fileID: 982551924}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &982551924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,8 +420,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 45
+  orthographic: 0
   orthographic size: 450.2945
   m_Depth: 0
   m_CullingMask:
@@ -568,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -600,7 +613,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &2102911862
 RectTransform:

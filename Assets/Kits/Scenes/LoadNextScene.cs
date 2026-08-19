@@ -14,7 +14,6 @@ public class LoadNextScene : MonoBehaviour
             if (collision.gameObject.GetComponent<PlayerController>().hasCamera)
             {
                 AsyncOperation operation = SceneManager.LoadSceneAsync("PantallaCarga", LoadSceneMode.Additive);
-
                 StartCoroutine(EsperaCarga());
             }
             else
@@ -28,10 +27,9 @@ public class LoadNextScene : MonoBehaviour
 
     IEnumerator EsperaCarga()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(0.5f);
 
-        SceneManager.UnloadSceneAsync("PantallaCarga");
         SceneManager.LoadScene(nombre);
-
+        SceneManager.UnloadSceneAsync("PantallaCarga");
     }
 }

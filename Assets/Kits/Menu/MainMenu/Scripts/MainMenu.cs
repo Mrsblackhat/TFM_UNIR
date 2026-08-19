@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator EsperaCarga()
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("dormitorio");
         SceneManager.UnloadSceneAsync("PantallaCarga");
 
