@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextScene : MonoBehaviour
 {
+    [SerializeField] int idSpawnPoint;
     [SerializeField] protected string nombre;
     [SerializeField] DialogoData dialogo;
 
@@ -38,6 +39,11 @@ public class LoadNextScene : MonoBehaviour
     IEnumerator EsperaCarga()
     {
         yield return new WaitForSeconds(0.5f);
+
+        if (SpawnController.instance != null)
+        {
+            SpawnController.instance.idSpawn = idSpawnPoint;
+        }
 
         SceneManager.LoadScene(nombre);
         SceneManager.UnloadSceneAsync("PantallaCarga");
