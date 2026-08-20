@@ -12,19 +12,14 @@ public class BrokenMirror : MonoBehaviour, Interactuable
         anim = GetComponent<Animator>();
     }
 
-    bool active = false;
-    private void Update()
-    {
-        if (!active && particles.isStopped)
-        {
-            finalTrigger.SetActive(true);
-            active = true;
-        }
-    }
-
     public void Interactuar(GameObject playerGameObject)
     {
         anim.SetTrigger("Break");
         particles.Play();
+    }
+
+    public void ActivateWinGameObject()
+    {
+        finalTrigger.SetActive(true);
     }
 }
