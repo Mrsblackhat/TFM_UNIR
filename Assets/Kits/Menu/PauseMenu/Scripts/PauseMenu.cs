@@ -27,6 +27,7 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+
         canvasMenu.GetComponent<Canvas>().enabled = false;
     }
 
@@ -84,7 +85,7 @@ public class PauseMenu : MonoBehaviour
         source.PlayOneShot(clickSFX);
 
         settingsOpen = true;
-        settingsMenu.SetActive(true);
+        settingsMenu.GetComponent<Canvas>().enabled = true;
         pauseContent.SetActive(false);
 
         settings.OnSettingsSaved += OnCloseSettings;
@@ -95,7 +96,7 @@ public class PauseMenu : MonoBehaviour
         source.PlayOneShot(clickSFX);
 
         settingsOpen = false;
-        settingsMenu.SetActive(false);
+        settingsMenu.GetComponent<Canvas>().enabled = false;
         pauseContent.SetActive(true);
 
         settings.OnSettingsSaved -= OnCloseSettings;
