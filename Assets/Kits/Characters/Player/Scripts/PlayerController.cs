@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour
     private bool danarJugador = false;
     [SerializeField] private Image camara;
 
+    [Header("Wendigo")]
+    [SerializeField] private float distanciaRaycast = 5f;
+    [SerializeField] private Color colorRaycast = Color.red;
+
     private Rigidbody2D rb2D;
 
     private Vector2 moveDirection = Vector2.zero;
@@ -79,6 +83,36 @@ public class PlayerController : MonoBehaviour
         cameraInputReference.action.Disable();
     }
 
+    private void FindEnemy()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(
+            transform.position,
+            lastDirection.normalized,
+            distanciaRaycast
+        );
+
+        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Stop");
+
+        foreach (GameObject enemigo in enemigos)
+        {
+            StalkerEnemy wendigo = enemigo.GetComponent<StalkerEnemy>();
+
+            if (wendigo != null)
+            {
+                wendigo.enabled = true;
+            }
+        }
+
+        if (hit.collider != null && hit.collider.CompareTag("Stop"))
+        {
+            StalkerEnemy wendigo = hit.collider.GetComponent<StalkerEnemy>();
+
+            if (wendigo != null)
+            {
+                wendigo.enabled = false;
+            }
+        }
+    }
 
     private void Update()
     {
@@ -100,8 +134,9 @@ public class PlayerController : MonoBehaviour
         rb2D.position += moveDirection * speed * Time.deltaTime;
 
         ActualizarAnimacion(moveDirection);
+        FindEnemy();
 
-        if(danarJugador)
+        if (danarJugador)
         {
             player.DanarJugador(danoPorSegundo * Time.deltaTime);
         }

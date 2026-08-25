@@ -1,58 +1,58 @@
 fileFormatVersion: 2
-guid: a7ee8cff35ebb5a4d87be2ae7b56c350
+guid: 15ce321b06a593242a2b01ac094ecb5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2507021374590056345
-    second: rojomiente 1_0
+      213: -3858966398816585720
+    second: rojomiente_0
   - first:
-      213: -710935241522995650
-    second: rojomiente 1_1
+      213: 2580113061442449039
+    second: rojomiente_1
   - first:
-      213: -7549482715611629336
-    second: rojomiente 1_2
+      213: 8940381441383450399
+    second: rojomiente_2
   - first:
-      213: -715139319411502419
-    second: rojomiente 1_3
+      213: 6677253898515741212
+    second: rojomiente_3
   - first:
-      213: 6742281481992110205
-    second: rojomiente 1_4
+      213: 9010499853858551628
+    second: rojomiente_4
   - first:
-      213: -87479765518318155
-    second: rojomiente 1_5
+      213: -3441538907579173741
+    second: rojomiente_5
   - first:
-      213: -5293724324679314032
-    second: rojomiente 1_6
+      213: 6201461788863755878
+    second: rojomiente_6
   - first:
-      213: 610740939227965159
-    second: rojomiente 1_7
+      213: -1667982029985865110
+    second: rojomiente_7
   - first:
-      213: -4234859762697117545
-    second: rojomiente 1_8
+      213: -2315553304777163981
+    second: rojomiente_8
   - first:
-      213: -7765677643947880542
-    second: rojomiente 1_9
+      213: 1760139081485927625
+    second: rojomiente_9
   - first:
-      213: -2764485522287214117
-    second: rojomiente 1_10
+      213: -8692205747347614417
+    second: rojomiente_10
   - first:
-      213: -3697569446063385234
-    second: rojomiente 1_11
+      213: -6696363622987548685
+    second: rojomiente_11
   - first:
-      213: 6006083219094445341
-    second: rojomiente 1_12
+      213: 5665206295406830249
+    second: rojomiente_12
   - first:
-      213: 9133814070969620905
-    second: rojomiente 1_13
+      213: 196396691879080464
+    second: rojomiente_13
   - first:
-      213: -2315127270697771426
-    second: rojomiente 1_14
+      213: -2051528229473203863
+    second: rojomiente_14
   - first:
-      213: -2548688821559697263
-    second: rojomiente 1_15
+      213: -8918906793641572399
+    second: rojomiente_15
   - first:
-      213: 1851052236830225756
-    second: rojomiente 1_16
+      213: 7904688038511557791
+    second: rojomiente_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -174,7 +174,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rojomiente 1_0
+      name: rojomiente_0
       rect:
         serializedVersion: 2
         x: 6
@@ -189,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7688f33b755453dd0800000000000000
-      internalID: -2507021374590056345
+      spriteID: 8087e568182327ac0800000000000000
+      internalID: -3858966398816585720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_1
+      name: rojomiente_1
       rect:
         serializedVersion: 2
         x: 14
@@ -211,14 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3e17be1a204226f0800000000000000
-      internalID: -710935241522995650
+      spriteID: f8e6f9bc8276ec320800000000000000
+      internalID: 2580113061442449039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_2
+      name: rojomiente_2
       rect:
         serializedVersion: 2
         x: 22
@@ -233,14 +233,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e874021879da3790800000000000000
-      internalID: -7549482715611629336
+      spriteID: f17c7228d8d921c70800000000000000
+      internalID: 8940381441383450399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_3
+      name: rojomiente_3
       rect:
         serializedVersion: 2
         x: 29
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da21095f3905316f0800000000000000
-      internalID: -715139319411502419
+      spriteID: c1a7f180b0f5aac50800000000000000
+      internalID: 6677253898515741212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_4
+      name: rojomiente_4
       rect:
         serializedVersion: 2
         x: 42
@@ -277,14 +277,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7085d52945619d50800000000000000
-      internalID: 6742281481992110205
+      spriteID: c47b2fd90e9bb0d70800000000000000
+      internalID: 9010499853858551628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_5
+      name: rojomiente_5
       rect:
         serializedVersion: 2
         x: 50
@@ -299,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b50f33ed9539cef0800000000000000
-      internalID: -87479765518318155
+      spriteID: 394be0df8923d30d0800000000000000
+      internalID: -3441538907579173741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_6
+      name: rojomiente_6
       rect:
         serializedVersion: 2
         x: 7
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09515a826c9e886b0800000000000000
-      internalID: -5293724324679314032
+      spriteID: 666f165e3a4001650800000000000000
+      internalID: 6201461788863755878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_7
+      name: rojomiente_7
       rect:
         serializedVersion: 2
         x: 21
@@ -343,14 +343,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e6a87cf5a9c97800800000000000000
-      internalID: 610740939227965159
+      spriteID: a6225fa5e232ad8e0800000000000000
+      internalID: -1667982029985865110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_8
+      name: rojomiente_8
       rect:
         serializedVersion: 2
         x: 28
@@ -365,14 +365,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 790e7daab71ca35c0800000000000000
-      internalID: -4234859762697117545
+      spriteID: 33b7642a9808ddfd0800000000000000
+      internalID: -2315553304777163981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_9
+      name: rojomiente_9
       rect:
         serializedVersion: 2
         x: 40
@@ -387,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2af4b40c355ca3490800000000000000
-      internalID: -7765677643947880542
+      spriteID: 9c440434b254d6810800000000000000
+      internalID: 1760139081485927625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_10
+      name: rojomiente_10
       rect:
         serializedVersion: 2
         x: 6
@@ -409,14 +409,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd14c59701392a9d0800000000000000
-      internalID: -2764485522287214117
+      spriteID: f259cb21de41f5780800000000000000
+      internalID: -8692205747347614417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_11
+      name: rojomiente_11
       rect:
         serializedVersion: 2
         x: 15
@@ -431,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e65dd0bed289facc0800000000000000
-      internalID: -3697569446063385234
+      spriteID: 3f7baf483ccb113a0800000000000000
+      internalID: -6696363622987548685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_12
+      name: rojomiente_12
       rect:
         serializedVersion: 2
         x: 25
@@ -453,14 +453,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1d1f8dbdd4e95350800000000000000
-      internalID: 6006083219094445341
+      spriteID: 9a2e7013c1bde9e40800000000000000
+      internalID: 5665206295406830249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_13
+      name: rojomiente_13
       rect:
         serializedVersion: 2
         x: 34
@@ -475,14 +475,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a9db982183d1ce70800000000000000
-      internalID: 9133814070969620905
+      spriteID: 012b38e20cdb9b200800000000000000
+      internalID: 196396691879080464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_14
+      name: rojomiente_14
       rect:
         serializedVersion: 2
         x: 40
@@ -497,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5e5d3c63040fdfd0800000000000000
-      internalID: -2315127270697771426
+      spriteID: 969409bd1f18783e0800000000000000
+      internalID: -2051528229473203863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_15
+      name: rojomiente_15
       rect:
         serializedVersion: 2
         x: 49
@@ -519,14 +519,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 190ece3350d31acd0800000000000000
-      internalID: -2548688821559697263
+      spriteID: 1d70d2c868da93480800000000000000
+      internalID: -8918906793641572399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rojomiente 1_16
+      name: rojomiente_16
       rect:
         serializedVersion: 2
         x: 18
@@ -541,8 +541,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5535fcb33240b910800000000000000
-      internalID: 1851052236830225756
+      spriteID: f9cb2c3e3e713bd60800000000000000
+      internalID: 7904688038511557791
       vertices: []
       indices: 
       edges: []
@@ -551,7 +551,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -561,23 +561,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rojomiente 1_0: -2507021374590056345
-      rojomiente 1_1: -710935241522995650
-      rojomiente 1_10: -2764485522287214117
-      rojomiente 1_11: -3697569446063385234
-      rojomiente 1_12: 6006083219094445341
-      rojomiente 1_13: 9133814070969620905
-      rojomiente 1_14: -2315127270697771426
-      rojomiente 1_15: -2548688821559697263
-      rojomiente 1_16: 1851052236830225756
-      rojomiente 1_2: -7549482715611629336
-      rojomiente 1_3: -715139319411502419
-      rojomiente 1_4: 6742281481992110205
-      rojomiente 1_5: -87479765518318155
-      rojomiente 1_6: -5293724324679314032
-      rojomiente 1_7: 610740939227965159
-      rojomiente 1_8: -4234859762697117545
-      rojomiente 1_9: -7765677643947880542
+      rojomiente_0: -3858966398816585720
+      rojomiente_1: 2580113061442449039
+      rojomiente_10: -8692205747347614417
+      rojomiente_11: -6696363622987548685
+      rojomiente_12: 5665206295406830249
+      rojomiente_13: 196396691879080464
+      rojomiente_14: -2051528229473203863
+      rojomiente_15: -8918906793641572399
+      rojomiente_16: 7904688038511557791
+      rojomiente_2: 8940381441383450399
+      rojomiente_3: 6677253898515741212
+      rojomiente_4: 9010499853858551628
+      rojomiente_5: -3441538907579173741
+      rojomiente_6: 6201461788863755878
+      rojomiente_7: -1667982029985865110
+      rojomiente_8: -2315553304777163981
+      rojomiente_9: 1760139081485927625
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
