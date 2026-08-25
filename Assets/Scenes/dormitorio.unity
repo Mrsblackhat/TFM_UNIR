@@ -12201,6 +12201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965003236}
   - component: {fileID: 1965003237}
+  - component: {fileID: 1965003240}
   - component: {fileID: 1965003239}
   - component: {fileID: 1965003238}
   m_Layer: 3
@@ -12343,6 +12344,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogoObjetos
   dialogoData: {fileID: 11400000, guid: 56bba657901315b41896534bc4fe17aa, type: 2}
+--- !u!114 &1965003240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965003235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0d1f854ce89774bb25ae3560db20d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Armario
 --- !u!1 &1987513056
 GameObject:
   m_ObjectHideFlags: 0

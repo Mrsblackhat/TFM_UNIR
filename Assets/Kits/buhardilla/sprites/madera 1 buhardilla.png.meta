@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 092d439af2948d94ca91d0c4199bbecd
+guid: 3c699cd8833342744963209fe53e28e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 461244919173445021
-    second: cabinets_BA_0
-  - first:
-      213: 2485201264383971414
-    second: cabinets_BA_1
-  - first:
-      213: 3202566847907410633
-    second: cabinets_BA_2
-  - first:
-      213: 6073675411502937832
-    second: cabinets_BA_3
-  - first:
-      213: 1987058814213139719
-    second: cabinets_BA_4
-  - first:
-      213: -808495629160210913
-    second: cabinets_BA_5
+      213: -1410724556629932457
+    second: madera 1 buhardilla_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,150 +96,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cabinets_BA_0
+      name: madera 1 buhardilla_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 79
-        width: 34
-        height: 22
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9579c96fcba66600800000000000000
-      internalID: 461244919173445021
+      spriteID: 75607267d791c6ce0800000000000000
+      internalID: -1410724556629932457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabinets_BA_1
+      name: madera 1 buhardilla_1
       rect:
         serializedVersion: 2
-        x: 63
-        y: 47
-        width: 18
-        height: 50
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 65055fef1653d7220800000000000000
-      internalID: 2485201264383971414
+      spriteID: 88c4ed85e79f5ea449039d89664e753a
+      internalID: -630787356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabinets_BA_2
+      name: madera 1 buhardilla_2
       rect:
         serializedVersion: 2
-        x: 95
-        y: 47
-        width: 18
-        height: 50
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9c2b6fa849dc17c20800000000000000
-      internalID: 3202566847907410633
+      spriteID: be5f82da0d1e37d4cbe6117f2f35afed
+      internalID: -1609319375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabinets_BA_3
+      name: madera 1 buhardilla_3
       rect:
         serializedVersion: 2
-        x: 127
-        y: 47
-        width: 18
-        height: 50
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8e638a76b970a4450800000000000000
-      internalID: 6073675411502937832
+      spriteID: 5f32144535f8ac74cbd46397d75592db
+      internalID: 907096499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabinets_BA_4
+      name: madera 1 buhardilla_4
       rect:
         serializedVersion: 2
-        x: 15
-        y: 47
-        width: 34
-        height: 22
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70dabf0b673739b10800000000000000
-      internalID: 1987058814213139719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cabinets_BA_5
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 15
-        width: 34
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1e13754285a7c4f0800000000000000
-      internalID: -808495629160210913
+      spriteID: 03c114454c3f51443b1315bb346845ce
+      internalID: 1656813928
       vertices: []
       indices: 
       edges: []
@@ -263,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 11ebfd6d415521a429bdf5b5911dc6a0
     internalID: 0
     vertices: []
     indices: 
@@ -271,14 +221,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      cabinets_BA_0: 461244919173445021
-      cabinets_BA_1: 2485201264383971414
-      cabinets_BA_2: 3202566847907410633
-      cabinets_BA_3: 6073675411502937832
-      cabinets_BA_4: 1987058814213139719
-      cabinets_BA_5: -808495629160210913
+      madera 1 buhardilla_0: -1410724556629932457
+      madera 1 buhardilla_1: -630787356
+      madera 1 buhardilla_2: -1609319375
+      madera 1 buhardilla_3: 907096499
+      madera 1 buhardilla_4: 1656813928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

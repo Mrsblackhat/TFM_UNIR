@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 66f444e940f431249bf736cbb96784cf
+guid: 6886a357485380342bba575f3a855817
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2142023413604319806
-    second: fixtures_BA_0
+      213: 4420078082790108562
+    second: manta_0
   - first:
-      213: 1139324243355928867
-    second: fixtures_BA_1
+      213: 6853618508776169536
+    second: manta_1
   - first:
-      213: -7366894489222144240
-    second: fixtures_BA_2
+      213: 6101169863369196241
+    second: manta_2
   - first:
-      213: 2054163155403834821
-    second: fixtures_BA_3
-  - first:
-      213: -7680703558453618354
-    second: fixtures_BA_4
+      213: -6824433659754160143
+    second: manta_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,10 +57,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,128 +105,93 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fixtures_BA_0
+      name: manta_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 63
-        width: 67
-        height: 34
+        x: 0
+        y: 3
+        width: 39
+        height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e32847c12fef9bd10800000000000000
-      internalID: 2142023413604319806
+      spriteID: 29da1340995475d30800000000000000
+      internalID: 4420078082790108562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fixtures_BA_1
+      name: manta_1
       rect:
         serializedVersion: 2
-        x: 104
-        y: 77
-        width: 34
-        height: 23
+        x: 39
+        y: 3
+        width: 39
+        height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3298839ec51bfcf00800000000000000
-      internalID: 1139324243355928867
+      spriteID: 04065a1c8b1fc1f50800000000000000
+      internalID: 6853618508776169536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fixtures_BA_2
+      name: manta_2
       rect:
         serializedVersion: 2
-        x: 164
-        y: 51
-        width: 24
-        height: 46
+        x: 78
+        y: 3
+        width: 39
+        height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01f91285e7883c990800000000000000
-      internalID: -7366894489222144240
+      spriteID: 1d280745aa5bba450800000000000000
+      internalID: 6101169863369196241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fixtures_BA_3
+      name: manta_3
       rect:
         serializedVersion: 2
-        x: 14
-        y: 15
-        width: 67
-        height: 34
+        x: 117
+        y: 3
+        width: 39
+        height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c58a84a18ad18c10800000000000000
-      internalID: 2054163155403834821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fixtures_BA_4
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 29
-        width: 34
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e491b45cec8a86590800000000000000
-      internalID: -7680703558453618354
+      spriteID: 1ff522d6ebdba41a0800000000000000
+      internalID: -6824433659754160143
       vertices: []
       indices: 
       edges: []
@@ -238,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 412584444b1148a46ada371b742258bf
     internalID: 0
     vertices: []
     indices: 
@@ -246,13 +208,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":39.0,"y":69.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      fixtures_BA_0: 2142023413604319806
-      fixtures_BA_1: 1139324243355928867
-      fixtures_BA_2: -7366894489222144240
-      fixtures_BA_3: 2054163155403834821
-      fixtures_BA_4: -7680703558453618354
+      manta_0: 4420078082790108562
+      manta_1: 6853618508776169536
+      manta_2: 6101169863369196241
+      manta_3: -6824433659754160143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
