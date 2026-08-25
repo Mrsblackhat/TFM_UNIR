@@ -157,7 +157,8 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-        private void AvisarAfectados(bool camaraActiva)
+    
+    private void AvisarAfectados(bool camaraActiva)
     {
         MonoBehaviour[] scripts = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include,FindObjectsSortMode.None);
         foreach (MonoBehaviour script in scripts)
@@ -245,6 +246,11 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("x", lastDirection.x);
         anim.SetFloat("y", lastDirection.y);
+    }
+
+    public void RestartBattery()
+    {
+        player.Reset();
     }
 
     private void OnDrawGizmos()
