@@ -1,17 +1,36 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class StalkerEnemy : EnemyBase
+public class StalkerEnemy : EnemyBase, IAfectadoPorCamara
 {
     [SerializeField] float safeDistance = 7;
     [SerializeField] float safeSpeed = 1;
     private float originSpeed;
 
+    private float initialSafeSpeed;
+    private float initialOriginSpeed;
+
     protected override void Start()
     {
         base.Start();
         originSpeed = agent.speed;
+
+        initialSafeSpeed = safeSpeed;
+        initialOriginSpeed = originSpeed;
+    }
+
+    public void CambiarEstadoCamara(bool activa)
+    {
+        if (activa)
+        {
+            safeSpeed = initialSafeSpeed * 0.5f;
+            originSpeed = initialOriginSpeed * 0.5f;
+        }
+        else
+        {
+            safeSpeed = initialSafeSpeed;
+            originSpeed = initialOriginSpeed;
+        }
     }
 
     protected override void LogicaEnemigo()
@@ -25,7 +44,7 @@ public class StalkerEnemy : EnemyBase
 
     private void Move()
     {
-        if(PlayerEscondido())
+        if (PlayerEscondido())
         {
             agent.SetDestination(puntoInicialTarget.position);
             return;

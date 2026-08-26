@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour
     [Header("LlaveBuhardilla")]
     public bool hasLlave = false;
 
+    [Header("Wendigo")]
+    [SerializeField] private float distanciaRaycast = 5f;
+    [SerializeField] private Color colorRaycast = Color.red;
+
     private Rigidbody2D rb2D;
 
     private Vector2 moveDirection = Vector2.zero;
@@ -84,6 +88,36 @@ public class PlayerController : MonoBehaviour
         cameraInputReference.action.Disable();
     }
 
+    private void FindEnemy()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(
+            transform.position,
+            lastDirection.normalized,
+            distanciaRaycast
+        );
+
+        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Stop");
+
+        foreach (GameObject enemigo in enemigos)
+        {
+            StalkerEnemy wendigo = enemigo.GetComponent<StalkerEnemy>();
+
+            if (wendigo != null)
+            {
+                wendigo.enabled = true;
+            }
+        }
+
+        if (hit.collider != null && hit.collider.CompareTag("Stop"))
+        {
+            StalkerEnemy wendigo = hit.collider.GetComponent<StalkerEnemy>();
+
+            if (wendigo != null)
+            {
+                wendigo.enabled = false;
+            }
+        }
+    }
 
     private void Update()
     {
@@ -105,8 +139,9 @@ public class PlayerController : MonoBehaviour
         rb2D.position += moveDirection * speed * Time.deltaTime;
 
         ActualizarAnimacion(moveDirection);
+        FindEnemy();
 
-        if(danarJugador)
+        if (danarJugador)
         {
             player.DanarJugador(danoPorSegundo * Time.deltaTime);
         }
@@ -157,7 +192,8 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-        private void AvisarAfectados(bool camaraActiva)
+    
+    private void AvisarAfectados(bool camaraActiva)
     {
         MonoBehaviour[] scripts = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include,FindObjectsSortMode.None);
         foreach (MonoBehaviour script in scripts)
@@ -245,6 +281,11 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("x", lastDirection.x);
         anim.SetFloat("y", lastDirection.y);
+    }
+
+    public void RestartBattery()
+    {
+        player.Reset();
     }
 
     private void OnDrawGizmos()

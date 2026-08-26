@@ -19,13 +19,13 @@ public class FinalMenu : MonoBehaviour
 
         source = GetComponent<AudioSource>();
 
-        victoryCanvas.SetActive(false);
-        defeatCanvas.SetActive(false);
+        victoryCanvas.GetComponent<Canvas>().enabled = false;
+        defeatCanvas.GetComponent<Canvas>().enabled = false;
     }
 
     public void Win()
     {
-        victoryCanvas.SetActive(true);
+        victoryCanvas.GetComponent<Canvas>().enabled = true;
         source.PlayOneShot(victory);
 
         Time.timeScale = 0;
@@ -33,7 +33,7 @@ public class FinalMenu : MonoBehaviour
 
     public void Defeat()
     {
-        defeatCanvas.SetActive(true);
+        defeatCanvas.GetComponent<Canvas>().enabled = true;
         source.PlayOneShot(defeat);
 
         Time.timeScale = 0;
@@ -44,6 +44,10 @@ public class FinalMenu : MonoBehaviour
         Time.timeScale = 1;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        defeatCanvas.GetComponent<Canvas>().enabled = false;
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().RestartBattery();
     }
 
     public void VictoryRestart()
@@ -51,6 +55,10 @@ public class FinalMenu : MonoBehaviour
         Time.timeScale = 1;
 
         SceneManager.LoadScene("dormitorio");
+
+        victoryCanvas.GetComponent<Canvas>().enabled = false;
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().RestartBattery();
     }
 
     public void Exit()
