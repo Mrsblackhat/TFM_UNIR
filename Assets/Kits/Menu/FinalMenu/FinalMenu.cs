@@ -44,6 +44,10 @@ public class FinalMenu : MonoBehaviour
         Time.timeScale = 1;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        defeatCanvas.GetComponent<Canvas>().enabled = false;
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().RestartBattery();
     }
 
     public void VictoryRestart()
@@ -51,6 +55,10 @@ public class FinalMenu : MonoBehaviour
         Time.timeScale = 1;
 
         SceneManager.LoadScene("dormitorio");
+
+        victoryCanvas.GetComponent<Canvas>().enabled = false;
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().RestartBattery();
     }
 
     public void Exit()

@@ -1854,7 +1854,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a70549c8d090e4a95df119b6b48055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextScene
+  idSpawnPoint: 1
   nombre: parte_superior
+  dialogo: {fileID: 0}
 --- !u!1 &1058740122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc25dad5bcd32274ab4a3f854e74734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogoObjetos
+  canvas: {fileID: 0}
   dialogoData: {fileID: 11400000, guid: 56bba657901315b41896534bc4fe17aa, type: 2}
 --- !u!212 &1878194044
 SpriteRenderer:
