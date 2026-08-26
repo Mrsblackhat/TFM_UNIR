@@ -33,4 +33,22 @@ public class BateriaPlayer : MonoBehaviour, Danable
 
         FinalMenu.instance.Defeat();
     }
+
+    public void curarJugador(float bateria)
+    {
+        vida += bateria;
+        if (vida >= 100)
+        {
+            vida = 100;
+        }
+
+        Debug.Log(vida);
+
+        bateriaUI.ActualizarBateriaHUD(vida);
+
+        if (vida <= 0)
+        {
+            Morir();
+        }
+    }
 }
