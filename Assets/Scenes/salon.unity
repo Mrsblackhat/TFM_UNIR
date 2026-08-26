@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 58144905}
   - component: {fileID: 58144904}
   - component: {fileID: 58144903}
+  - component: {fileID: 58144906}
   m_Layer: 0
   m_Name: lampara
   m_TagString: Untagged
@@ -226,11 +227,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.39183903, y: -1.1214712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -240,7 +241,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8125, y: 1.375}
+  m_Size: {x: 2.028555, y: 3.6179423}
   m_EdgeRadius: 0
 --- !u!212 &58144905
 SpriteRenderer:
@@ -301,6 +302,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &58144906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58144901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d7558e5b2ea5445acd262ed5656718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPosition
+  itemPrefab: {fileID: 2448794895584257198, guid: cd783c6663de9ee4ab431a0df7dedcdc, type: 3}
+  canvas: {fileID: 6627458327089906178, guid: 0316e5477ce602d46a3840c47f98b1c9, type: 3}
 --- !u!1 &58561737
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +670,7 @@ GameObject:
   - component: {fileID: 156166289}
   - component: {fileID: 156166288}
   - component: {fileID: 156166287}
+  - component: {fileID: 156166290}
   m_Layer: 0
   m_Name: ordenador
   m_TagString: Untagged
@@ -719,11 +735,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.10809326, y: 0.32428074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -733,7 +749,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0625, y: 1}
+  m_Size: {x: 2.7379513, y: 1.6485615}
   m_EdgeRadius: 0
 --- !u!212 &156166289
 SpriteRenderer:
@@ -794,6 +810,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &156166290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156166285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d7558e5b2ea5445acd262ed5656718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPosition
+  itemPrefab: {fileID: 2956150085387324131, guid: bad4c615df9ce9a4d850a926665c1980, type: 3}
+  canvas: {fileID: 6627458327089906178, guid: 0316e5477ce602d46a3840c47f98b1c9, type: 3}
 --- !u!1 &156795908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4400,6 +4430,7 @@ GameObject:
   - component: {fileID: 795524526}
   - component: {fileID: 795524525}
   - component: {fileID: 795524524}
+  - component: {fileID: 795524527}
   m_Layer: 0
   m_Name: libro
   m_TagString: Untagged
@@ -4464,11 +4495,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.09458208, y: 0.13511705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4478,7 +4509,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9375, y: 0.625}
+  m_Size: {x: 1.7752256, y: 0.8952341}
   m_EdgeRadius: 0
 --- !u!212 &795524526
 SpriteRenderer:
@@ -4539,6 +4570,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &795524527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795524522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d7558e5b2ea5445acd262ed5656718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPosition
+  itemPrefab: {fileID: 8830243344190173485, guid: fea125946ee377c4abe7df67eeacdbf9, type: 3}
+  canvas: {fileID: 6627458327089906178, guid: 0316e5477ce602d46a3840c47f98b1c9, type: 3}
 --- !u!1 &815068934
 GameObject:
   m_ObjectHideFlags: 0
@@ -16749,6 +16794,7 @@ GameObject:
   - component: {fileID: 1758694022}
   - component: {fileID: 1758694021}
   - component: {fileID: 1758694020}
+  - component: {fileID: 1758694023}
   m_Layer: 0
   m_Name: cuadro
   m_TagString: Untagged
@@ -16813,11 +16859,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.027023554, y: -0.59451497}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16827,7 +16873,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.625, y: 0.75}
+  m_Size: {x: 2.5166383, y: 1.9390299}
   m_EdgeRadius: 0
 --- !u!212 &1758694022
 SpriteRenderer:
@@ -16888,6 +16934,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1758694023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758694018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d7558e5b2ea5445acd262ed5656718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPosition
+  itemPrefab: {fileID: 3703780289096564539, guid: 329425484bba4cc4b96783b9fec9f515, type: 3}
+  canvas: {fileID: 6627458327089906178, guid: 0316e5477ce602d46a3840c47f98b1c9, type: 3}
 --- !u!1 &1788461539
 GameObject:
   m_ObjectHideFlags: 0
@@ -18246,6 +18306,7 @@ GameObject:
   - component: {fileID: 2030722535}
   - component: {fileID: 2030722534}
   - component: {fileID: 2030722533}
+  - component: {fileID: 2030722536}
   m_Layer: 0
   m_Name: jarron
   m_TagString: Untagged
@@ -18310,11 +18371,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.08107042, y: -0.8647492}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18324,7 +18385,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.75, y: 1.0625}
+  m_Size: {x: 6.1006346, y: 4.305309}
   m_EdgeRadius: 0
 --- !u!212 &2030722535
 SpriteRenderer:
@@ -18385,6 +18446,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2030722536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030722531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d7558e5b2ea5445acd262ed5656718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPosition
+  itemPrefab: {fileID: 1164106300868902270, guid: 1d20e7ae2b62b7443b33011847bb952c, type: 3}
+  canvas: {fileID: 6627458327089906178, guid: 0316e5477ce602d46a3840c47f98b1c9, type: 3}
 --- !u!1 &2032962622
 GameObject:
   m_ObjectHideFlags: 0

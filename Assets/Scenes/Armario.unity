@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 53161451}
   - component: {fileID: 53161453}
   - component: {fileID: 53161452}
+  - component: {fileID: 53161454}
   m_Layer: 0
   m_Name: cabinets_LRK_36 (1)
   m_TagString: Untagged
@@ -389,6 +390,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &53161454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53161449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &74286488
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +418,7 @@ GameObject:
   - component: {fileID: 74286490}
   - component: {fileID: 74286492}
   - component: {fileID: 74286491}
+  - component: {fileID: 74286493}
   m_Layer: 0
   m_Name: cabinets_LRK_1
   m_TagString: Untagged
@@ -555,6 +573,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &74286493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74286488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &103529087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1200,7 @@ GameObject:
   - component: {fileID: 249762090}
   - component: {fileID: 249762092}
   - component: {fileID: 249762091}
+  - component: {fileID: 249762093}
   m_Layer: 0
   m_Name: cabinets_LRK_43 (1)
   m_TagString: Untagged
@@ -1320,6 +1355,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &249762093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249762088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &317418896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1549,7 @@ GameObject:
   - component: {fileID: 318262888}
   - component: {fileID: 318262890}
   - component: {fileID: 318262889}
+  - component: {fileID: 318262891}
   m_Layer: 0
   m_Name: cabinets_LRK_43
   m_TagString: Untagged
@@ -1652,6 +1704,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &318262891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318262886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &336216500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1916,7 @@ GameObject:
   - component: {fileID: 376026023}
   - component: {fileID: 376026025}
   - component: {fileID: 376026024}
+  - component: {fileID: 376026026}
   m_Layer: 0
   m_Name: cabinets_LRK_36
   m_TagString: Untagged
@@ -2002,6 +2071,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &376026026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376026021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &397644961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,6 +2203,7 @@ GameObject:
   - component: {fileID: 497903507}
   - component: {fileID: 497903509}
   - component: {fileID: 497903508}
+  - component: {fileID: 497903510}
   m_Layer: 0
   m_Name: cabinets_LRK_53 (2)
   m_TagString: Untagged
@@ -2272,6 +2358,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &497903510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497903505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &567517911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,6 +2836,7 @@ GameObject:
   - component: {fileID: 675707720}
   - component: {fileID: 675707722}
   - component: {fileID: 675707721}
+  - component: {fileID: 675707723}
   m_Layer: 0
   m_Name: cabinets_LRK_1 (1)
   m_TagString: Untagged
@@ -2888,6 +2991,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &675707723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675707718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &687080109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,6 +3019,7 @@ GameObject:
   - component: {fileID: 687080111}
   - component: {fileID: 687080113}
   - component: {fileID: 687080112}
+  - component: {fileID: 687080114}
   m_Layer: 0
   m_Name: cabinets_LRK_62
   m_TagString: Untagged
@@ -3054,6 +3174,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2.9375}
   m_EdgeRadius: 0
+--- !u!114 &687080114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687080109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &792803418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,6 +3202,7 @@ GameObject:
   - component: {fileID: 792803420}
   - component: {fileID: 792803422}
   - component: {fileID: 792803421}
+  - component: {fileID: 792803423}
   m_Layer: 0
   m_Name: cabinets_LRK_47 (2)
   m_TagString: Untagged
@@ -3220,6 +3357,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &792803423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792803418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &984223300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,6 +3385,7 @@ GameObject:
   - component: {fileID: 984223302}
   - component: {fileID: 984223304}
   - component: {fileID: 984223303}
+  - component: {fileID: 984223305}
   m_Layer: 0
   m_Name: doorswindowsstairs_LRK_5 (3)
   m_TagString: Untagged
@@ -3386,6 +3540,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &984223305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984223300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &990553799
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,6 +3568,7 @@ GameObject:
   - component: {fileID: 990553801}
   - component: {fileID: 990553803}
   - component: {fileID: 990553802}
+  - component: {fileID: 990553804}
   m_Layer: 0
   m_Name: cabinets_LRK_1
   m_TagString: Untagged
@@ -3552,6 +3723,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &990553804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990553799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1032850365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3564,6 +3751,7 @@ GameObject:
   - component: {fileID: 1032850367}
   - component: {fileID: 1032850369}
   - component: {fileID: 1032850368}
+  - component: {fileID: 1032850370}
   m_Layer: 0
   m_Name: doorswindowsstairs_LRK_5 (1)
   m_TagString: Untagged
@@ -3718,6 +3906,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1032850370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032850365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1045914996
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,6 +3934,7 @@ GameObject:
   - component: {fileID: 1045914998}
   - component: {fileID: 1045915000}
   - component: {fileID: 1045914999}
+  - component: {fileID: 1045915001}
   m_Layer: 0
   m_Name: cabinets_LRK_53
   m_TagString: Untagged
@@ -3884,6 +4089,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &1045915001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045914996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1089296228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,6 +4117,7 @@ GameObject:
   - component: {fileID: 1089296230}
   - component: {fileID: 1089296232}
   - component: {fileID: 1089296231}
+  - component: {fileID: 1089296233}
   m_Layer: 0
   m_Name: cabinets_LRK_39
   m_TagString: Untagged
@@ -4050,6 +4272,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2.9375}
   m_EdgeRadius: 0
+--- !u!114 &1089296233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089296228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1099549741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4211,6 +4449,7 @@ GameObject:
   - component: {fileID: 1129791155}
   - component: {fileID: 1129791157}
   - component: {fileID: 1129791156}
+  - component: {fileID: 1129791158}
   m_Layer: 0
   m_Name: cabinets_LRK_47
   m_TagString: Untagged
@@ -4365,6 +4604,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &1129791158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129791153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1138237380
 GameObject:
   m_ObjectHideFlags: 0
@@ -10218,6 +10473,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0753cf51f2c10c74896b3ed4265122eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseSecrets
+--- !u!1 &1224014838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224014839}
+  - component: {fileID: 1224014840}
+  m_Layer: 0
+  m_Name: puente
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1224014839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224014838}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 11.57, y: -0, z: 11.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1682352740}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1224014840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224014838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9acdb93a5f98644a2e18d4884f04e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshLink
+  m_AgentTypeID: 0
+  m_StartPoint: {x: 1, y: -0.3, z: 0}
+  m_EndPoint: {x: -1, y: 0.3, z: 0}
+  m_Width: 0
+  m_CostModifier: -1
+  m_Bidirectional: 1
+  m_AutoUpdatePosition: 0
+  m_Area: 0
 --- !u!1 &1286481632
 GameObject:
   m_ObjectHideFlags: 0
@@ -11611,6 +11918,7 @@ GameObject:
   - component: {fileID: 1405268894}
   - component: {fileID: 1405268896}
   - component: {fileID: 1405268895}
+  - component: {fileID: 1405268897}
   m_Layer: 0
   m_Name: doorswindowsstairs_LRK_5 (2)
   m_TagString: Untagged
@@ -11765,6 +12073,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1405268897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405268892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1408173362
 GameObject:
   m_ObjectHideFlags: 0
@@ -11777,6 +12101,7 @@ GameObject:
   - component: {fileID: 1408173364}
   - component: {fileID: 1408173366}
   - component: {fileID: 1408173365}
+  - component: {fileID: 1408173367}
   m_Layer: 0
   m_Name: cabinets_LRK_46 (2)
   m_TagString: Untagged
@@ -11931,6 +12256,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &1408173367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408173362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1434794730
 GameObject:
   m_ObjectHideFlags: 0
@@ -11943,6 +12284,7 @@ GameObject:
   - component: {fileID: 1434794731}
   - component: {fileID: 1434794734}
   - component: {fileID: 1434794733}
+  - component: {fileID: 1434794735}
   m_Layer: 0
   m_Name: decorations_LRK_11
   m_TagString: Untagged
@@ -12097,6 +12439,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 1.125}
   m_EdgeRadius: 0
+--- !u!114 &1434794735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434794730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1485428624
 GameObject:
   m_ObjectHideFlags: 0
@@ -12109,6 +12467,7 @@ GameObject:
   - component: {fileID: 1485428626}
   - component: {fileID: 1485428628}
   - component: {fileID: 1485428627}
+  - component: {fileID: 1485428629}
   m_Layer: 0
   m_Name: cabinets_LRK_53 (1)
   m_TagString: Untagged
@@ -12263,6 +12622,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &1485428629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485428624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1494416897
 GameObject:
   m_ObjectHideFlags: 0
@@ -12379,6 +12754,7 @@ GameObject:
   - component: {fileID: 1506636397}
   - component: {fileID: 1506636400}
   - component: {fileID: 1506636399}
+  - component: {fileID: 1506636401}
   m_Layer: 0
   m_Name: decorations_LRK_12
   m_TagString: Untagged
@@ -12533,6 +12909,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 1.125}
   m_EdgeRadius: 0
+--- !u!114 &1506636401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506636396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1509232811
 GameObject:
   m_ObjectHideFlags: 0
@@ -12890,6 +13282,7 @@ GameObject:
   - component: {fileID: 1518302348}
   - component: {fileID: 1518302350}
   - component: {fileID: 1518302349}
+  - component: {fileID: 1518302351}
   m_Layer: 0
   m_Name: cabinets_LRK_36
   m_TagString: Untagged
@@ -13044,6 +13437,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &1518302351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518302346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1673076518
 GameObject:
   m_ObjectHideFlags: 0
@@ -13058,6 +13467,7 @@ GameObject:
   - component: {fileID: 1673076521}
   - component: {fileID: 1673076524}
   - component: {fileID: 1673076523}
+  - component: {fileID: 1673076525}
   m_Layer: 0
   m_Name: cabinets_LRK_62 (2)
   m_TagString: Untagged
@@ -13226,6 +13636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   canvas: {fileID: 2112842679}
+  canBePicked: 1
+  pickedUp: 0
 --- !u!114 &1673076524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13238,6 +13650,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0d1f854ce89774bb25ae3560db20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
+--- !u!114 &1673076525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673076518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1682352739
 GameObject:
   m_ObjectHideFlags: 0
@@ -13268,7 +13696,8 @@ Transform:
   m_LocalPosition: {x: 3.80428, y: 0.42133, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1224014839}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1682352741
@@ -13332,6 +13761,7 @@ GameObject:
   - component: {fileID: 1703180214}
   - component: {fileID: 1703180217}
   - component: {fileID: 1703180216}
+  - component: {fileID: 1703180218}
   m_Layer: 0
   m_Name: cabinets_LRK_62 (1)
   m_TagString: Untagged
@@ -13500,6 +13930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   canvas: {fileID: 2112842679}
+  canBePicked: 1
+  pickedUp: 0
 --- !u!114 &1703180217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13512,6 +13944,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0d1f854ce89774bb25ae3560db20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
+--- !u!114 &1703180218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703180211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1715434289
 GameObject:
   m_ObjectHideFlags: 0
@@ -13524,6 +13972,7 @@ GameObject:
   - component: {fileID: 1715434291}
   - component: {fileID: 1715434293}
   - component: {fileID: 1715434292}
+  - component: {fileID: 1715434294}
   m_Layer: 0
   m_Name: doorswindowsstairs_LRK_5
   m_TagString: Untagged
@@ -13678,6 +14127,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1715434294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715434289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1724675086
 GameObject:
   m_ObjectHideFlags: 0
@@ -13794,6 +14259,7 @@ GameObject:
   - component: {fileID: 1854658850}
   - component: {fileID: 1854658852}
   - component: {fileID: 1854658851}
+  - component: {fileID: 1854658853}
   m_Layer: 0
   m_Name: cabinets_LRK_46 (1)
   m_TagString: Untagged
@@ -13948,6 +14414,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &1854658853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854658848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1924710842
 GameObject:
   m_ObjectHideFlags: 0
@@ -14062,6 +14544,7 @@ GameObject:
   - component: {fileID: 1931848996}
   - component: {fileID: 1931848998}
   - component: {fileID: 1931848997}
+  - component: {fileID: 1931848999}
   m_Layer: 0
   m_Name: cabinets_LRK_46
   m_TagString: Untagged
@@ -14216,6 +14699,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &1931848999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931848994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1953803851
 GameObject:
   m_ObjectHideFlags: 0
@@ -14227,6 +14726,7 @@ GameObject:
   - component: {fileID: 1953803852}
   - component: {fileID: 1953803854}
   - component: {fileID: 1953803853}
+  - component: {fileID: 1953803855}
   m_Layer: 0
   m_Name: Paredes
   m_TagString: Untagged
@@ -16439,6 +16939,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1953803855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953803851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2015333920
 GameObject:
   m_ObjectHideFlags: 0
@@ -16555,6 +17071,7 @@ GameObject:
   - component: {fileID: 2021945416}
   - component: {fileID: 2021945418}
   - component: {fileID: 2021945417}
+  - component: {fileID: 2021945419}
   m_Layer: 0
   m_Name: cabinets_LRK_39 (2)
   m_TagString: Untagged
@@ -16709,6 +17226,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2.9375}
   m_EdgeRadius: 0
+--- !u!114 &2021945419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021945414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2060540132
 GameObject:
   m_ObjectHideFlags: 0
@@ -16721,6 +17254,7 @@ GameObject:
   - component: {fileID: 2060540134}
   - component: {fileID: 2060540136}
   - component: {fileID: 2060540135}
+  - component: {fileID: 2060540137}
   m_Layer: 0
   m_Name: livingroom_LRK_41
   m_TagString: Untagged
@@ -16875,6 +17409,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.125, y: 1.125}
   m_EdgeRadius: 0
+--- !u!114 &2060540137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060540132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2068588673
 GameObject:
   m_ObjectHideFlags: 0
@@ -16887,6 +17437,7 @@ GameObject:
   - component: {fileID: 2068588675}
   - component: {fileID: 2068588677}
   - component: {fileID: 2068588676}
+  - component: {fileID: 2068588678}
   m_Layer: 0
   m_Name: cabinets_LRK_39 (1)
   m_TagString: Untagged
@@ -17041,6 +17592,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 2.9375}
   m_EdgeRadius: 0
+--- !u!114 &2068588678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068588673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2112842679
 GameObject:
   m_ObjectHideFlags: 0
@@ -17155,6 +17722,7 @@ GameObject:
   - component: {fileID: 2117439067}
   - component: {fileID: 2117439069}
   - component: {fileID: 2117439068}
+  - component: {fileID: 2117439070}
   m_Layer: 0
   m_Name: cabinets_LRK_43
   m_TagString: Untagged
@@ -17309,6 +17877,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &2117439070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117439065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2146451902
 GameObject:
   m_ObjectHideFlags: 0
@@ -17321,6 +17905,7 @@ GameObject:
   - component: {fileID: 2146451904}
   - component: {fileID: 2146451906}
   - component: {fileID: 2146451905}
+  - component: {fileID: 2146451907}
   m_Layer: 0
   m_Name: cabinets_LRK_47 (1)
   m_TagString: Untagged
@@ -17475,6 +18060,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.125, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &2146451907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146451902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
