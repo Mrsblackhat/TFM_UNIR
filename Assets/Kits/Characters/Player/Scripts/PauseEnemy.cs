@@ -5,20 +5,20 @@ public class PauseEnemy : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Animator animator;
-    private PatrollingEnemy patrollingScript;
+    private EnemyBase enemy;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        patrollingScript = GetComponent<PatrollingEnemy>();
+        enemy = GetComponent<EnemyBase>();
     }
 
     public void pause()
     {
-        if (patrollingScript != null)
+        if (enemy != null)
         {
-            patrollingScript.enabled = false;
+            enemy.enabled = false;
         }
 
         agent.isStopped = true;
@@ -30,9 +30,9 @@ public class PauseEnemy : MonoBehaviour
 
     public void move()
     {
-        if (patrollingScript != null)
+        if (enemy != null)
         {
-            patrollingScript.enabled = true;
+            enemy.enabled = true;
         }
 
         agent.isStopped = false;

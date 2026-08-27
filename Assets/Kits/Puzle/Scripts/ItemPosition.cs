@@ -6,7 +6,7 @@ public class ItemPosition : MonoBehaviour
 {
     [SerializeField] GameObject itemPrefab;
     [SerializeField] GameObject canvas;
-    bool isCorrect = false;
+    public bool isCorrect = false; // debug
 
     public event Action OnCorrectPosition;
 
@@ -16,8 +16,9 @@ public class ItemPosition : MonoBehaviour
         {
             if (!itemPrefab.GetComponent<Item>().pickedUp && isColliding)
             {
-                itemPrefab.GetComponent<Item>().canBePicked = false;
-                itemPrefab.transform.position = transform.position;
+                Destroy(itemPrefab);
+                GetComponent<SpriteRenderer>().enabled = true;
+                GetComponent<PauseSecrets>().enabled = false;
                 isCorrect = true;
                 OnCorrectPosition?.Invoke();
             }

@@ -12,7 +12,7 @@ public class Item : MonoBehaviour, Interactuable
     {
         PlayerController player = playerGameObject.GetComponent<PlayerController>();
 
-        if (!pickedUp && canBePicked)
+        if (!pickedUp && canBePicked && player.currentItem == null)
         {
             pickedUp = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
