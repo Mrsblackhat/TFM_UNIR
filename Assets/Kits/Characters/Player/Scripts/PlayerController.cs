@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Items pickup")]
     [SerializeField] Transform pickUpPoint;
-    public Item currentItem;
+    Item currentItem;
 
     [Header("Animation")]
     [SerializeField] private Animator anim;
@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Color colorRaycast = Color.red;
 
     private Rigidbody2D rb2D;
+    AudioSource source;
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 lastDirection = Vector2.down; 
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        source = GetComponent<AudioSource>();
 
         if (anim == null)
         {
@@ -135,6 +137,18 @@ public class PlayerController : MonoBehaviour
             rb2D.linearVelocity = Vector2.zero;
             ActualizarAnimacion(Vector2.zero);
             return;
+        }
+
+        if (moveDirection != Vector2.zero)
+        {
+            if (!source.isPlaying)
+            {
+                source.Play();
+            }
+        }
+        else
+        {
+            source.Pause();
         }
 
         rb2D.position += moveDirection * speed * Time.deltaTime;
@@ -292,6 +306,11 @@ public class PlayerController : MonoBehaviour
     public void ActivateBattery()
     {
         batteryUI.GetComponent<Canvas>().enabled = true;
+    }
+
+    public Item GetItem()
+    {
+        return currentItem;
     }
 
     private void OnDrawGizmos()
