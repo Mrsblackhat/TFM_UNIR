@@ -26,7 +26,7 @@ public class BateriaPlayer : MonoBehaviour, Danable
         vidaActual -= dano;
         Debug.Log(vidaActual);
 
-        bateriaUI.ActualizarBateriaHUD(vida);
+        bateriaUI.ActualizarBateriaHUD(vidaActual);
 
         if (vidaActual <= 0) 
         {
@@ -56,7 +56,7 @@ public class BateriaPlayer : MonoBehaviour, Danable
 
         Debug.Log(vida);
 
-        bateriaUI.ActualizarBateriaHUD(vida);
+        bateriaUI.ActualizarBateriaHUD(vidaActual);
 
         if (vida <= 0)
         {

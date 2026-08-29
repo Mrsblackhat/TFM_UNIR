@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Items pickup")]
     [SerializeField] Transform pickUpPoint;
-    Item currentItem;
+    public Item currentItem;
 
     [Header("Animation")]
     [SerializeField] private Animator anim;
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float danoPorSegundo = 1f; //Hay que ajustarlo
     private bool danarJugador = false;
     [SerializeField] private Image camara;
+    [SerializeField] private GameObject batteryUI;
 
     [Header("LlaveBuhardilla")]
     public bool hasLlave = false;
@@ -286,6 +287,11 @@ public class PlayerController : MonoBehaviour
     public void RestartBattery()
     {
         player.Reset();
+    }
+
+    public void ActivateBattery()
+    {
+        batteryUI.GetComponent<Canvas>().enabled = true;
     }
 
     private void OnDrawGizmos()

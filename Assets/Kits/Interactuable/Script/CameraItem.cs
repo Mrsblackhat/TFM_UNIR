@@ -5,6 +5,7 @@ public class CameraItem : MonoBehaviour, Interactuable
     public void Interactuar(GameObject playerGameObject)
     {
         playerGameObject.GetComponent<PlayerController>().hasCamera = true;
+        playerGameObject.GetComponent<PlayerController>().ActivateBattery();
         Destroy(gameObject);
     }
 }

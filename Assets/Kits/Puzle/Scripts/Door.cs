@@ -19,8 +19,7 @@ public class Door : MonoBehaviour
 
         if (nCorrectItems == itemPositions.Length)
         {
-            Debug.Log("Puerta abierta");
-            GetComponent<SpriteRenderer>().color = Color.red; // pruebas
+            GetComponent<LoadNextScene>().enabled = true;
         }
     }
 }
