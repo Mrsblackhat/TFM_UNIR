@@ -157,7 +157,7 @@ public class DialogoManager : MonoBehaviour
         estaEscribiendo = false;
     }
 
-    private void TerminarDialogo()
+    public void TerminarDialogo()
     {
         if(escrituraCoroutine != null)
         {

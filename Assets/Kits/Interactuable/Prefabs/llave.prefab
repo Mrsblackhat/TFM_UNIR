@@ -187,7 +187,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1694913177206695654, guid: 0b365c1050c4c504bad919664f1da360, type: 3}
   m_Color: {r: 0.3679245, g: 0.36271805, b: 0.36271805, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -222,6 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   canvas: {fileID: 601333582292123013}
+  canBePicked: 1
+  pickedUp: 0
 --- !u!70 &1529527653372645424
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

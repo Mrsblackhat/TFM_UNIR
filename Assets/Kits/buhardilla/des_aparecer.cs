@@ -1,9 +1,26 @@
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 
 public class des_aparecer : MonoBehaviour
 {
     [SerializeField] GameObject puerta;
+    [SerializeField] PlayableDirector timeline;
+
+    [SerializeField] private DialogoData dialogo;
+
+    [Header("Objetos")]
+    [SerializeField] private GameObject objetos;
+    [SerializeField] private GameObject cuadro;
+    [SerializeField] private GameObject manta;
+
+    private void Start()
+    {
+        objetos.SetActive(false);
+        manta.SetActive(false);
+        cuadro.SetActive(true);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,9 +28,35 @@ public class des_aparecer : MonoBehaviour
         {
             PlayerController player = collision.GetComponent<PlayerController>();
 
-            Debug.Log("Player ha entrado. Llave: " + player.hasLlave);
+            if (!player.buhardillaVisitada)
+            {
+                timeline.Play();
+                Debug.Log("Le doy al play");
+                player.buhardillaVisitada = true;
+            }
 
-            puerta.SetActive(player.hasLlave);
+            else if (player.buhardillaVisitada && player.hasLlave)
+            {
+                objetos.SetActive(true);
+                manta.SetActive(true);
+                cuadro.SetActive(false);
+            }
+
+            Debug.Log("Player ha entrado. Llave: " + player.hasLlave);
+            //puerta.SetActive(player.hasLlave);         
         }
+    }
+
+    public void MostrarDialogoTimeline()
+    {
+        if (DialogoManager.Instance == null)
+            return;
+
+        DialogoManager.Instance.IniciarDialogo(dialogo, null);
+    }
+
+    public void OcultarDialogoTimeline()
+    {
+        DialogoManager.Instance.TerminarDialogo();
     }
 }

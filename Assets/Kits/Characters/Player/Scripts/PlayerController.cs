@@ -42,6 +42,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float distanciaRaycast = 5f;
     [SerializeField] private Color colorRaycast = Color.red;
 
+    [Header("Buhardilla")]
+    public bool buhardillaVisitada = false;
+
     private Rigidbody2D rb2D;
 
     private Vector2 moveDirection = Vector2.zero;
@@ -49,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private bool canMove = true;
 
+    public bool moviendose { get; private set; }
 
 
     private void Awake()
@@ -136,6 +140,8 @@ public class PlayerController : MonoBehaviour
             ActualizarAnimacion(Vector2.zero);
             return;
         }
+
+        moviendose = moveDirection.sqrMagnitude > 0;
 
         rb2D.position += moveDirection * speed * Time.deltaTime;
 
@@ -270,7 +276,7 @@ public class PlayerController : MonoBehaviour
     {
         bool moviendose = direccion.sqrMagnitude > deadZone * deadZone;
 
-        Debug.Log("direccion: " + direccion + " | moviendose: " + moviendose);
+        //Debug.Log("direccion: " + direccion + " | moviendose: " + moviendose);
 
         anim.SetBool("moving", moviendose);
 

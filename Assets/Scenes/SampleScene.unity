@@ -6066,6 +6066,7 @@ MonoBehaviour:
   hasLlave: 0
   distanciaRaycast: 5
   colorRaycast: {r: 1, g: 0, b: 0, a: 1}
+  buhardillaVisitada: 0
 --- !u!50 &1257827080
 Rigidbody2D:
   serializedVersion: 5
@@ -11809,6 +11810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StalkerEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7059957030955721131, guid: b8e3d9203a614324a942d1b1fa359b95, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2a6d370a6e87afa4cae7c94ea5bb92d6, type: 2}
     - target: {fileID: 7711817827340935627, guid: b8e3d9203a614324a942d1b1fa359b95, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.68

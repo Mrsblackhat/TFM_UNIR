@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0af65301b5f2b40b3b0f92f886e078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  id: 2
+  id: 1
 --- !u!213 &293537964
 Sprite:
   m_ObjectHideFlags: 0
@@ -2038,7 +2038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0af65301b5f2b40b3b0f92f886e078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  id: 1
+  id: 0
 --- !u!1 &826663788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,7 +2053,7 @@ GameObject:
   - component: {fileID: 826663793}
   - component: {fileID: 826663794}
   m_Layer: 0
-  m_Name: TriggerFin
+  m_Name: TriggerFin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3495,7 +3495,7 @@ GameObject:
   - component: {fileID: 1473074235}
   - component: {fileID: 1473074239}
   m_Layer: 0
-  m_Name: TriggerFin2
+  m_Name: TriggerFin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10211,8 +10211,8 @@ SceneRoots:
   - {fileID: 1888402191}
   - {fileID: 941697350}
   - {fileID: 602785419}
-  - {fileID: 826663792}
   - {fileID: 1473074238}
+  - {fileID: 826663792}
   - {fileID: 2118595085}
   - {fileID: 8831911}
   - {fileID: 1468998034}
