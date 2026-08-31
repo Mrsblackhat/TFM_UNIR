@@ -95,6 +95,8 @@ public class PlayerController : MonoBehaviour
         cameraInputReference.action.Disable();
     }
 
+    private WendigoEnemy enemigoActual;
+
     private void FindEnemy()
     {
         RaycastHit2D hit = Physics2D.Raycast(
@@ -103,25 +105,27 @@ public class PlayerController : MonoBehaviour
             distanciaRaycast
         );
 
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Stop");
 
-        foreach (GameObject enemigo in enemigos)
+        // Si había un enemigo desaparecido, lo reaparecemos
+        if (enemigoActual != null)
         {
-            StalkerEnemy wendigo = enemigo.GetComponent<StalkerEnemy>();
-
-            if (wendigo != null)
-            {
-                wendigo.enabled = true;
-            }
+            enemigoActual.Reaparecer();
+            Debug.Log("Le hago aparecer");
+            enemigoActual = null;
         }
 
-        if (hit.collider != null && hit.collider.CompareTag("Stop"))
+        // Miramos si el raycast golpeó a un Wendigo
+        if (hit.collider != null)
         {
-            StalkerEnemy wendigo = hit.collider.GetComponent<StalkerEnemy>();
+            WendigoEnemy enemigo = hit.collider.GetComponent<WendigoEnemy>();
 
-            if (wendigo != null)
+            Debug.Log(enemigo.name);
+
+            if (enemigo != null)
             {
-                wendigo.enabled = false;
+                enemigo.Desaparecer();
+                Debug.Log("Le hago desaparecer");
+                enemigoActual = enemigo;
             }
         }
     }
@@ -322,7 +326,11 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Vector2 direccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
-
         Gizmos.DrawSphere(direccion, radioDeteccion);
+
+        Vector2 raycast = (Vector2)transform.position + lastDirection.normalized * distanciaRaycast;
+        Gizmos.DrawLine(transform.position, raycast);
+
+
     }
 }

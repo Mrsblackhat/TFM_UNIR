@@ -18,6 +18,7 @@ public class ItemPosition : MonoBehaviour
             {
                 Destroy(itemPrefab);
                 GetComponent<SpriteRenderer>().enabled = true;
+                GetComponent<SpriteRenderer>().color = Color.white;
                 GetComponent<PauseSecrets>().enabled = false;
                 isCorrect = true;
                 OnCorrectPosition?.Invoke();

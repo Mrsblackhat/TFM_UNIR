@@ -2231,7 +2231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3266529.5}
+  m_AnchoredPosition: {x: 0, y: 4580774.5}
   m_SizeDelta: {x: 0, y: 51.3258}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &431706695
@@ -10377,8 +10377,9 @@ MonoBehaviour:
   camara: {fileID: 946090481}
   batteryUI: {fileID: 1232254729}
   hasLlave: 0
-  distanciaRaycast: 5
+  distanciaRaycast: 10
   colorRaycast: {r: 1, g: 0, b: 0, a: 1}
+  buhardillaVisitada: 0
 --- !u!50 &1745023099
 Rigidbody2D:
   serializedVersion: 5
@@ -11240,7 +11241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextSceneCamera
   idSpawnPoint: 0
-  nombre: parte_superior
+  nombre: pasilloPersecucion
   dialogo: {fileID: 11400000, guid: d39bdac51523e274da1c5b7cbde68200, type: 2}
 --- !u!1 &1815254270
 GameObject:
@@ -13443,6 +13444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BateriaUI
   bateriaRelleno: {fileID: 2132536525}
+  fundidoANegro: {fileID: 0}
+  opacidadMax: 0
 --- !u!114 &1955730369
 MonoBehaviour:
   m_ObjectHideFlags: 0

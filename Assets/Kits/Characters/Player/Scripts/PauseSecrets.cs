@@ -17,6 +17,9 @@ public class PauseSecrets : MonoBehaviour
 
     public void Ocultar()
     {
-        spriteRenderer.enabled = false;
+        if (!GetComponent<ItemPosition>().isCorrect)
+        {
+            spriteRenderer.enabled = false;
+        }
     }
 }

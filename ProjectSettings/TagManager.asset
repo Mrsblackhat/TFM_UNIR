@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Parallax
   - Stop
+  - Enemy
   layers:
   - Default
   - TransparentFX
