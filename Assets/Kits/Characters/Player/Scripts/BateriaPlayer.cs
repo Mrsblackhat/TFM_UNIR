@@ -37,6 +37,8 @@ public class BateriaPlayer : MonoBehaviour, Danable
     internal void Reset()
     {
         vidaActual = vida;
+
+        bateriaUI.ActualizarBateriaHUD(vidaActual);
     }
 
     private void Morir()
