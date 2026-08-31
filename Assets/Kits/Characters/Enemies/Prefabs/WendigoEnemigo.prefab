@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 65091616063031391}
   - component: {fileID: 6951983319210114557}
   - component: {fileID: 2707928944137919299}
+  - component: {fileID: 7943710227146369476}
   m_Layer: 0
   m_Name: WendigoEnemigo
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5772181662504316560}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.785475, y: -4.6053667, z: 0}
+  m_LocalPosition: {x: 3.5733414, y: 12.908758, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,3 +189,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303cb40b3a6dbb544a866a179a078910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseEnemy
+--- !u!114 &7943710227146369476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772181662504316560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b29c6a3dfa7dad40ac492d05c28c008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StalkerEnemy
+  danho: 0
+  safeDistance: 7
+  safeSpeed: 1
