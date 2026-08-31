@@ -95,31 +95,40 @@ public class PlayerController : MonoBehaviour
 
     private void FindEnemy()
     {
+        Vector2 rayOrigin = (Vector2)transform.position + (lastDirection.normalized * 0.3f);
+
         RaycastHit2D hit = Physics2D.Raycast(
-            transform.position,
+            rayOrigin,
             lastDirection.normalized,
             distanciaRaycast
         );
 
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Stop");
+        Color rayColor = (hit.collider != null && hit.collider.CompareTag("Stop")) ? Color.green : Color.red;
+        Debug.DrawRay(rayOrigin, lastDirection.normalized * distanciaRaycast, rayColor);
 
-        foreach (GameObject enemigo in enemigos)
-        {
-            StalkerEnemy wendigo = enemigo.GetComponent<StalkerEnemy>();
-
-            if (wendigo != null)
-            {
-                wendigo.enabled = true;
-            }
-        }
+        PauseEnemy enemigoMirado = null;
 
         if (hit.collider != null && hit.collider.CompareTag("Stop"))
         {
-            StalkerEnemy wendigo = hit.collider.GetComponent<StalkerEnemy>();
+            enemigoMirado = hit.collider.GetComponent<PauseEnemy>();
+        }
 
-            if (wendigo != null)
+        PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+
+        foreach (PauseEnemy enemigo in enemigos)
+        {
+            if (enemigo == null) continue;
+
+            if (enemigo == enemigoMirado)
             {
-                wendigo.enabled = false;
+                enemigo.pause();
+            }
+            else
+            {
+                if (!camara.gameObject.activeSelf)
+                {
+                    enemigo.move();
+                }
             }
         }
     }
