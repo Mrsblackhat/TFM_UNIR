@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Items pickup")]
     [SerializeField] Transform pickUpPoint;
-    Item currentItem;
+    public Item currentItem;
 
     [Header("Animation")]
     [SerializeField] private Animator anim;

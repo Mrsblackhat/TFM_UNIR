@@ -3816,63 +3816,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 562226539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &844080637
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.9798417
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.4372118
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845881238133214166, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772181662504316560, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
-      propertyPath: m_Name
-      value: WendigoEnemigo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5761f6f8858648e429f5fa653326c3ed, type: 3}
 --- !u!1001 &902723253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14790,4 +14733,3 @@ SceneRoots:
   - {fileID: 1369348176}
   - {fileID: 439000615}
   - {fileID: 642421575}
-  - {fileID: 844080637}

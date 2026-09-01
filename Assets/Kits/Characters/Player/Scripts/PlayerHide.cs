@@ -8,13 +8,13 @@ public class PlayerHide : MonoBehaviour
 
     private PlayerController playerController;
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D boxCollider;
+    private CapsuleCollider2D collider;
 
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<CapsuleCollider2D>();
     }
 
 
@@ -32,9 +32,9 @@ public class PlayerHide : MonoBehaviour
             spriteRenderer.enabled = false;
         }
 
-        if (boxCollider != null)
+        if (collider != null)
         {
-            boxCollider.enabled = false;
+            collider.enabled = false;
         }
     }
 
@@ -52,9 +52,9 @@ public class PlayerHide : MonoBehaviour
             spriteRenderer.enabled = true;
         }
 
-        if (boxCollider != null)
+        if (collider != null)
         {
-            boxCollider.enabled = true;
+            collider.enabled = true;
         }
     }
 }

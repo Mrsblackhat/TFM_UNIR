@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ItemPosition : MonoBehaviour
+public class ItemPosition : MonoBehaviour, Interactuable
 {
     [SerializeField] GameObject itemPrefab;
     [SerializeField] GameObject canvas;
@@ -10,19 +10,19 @@ public class ItemPosition : MonoBehaviour
 
     public event Action OnCorrectPosition;
 
-    private void Update()
+    public void Interactuar(GameObject playerGameObject)
     {
-        if (!isCorrect)
+        if(isColliding)
         {
-            if (!itemPrefab.GetComponent<Item>().pickedUp && isColliding)
-            {
-                Destroy(itemPrefab);
-                GetComponent<SpriteRenderer>().enabled = true;
-                GetComponent<SpriteRenderer>().color = Color.white;
-                GetComponent<PauseSecrets>().enabled = false;
-                isCorrect = true;
-                OnCorrectPosition?.Invoke();
-            }
+            Destroy(itemPrefab);
+            playerGameObject.GetComponent<PlayerController>().currentItem = null;
+
+            GetComponent<SpriteRenderer>().enabled = true;
+            GetComponent<SpriteRenderer>().color = Color.white;
+            GetComponent<PauseSecrets>().enabled = false;
+
+            isCorrect = true;
+            OnCorrectPosition?.Invoke();
         }
     }
 
