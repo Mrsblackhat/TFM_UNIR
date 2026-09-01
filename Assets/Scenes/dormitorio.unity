@@ -2445,7 +2445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 9067725}
+  m_AnchoredPosition: {x: 0, y: 9124500}
   m_SizeDelta: {x: 0, y: 51.3258}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &431706695
@@ -11345,6 +11345,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pickUpPoint: {fileID: 40545908}
+  currentItem: {fileID: 0}
   anim: {fileID: 1745023103}
   deadZone: 0.1
   hasCamera: 0
@@ -12137,8 +12138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ca3e08a3c9a6746b1bf3c26e934cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextSceneCamera
-  idSpawnPoint: 1
-  nombre: buhardilla
+  idSpawnPoint: 0
+  nombre: parte_superior
   dialogo: {fileID: 11400000, guid: d39bdac51523e274da1c5b7cbde68200, type: 2}
 --- !u!1 &1815254270
 GameObject:

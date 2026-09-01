@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : LoadNextScene
 {
     [SerializeField] ItemPosition[] itemPositions;
 
@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
         {
             item.OnCorrectPosition += CorrectPositionItem;
         }
+
+        canChange = false;
     }
 
     int nCorrectItems = 0;
@@ -19,7 +21,7 @@ public class Door : MonoBehaviour
 
         if (nCorrectItems == itemPositions.Length)
         {
-            GetComponent<LoadNextScene>().enabled = true;
+            canChange = true;
         }
     }
 }

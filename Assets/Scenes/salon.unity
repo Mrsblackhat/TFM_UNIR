@@ -6240,51 +6240,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1128250723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1128250725}
-  - component: {fileID: 1128250724}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1128250724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128250723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38dbf8ddaec95f44ba2a0c276c785c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
-  spawnPoint: {fileID: 1128250725}
---- !u!4 &1128250725
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128250723}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.5, y: -12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1233859282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7037,7 +6992,6 @@ GameObject:
   - component: {fileID: 1357777896}
   - component: {fileID: 1357777899}
   - component: {fileID: 1357777898}
-  - component: {fileID: 1357777897}
   m_Layer: 0
   m_Name: doorswindowsstairs_LRK_30
   m_TagString: Untagged
@@ -7119,21 +7073,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1357777897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357777894}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a70549c8d090e4a95df119b6b48055, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LoadNextScene
-  idSpawnPoint: 0
-  nombre: dormitorioFinal
-  dialogo: {fileID: 0}
 --- !u!114 &1357777898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7146,6 +7085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaef32dd6ae650546973c9e41e97e0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
+  idSpawnPoint: 0
+  nombre: dormitorioFinal
+  dialogo: {fileID: 0}
   itemPositions:
   - {fileID: 58144906}
   - {fileID: 2030722536}
@@ -7182,7 +7124,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -17488,6 +17430,51 @@ Transform:
   - {fileID: 1910164443}
   m_Father: {fileID: 1543078001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1567220304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567220306}
+  - component: {fileID: 1567220305}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1567220305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567220304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0af65301b5f2b40b3b0f92f886e078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
+  id: 0
+--- !u!4 &1567220306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567220304}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.44, y: -12.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1635832436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20922,7 +20909,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 170283434}
   - {fileID: 1797212922}
-  - {fileID: 1128250725}
   - {fileID: 5622707603829267434}
   - {fileID: 98516908708541018}
   - {fileID: 8726043061052824018}
@@ -20936,3 +20922,4 @@ SceneRoots:
   - {fileID: 1770161152}
   - {fileID: 1519581003}
   - {fileID: 84131046}
+  - {fileID: 1567220306}
