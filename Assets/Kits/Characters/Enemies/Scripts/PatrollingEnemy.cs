@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -55,6 +56,11 @@ public class PatrollingEnemy : EnemyBase
         if (playerDetected)
         {
             agent.SetDestination(target.position);
+
+            if (agent.remainingDistance <= attackRange)
+            {
+                Attack();
+            }
         }
         else
         {
@@ -73,6 +79,20 @@ public class PatrollingEnemy : EnemyBase
                 Debug.Log("Te detecté");
                 playerDetected = true;
             }
+        }
+    }
+
+    protected override void Attack()
+    {
+        if (!canAttack)
+        {
+            canAttack = true;
+
+            attackPoint.SetActive(true);
+
+            anim.SetTrigger("Attack");
+
+            StartCoroutine(DelayAttack());
         }
     }
 }

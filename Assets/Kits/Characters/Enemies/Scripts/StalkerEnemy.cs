@@ -67,6 +67,23 @@ public class StalkerEnemy : EnemyBase, IAfectadoPorCamara
 
             if (Mathf.Clamp(target.position.x - transform.position.x, -1, 1) < 0) transform.localScale = new Vector2(-1, 1);
             else transform.localScale = new Vector2(1, 1);
+
+            if (agent.remainingDistance <= attackRange)
+            {
+                Attack();
+            }
+        }
+    }
+
+    protected override void Attack()
+    {
+        if (!canAttack)
+        {
+            canAttack = true;
+
+            attackPoint.SetActive(true);
+
+            StartCoroutine(DelayAttack());
         }
     }
 }

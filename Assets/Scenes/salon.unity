@@ -4346,6 +4346,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 909193153}
     m_Modifications:
     - target: {fileID: 904169498547902543, guid: 0b0a14bba9ea696458484cd1e4b751be, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 904169498547902543, guid: 0b0a14bba9ea696458484cd1e4b751be, type: 3}
       propertyPath: patrollPoints.Array.size
       value: 2
       objectReference: {fileID: 0}

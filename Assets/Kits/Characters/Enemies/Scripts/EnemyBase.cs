@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,7 +13,11 @@ public abstract class EnemyBase : MonoBehaviour
     protected Transform puntoInicialTarget;
 
     [Header("Daño")]
-    [SerializeField] protected float danho;
+    //[SerializeField] protected float danho;
+    [SerializeField] protected GameObject attackPoint;
+    [SerializeField] protected float attackRange;
+    [SerializeField] protected float attackDelay = 1f;
+    protected bool canAttack = false;
 
     protected virtual void Awake()
     {
@@ -54,7 +59,6 @@ public abstract class EnemyBase : MonoBehaviour
         return false;
     }
 
-
     protected void BuscarPlayer()
     {
         if (playerHide != null)
@@ -68,25 +72,17 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }
 
+    protected abstract void Attack();
+
     protected bool PlayerEscondido()
     {
         return playerHide != null && playerHide.EstaEscondido;
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected IEnumerator DelayAttack()
     {
-        if (collision.collider.TryGetComponent<Danable>(out Danable danable))
-        {
-            if (Vector2.Distance(target.position, transform.position) <= agent.stoppingDistance)
-            {
-                Debug.Log("Te pillé");
-                if (anim.GetParameter(1).name == "Attack")
-                {
-                    anim.SetTrigger("Attack");
-                }
-                danable.DanarJugador(danho);
-            }
-        }
+        yield return new WaitForSeconds(attackDelay);
+        canAttack = false;
+        attackPoint.SetActive(false);
     }
 }
