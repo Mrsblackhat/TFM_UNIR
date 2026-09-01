@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Items pickup")]
     [SerializeField] Transform pickUpPoint;
-    public Item currentItem;
+    Item currentItem;
 
     [Header("Animation")]
     [SerializeField] private Animator anim;
@@ -41,11 +42,14 @@ public class PlayerController : MonoBehaviour
     [Header("Wendigo")]
     [SerializeField] private float distanciaRaycast = 5f;
     [SerializeField] private Color colorRaycast = Color.red;
+    private WendigoEnemy wendigo;
+
 
     [Header("Buhardilla")]
     public bool buhardillaVisitada = false;
 
     private Rigidbody2D rb2D;
+    AudioSource source;
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 lastDirection = Vector2.down; 
@@ -58,6 +62,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        source = GetComponent<AudioSource>();
 
         if (anim == null)
         {
@@ -67,6 +72,11 @@ public class PlayerController : MonoBehaviour
         player = GetComponent<BateriaPlayer>();
 
         camara.gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        StartCoroutine(BuscarWendigo());
     }
 
     private void OnEnable()
@@ -93,46 +103,6 @@ public class PlayerController : MonoBehaviour
         cameraInputReference.action.Disable();
     }
 
-    private void FindEnemy()
-    {
-        Vector2 rayOrigin = (Vector2)transform.position + (lastDirection.normalized * 0.3f);
-
-        RaycastHit2D hit = Physics2D.Raycast(
-            rayOrigin,
-            lastDirection.normalized,
-            distanciaRaycast
-        );
-
-        Color rayColor = (hit.collider != null && hit.collider.CompareTag("Stop")) ? Color.green : Color.red;
-        Debug.DrawRay(rayOrigin, lastDirection.normalized * distanciaRaycast, rayColor);
-
-        PauseEnemy enemigoMirado = null;
-
-        if (hit.collider != null && hit.collider.CompareTag("Stop"))
-        {
-            enemigoMirado = hit.collider.GetComponent<PauseEnemy>();
-        }
-
-        PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
-
-        foreach (PauseEnemy enemigo in enemigos)
-        {
-            if (enemigo == null) continue;
-
-            if (enemigo == enemigoMirado)
-            {
-                enemigo.pause();
-            }
-            else
-            {
-                if (!camara.gameObject.activeSelf)
-                {
-                    enemigo.move();
-                }
-            }
-        }
-    }
-
     private void Update()
     {
         moveDirection = inputReference.action.ReadValue<Vector2>();
@@ -152,6 +122,18 @@ public class PlayerController : MonoBehaviour
 
         moviendose = moveDirection.sqrMagnitude > 0;
 
+        if (moveDirection != Vector2.zero)
+        {
+            if (!source.isPlaying)
+            {
+                source.Play();
+            }
+        }
+        else
+        {
+            source.Pause();
+        }
+
         rb2D.position += moveDirection * speed * Time.deltaTime;
 
         ActualizarAnimacion(moveDirection);
@@ -165,6 +147,53 @@ public class PlayerController : MonoBehaviour
         if(hasLlave)
         { Debug.Log("tengo la llave"); }
     }
+
+
+    private void FindEnemy()
+    {
+        if (wendigo == null) return;
+
+        Vector2 dirPlayer2Enemy =((Vector2)wendigo.transform.position - (Vector2)transform.position).normalized;
+        Debug.Log("Vector PlayerAlEnemy " + dirPlayer2Enemy);
+
+        Vector2 dirMirada = lastDirection.normalized;
+        Debug.Log("Vector DondeMiro" + dirMirada);
+
+        float dot = Vector2.Dot(dirMirada, dirPlayer2Enemy);
+
+        if(dot > 0.7f)
+        { 
+            wendigo.Desaparecer();
+        }
+
+        else
+        {
+            wendigo.Reaparecer();
+        }
+        // Si había un enemigo desaparecido, lo reaparecemos
+        //if (enemigoActual != null)
+        //{
+        //    enemigoActual.Reaparecer();
+        //    Debug.Log("Le hago aparecer");
+        //    enemigoActual = null;
+        //}
+
+        //// Miramos si el raycast golpeó a un Wendigo
+        //if (hit.collider != null)
+        //{
+        //    WendigoEnemy enemigo = hit.collider.GetComponent<WendigoEnemy>();
+
+        //    Debug.Log(enemigo.name);
+
+        //    if (enemigo != null)
+        //    {
+        //        enemigo.Desaparecer();
+        //        Debug.Log("Le hago desaparecer");
+        //        enemigoActual = enemigo;
+        //    }
+        //}
+    }
+
 
     private void OnCamera(InputAction.CallbackContext context)
     {
@@ -309,10 +338,28 @@ public class PlayerController : MonoBehaviour
         batteryUI.GetComponent<Canvas>().enabled = true;
     }
 
+    public Item GetItem()
+    {
+        return currentItem;
+    }
+
+    private IEnumerator BuscarWendigo()
+    {
+        while (wendigo == null)
+        {
+            wendigo = FindFirstObjectByType<WendigoEnemy>();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Vector2 direccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
-
         Gizmos.DrawSphere(direccion, radioDeteccion);
+
+        Vector2 raycast = (Vector2)transform.position + lastDirection.normalized * distanciaRaycast;
+        Gizmos.DrawLine(transform.position, raycast);
+
+
     }
 }
