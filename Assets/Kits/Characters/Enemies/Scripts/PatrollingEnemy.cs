@@ -11,6 +11,8 @@ public class PatrollingEnemy : EnemyBase
 
     bool playerDetected = false;
 
+    [SerializeField] public AudioSource bite;
+
     protected override void LogicaEnemigo()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
@@ -100,6 +102,8 @@ public class PatrollingEnemy : EnemyBase
             attackPoint.SetActive(true);
 
             anim.SetTrigger("Attack");
+
+            bite.Play();
 
             StartCoroutine(DelayAttack());
         }
