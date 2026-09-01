@@ -47,12 +47,13 @@ public class FinalMenu : MonoBehaviour
 
         defeatCanvas.GetComponent<Canvas>().enabled = false;
 
-        //GameObject player = GameObject.FindGameObjectWithTag("Player");
-        //if (player != null)
-        //{
-        //    player.GetComponent<PlayerController>().RestartBattery();
-        //    player.GetComponent<PlayerController>().RebuscarWendigos();
-        //}
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().RestartBattery();
+            //player.GetComponent<PlayerController>().RebuscarWendigos();
+
+        }
     }
 
     public void VictoryRestart()
