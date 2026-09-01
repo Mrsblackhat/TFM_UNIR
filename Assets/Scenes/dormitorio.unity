@@ -231,7 +231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.01, y: -0.57}
+  m_AnchoredPosition: {x: 0.01, y: 0.606}
   m_SizeDelta: {x: 0.7544, y: 0.4287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &26147862
@@ -1273,7 +1273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.02, y: -1.12}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 0.7544, y: 0.4287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242961057
@@ -2231,7 +2231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4671524.5}
+  m_AnchoredPosition: {x: 0, y: 5137574.5}
   m_SizeDelta: {x: 0, y: 51.3258}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &431706695
@@ -5514,6 +5514,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946090479}
+  m_CullTransparentMesh: 1
+--- !u!1 &957711550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957711551}
+  - component: {fileID: 957711553}
+  - component: {fileID: 957711552}
+  m_Layer: 5
+  m_Name: FundidoANegro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &957711551
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957711550}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1955730367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -317.00003, y: -180.35211}
+  m_SizeDelta: {x: 850, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &957711552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957711550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &957711553
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957711550}
   m_CullTransparentMesh: 1
 --- !u!1 &975039297
 GameObject:
@@ -10373,13 +10448,12 @@ MonoBehaviour:
   anim: {fileID: 1745023103}
   deadZone: 0.1
   hasCamera: 0
-  danoPorSegundo: 5
+  danoPorSegundo: 20
   camara: {fileID: 946090481}
   batteryUI: {fileID: 1232254729}
-  hasLlave: 0
-  distanciaRaycast: 10
-  colorRaycast: {r: 1, g: 0, b: 0, a: 1}
+  distPlayerWendMax: 6
   buhardillaVisitada: 0
+  hasLlave: 0
 --- !u!50 &1745023099
 Rigidbody2D:
   serializedVersion: 5
@@ -11241,7 +11315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextSceneCamera
   idSpawnPoint: 0
-  nombre: pasilloPersecucion
+  nombre: dormitorioFinal
   dialogo: {fileID: 11400000, guid: d39bdac51523e274da1c5b7cbde68200, type: 2}
 --- !u!1 &1815254270
 GameObject:
@@ -13424,6 +13498,7 @@ RectTransform:
   m_Children:
   - {fileID: 2132536524}
   - {fileID: 1351623837}
+  - {fileID: 957711551}
   m_Father: {fileID: 1232254733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -13444,7 +13519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BateriaUI
   bateriaRelleno: {fileID: 2132536525}
-  fundidoANegro: {fileID: 0}
+  fundidoANegro: {fileID: 957711552}
   opacidadMax: 0
 --- !u!114 &1955730369
 MonoBehaviour:

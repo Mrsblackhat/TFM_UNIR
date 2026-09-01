@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class cuadro : MonoBehaviour, Interactuable
 {
+    [SerializeField] GameObject canvas;
+
     [SerializeField] private Animator animator;
     private bool yaInteractuo;
 
@@ -18,6 +20,22 @@ public class cuadro : MonoBehaviour, Interactuable
         {
             yaInteractuo = true;
             animator.SetTrigger("interactua"); 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            canvas.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            canvas.SetActive(false);
         }
     }
 }

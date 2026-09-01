@@ -1,9 +1,11 @@
 using System;
+using System.Collections;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,17 +38,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Image camara;
     [SerializeField] private GameObject batteryUI;
 
-    [Header("LlaveBuhardilla")]
-    public bool hasLlave = false;
-
     [Header("Wendigo")]
-    [SerializeField] private float distanciaRaycast = 5f;
-    [SerializeField] private Color colorRaycast = Color.red;
-    private WendigoEnemy wendigo;
-
+    [SerializeField] private float distPlayerWendMax;
+    private WendigoEnemy[] wendigos;
 
     [Header("Buhardilla")]
     public bool buhardillaVisitada = false;
+    public bool hasLlave = false;
+
 
     private Rigidbody2D rb2D;
     AudioSource source;
@@ -74,10 +73,10 @@ public class PlayerController : MonoBehaviour
         camara.gameObject.SetActive(false);
     }
 
-    private void Start()
-    {
-        StartCoroutine(BuscarWendigo());
-    }
+    //private void Start()
+    //{
+    //    StartCoroutine(BuscarWendigo());
+    //}
 
     private void OnEnable()
     {
@@ -89,6 +88,8 @@ public class PlayerController : MonoBehaviour
         cameraInputReference.action.Enable();
         cameraInputReference.action.performed += OnCamera;
         cameraInputReference.action.canceled += OnCamera;
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
@@ -101,6 +102,14 @@ public class PlayerController : MonoBehaviour
         cameraInputReference.action.performed -= OnCamera;
         cameraInputReference.action.canceled -= OnCamera;
         cameraInputReference.action.Disable();
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        RestartBattery();
+        RebuscarWendigos();
     }
 
     private void Update()
@@ -149,49 +158,31 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    //private bool wendigoActivado;
+
     private void FindEnemy()
     {
-        if (wendigo == null) return;
-
-        Vector2 dirPlayer2Enemy =((Vector2)wendigo.transform.position - (Vector2)transform.position).normalized;
-        Debug.Log("Vector PlayerAlEnemy " + dirPlayer2Enemy);
+        if (wendigos == null) return;
 
         Vector2 dirMirada = lastDirection.normalized;
-        Debug.Log("Vector DondeMiro" + dirMirada);
 
-        float dot = Vector2.Dot(dirMirada, dirPlayer2Enemy);
-
-        if(dot > 0.7f)
-        { 
-            wendigo.Desaparecer();
-        }
-
-        else
+        foreach (WendigoEnemy wendigo in wendigos)
         {
-            wendigo.Reaparecer();
+            Vector2 dirPlayer2Enemy = ((Vector2)wendigo.transform.position - (Vector2)transform.position).normalized;
+
+            float dot = Vector2.Dot(dirMirada, dirPlayer2Enemy);
+            float distancia = Vector2.Distance(transform.position, wendigo.transform.position);
+
+            if (dot >= 0.7f && distancia <= distPlayerWendMax)
+            {
+                wendigo.Desaparecer();
+            }
+
+            else
+            {
+                wendigo.Reaparecer();
+            }
         }
-        // Si había un enemigo desaparecido, lo reaparecemos
-        //if (enemigoActual != null)
-        //{
-        //    enemigoActual.Reaparecer();
-        //    Debug.Log("Le hago aparecer");
-        //    enemigoActual = null;
-        //}
-
-        //// Miramos si el raycast golpeó a un Wendigo
-        //if (hit.collider != null)
-        //{
-        //    WendigoEnemy enemigo = hit.collider.GetComponent<WendigoEnemy>();
-
-        //    Debug.Log(enemigo.name);
-
-        //    if (enemigo != null)
-        //    {
-        //        enemigo.Desaparecer();
-        //        Debug.Log("Le hago desaparecer");
-        //        enemigoActual = enemigo;
-        //    }
-        //}
     }
 
 
@@ -314,8 +305,6 @@ public class PlayerController : MonoBehaviour
     {
         bool moviendose = direccion.sqrMagnitude > deadZone * deadZone;
 
-        //Debug.Log("direccion: " + direccion + " | moviendose: " + moviendose);
-
         anim.SetBool("moving", moviendose);
 
         if (moviendose)
@@ -333,6 +322,12 @@ public class PlayerController : MonoBehaviour
         player.Reset();
     }
 
+    public void RebuscarWendigos()
+    {
+        wendigos = null;
+        StartCoroutine(BuscarWendigo());
+    }
+
     public void ActivateBattery()
     {
         batteryUI.GetComponent<Canvas>().enabled = true;
@@ -345,10 +340,14 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator BuscarWendigo()
     {
-        while (wendigo == null)
+        while (wendigos == null || wendigos.Length == 0)
         {
-            wendigo = FindFirstObjectByType<WendigoEnemy>();
-            yield return new WaitForSeconds(0.5f);
+            wendigos = FindObjectsByType<WendigoEnemy>(FindObjectsSortMode.None);
+
+            if (wendigos.Length == 0)
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
         }
     }
 
@@ -356,10 +355,5 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
         Gizmos.DrawSphere(direccion, radioDeteccion);
-
-        Vector2 raycast = (Vector2)transform.position + lastDirection.normalized * distanciaRaycast;
-        Gizmos.DrawLine(transform.position, raycast);
-
-
     }
 }
