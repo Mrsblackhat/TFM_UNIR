@@ -32,19 +32,27 @@ public abstract class EnemyBase : MonoBehaviour
     protected virtual void Update()
     {
         bool debePararsePorDialogo = DialogoManager.HayDialogoAbierto;
+        bool debePararse = debePararsePorDialogo || DebePararse();
 
-        agent.isStopped = debePararsePorDialogo;
-
-        if (debePararsePorDialogo)
+        if (debePararse)
         {
+            agent.isStopped = true;
             agent.velocity = Vector3.zero;
-            return;
+        }
+        else
+        {
+            agent.isStopped = false;
         }
 
         LogicaEnemigo();
     }
 
     protected abstract void LogicaEnemigo();
+
+    protected virtual bool DebePararse()
+    {
+        return false;
+    }
 
 
     protected void BuscarPlayer()

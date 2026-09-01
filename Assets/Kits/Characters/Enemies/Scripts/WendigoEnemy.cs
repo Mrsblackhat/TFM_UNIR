@@ -12,6 +12,7 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
     private float initialOriginSpeed;
 
     private bool desaparecido;
+    private bool reapareciendo;
 
 
     protected override void Start()
@@ -48,6 +49,8 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
 
     private void Move()
     {
+        if (desaparecido) return;
+
         if (PlayerEscondido())
         {
             agent.SetDestination(puntoInicialTarget.position);
@@ -74,36 +77,39 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
         }
     }
 
+    protected override bool DebePararse()
+    {
+        return desaparecido;
+    }
+
     public void Desaparecer()
     {
         if (desaparecido) return;
 
         desaparecido = true;
 
-        anim.SetBool("desaparecer", true);
-
+        anim.SetTrigger("desaparecer");
         //GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
-        agent.isStopped = true;
-        agent.velocity = Vector3.zero;
     }
 
     public void Reaparecer()
     {
-        if (!desaparecido) return;
+        if (!desaparecido || reapareciendo) return;
 
-        desaparecido = false;
-
+        reapareciendo = true;
         StartCoroutine(TiempoEspera());
     }
 
     IEnumerator TiempoEspera()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
 
-        anim.SetBool("desaparecer", false);
+        desaparecido = false;
+        reapareciendo = false;
+
+        anim.SetTrigger("reaparecer");
         //GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
-        agent.isStopped = false;
     }
 }
