@@ -74,6 +74,20 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
 
             if (Mathf.Clamp(target.position.x - transform.position.x, -1, 1) < 0) transform.localScale = new Vector2(-1, 1);
             else transform.localScale = new Vector2(1, 1);
+
+            if (agent.remainingDistance <= attackRange)
+            {
+                Attack();
+            }
+        }
+
+        if (agent.destination.x < transform.position.x)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(1, 1);
         }
     }
 
@@ -111,5 +125,17 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
         anim.SetTrigger("reaparecer");
         //GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
+    }
+
+    protected override void Attack()
+    {
+        if (!canAttack)
+        {
+            canAttack = true;
+
+            attackPoint.SetActive(true);
+
+            StartCoroutine(DelayAttack());
+        }
     }
 }
