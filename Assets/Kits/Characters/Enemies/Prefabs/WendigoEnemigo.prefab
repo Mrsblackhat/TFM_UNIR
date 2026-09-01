@@ -91,7 +91,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 1.7777778, y: 2.6666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,7 +106,7 @@ Animator:
   m_GameObject: {fileID: 5772181662504316560}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 6ee271de371fd4e488d12b8eb727bf38, type: 2}
+  m_Controller: {fileID: 9100000, guid: d7faa44409e1e094aaf96079645d042e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -202,5 +202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WendigoEnemy
   danho: 0
+  animator: {fileID: 4814339688259938372}
   safeDistance: 7
   safeSpeed: 1

@@ -80,7 +80,9 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
 
         desaparecido = true;
 
-        GetComponent<SpriteRenderer>().enabled = false;
+        anim.SetBool("desaparecer", true);
+
+        //GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
@@ -99,7 +101,8 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
     {
         yield return new WaitForSeconds(2f);
 
-        GetComponent<SpriteRenderer>().enabled = true;
+        anim.SetBool("desaparecer", false);
+        //GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
         agent.isStopped = false;
     }
