@@ -100,6 +100,7 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
         yield return new WaitForSeconds(2f);
 
         GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<Collider2D>().enabled = true;
         agent.isStopped = false;
     }
 }

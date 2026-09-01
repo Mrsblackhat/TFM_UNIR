@@ -73,11 +73,6 @@ public class PlayerController : MonoBehaviour
         camara.gameObject.SetActive(false);
     }
 
-    //private void Start()
-    //{
-    //    StartCoroutine(BuscarWendigo());
-    //}
-
     private void OnEnable()
     {
         inputReference.action.Enable();
@@ -168,6 +163,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (WendigoEnemy wendigo in wendigos)
         {
+            Debug.Log("Encuentro a " + wendigo);
             Vector2 dirPlayer2Enemy = ((Vector2)wendigo.transform.position - (Vector2)transform.position).normalized;
 
             float dot = Vector2.Dot(dirMirada, dirPlayer2Enemy);
