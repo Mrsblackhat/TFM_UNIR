@@ -80,6 +80,15 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
                 Attack();
             }
         }
+
+        if (agent.destination.x < transform.position.x)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
     }
 
     protected override bool DebePararse()
