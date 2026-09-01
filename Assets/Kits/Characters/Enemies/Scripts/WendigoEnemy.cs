@@ -83,11 +83,11 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
 
         if (agent.destination.x < transform.position.x)
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(-1, 1);
         }
         else
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(1, 1);
         }
     }
 

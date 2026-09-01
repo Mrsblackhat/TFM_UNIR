@@ -189,7 +189,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 0.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -213,7 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e5a24a0209e984682f121f6749057e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PatrollingEnemy
-  danho: 5
   attackPoint: {fileID: 2049578323857445969}
   attackRange: 2
   attackDelay: 2
@@ -221,7 +220,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  detectionRadius: 2
+  detectionRadius: 5
 --- !u!95 &7074740596668954667
 Animator:
   serializedVersion: 7
