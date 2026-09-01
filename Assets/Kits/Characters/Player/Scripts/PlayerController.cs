@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        RestartBattery();
+        //RestartBattery();
         RebuscarWendigos();
     }
 

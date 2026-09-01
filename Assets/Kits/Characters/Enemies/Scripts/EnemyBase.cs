@@ -73,6 +73,10 @@ public abstract class EnemyBase : MonoBehaviour
             if (Vector2.Distance(target.position, transform.position) <= agent.stoppingDistance)
             {
                 Debug.Log("Te pillé");
+                if (anim.GetParameter(1).name == "Attack")
+                {
+                    anim.SetTrigger("Attack");
+                }
                 danable.DanarJugador(danho);
             }
         }
