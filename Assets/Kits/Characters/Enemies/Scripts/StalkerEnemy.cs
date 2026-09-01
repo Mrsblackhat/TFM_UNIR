@@ -5,6 +5,8 @@ public class StalkerEnemy : EnemyBase, IAfectadoPorCamara
 {
     [SerializeField] float safeDistance = 7;
     [SerializeField] float safeSpeed = 1;
+    [SerializeField] public AudioSource HeartSound;
+
     private float originSpeed;
 
     private float initialSafeSpeed;
@@ -70,6 +72,7 @@ public class StalkerEnemy : EnemyBase, IAfectadoPorCamara
 
             if (agent.remainingDistance <= attackRange)
             {
+                HeartSound.Play();
                 Attack();
             }
         }

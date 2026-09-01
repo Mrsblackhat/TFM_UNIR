@@ -14,6 +14,8 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
     private bool desaparecido;
     private bool reapareciendo;
 
+    [SerializeField] public AudioSource desapareceAudio;
+
 
     protected override void Start()
     {
@@ -101,6 +103,8 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
         if (desaparecido) return;
 
         desaparecido = true;
+
+        desapareceAudio.Play();
 
         anim.SetTrigger("desaparecer");
         //GetComponent<SpriteRenderer>().enabled = false;
