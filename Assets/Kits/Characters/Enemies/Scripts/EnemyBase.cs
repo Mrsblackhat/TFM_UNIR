@@ -81,7 +81,9 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected IEnumerator DelayAttack()
     {
+        GetComponent<CapsuleCollider2D>().enabled = false;
         yield return new WaitForSeconds(attackDelay);
+        GetComponent<CapsuleCollider2D>().enabled = true;
         canAttack = false;
         attackPoint.SetActive(false);
     }
