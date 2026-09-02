@@ -192,32 +192,24 @@ public class PlayerController : MonoBehaviour
                 danarJugador = true;
                 AvisarAfectados(true);
 
-                PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
-                foreach (PauseEnemy enemigo in enemigos)
-
                 if (context.performed)
                 {
                     camara.gameObject.SetActive(true);
                     danarJugador = true;
                     AvisarAfectados(true);
 
-                    PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                    PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
                     foreach (PauseEnemy enemigo in enemigos)
                     {
                         enemigo.pause();
                     }
 
-                    PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                    PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
                     foreach (PauseSecrets secret in secretos)
                     {
                         secret.Mostrar();
                     }
                 }
-
-
-                PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
-                foreach (PauseSecrets secret in secretos)
-
                 else
                 {
                     camara.gameObject.SetActive(false);
@@ -225,24 +217,13 @@ public class PlayerController : MonoBehaviour
                     AvisarAfectados(false);
 
 
-                PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
-                foreach (PauseEnemy enemigo in enemigos)
-                {
-                    enemigo.move();
-                }
-
-                PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
-                foreach (PauseSecrets secret in secretos)
-                {
-                    secret.Ocultar();
-
-                    PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                    PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
                     foreach (PauseEnemy enemigo in enemigos)
                     {
                         enemigo.move();
                     }
 
-                    PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                    PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
                     foreach (PauseSecrets secret in secretos)
                     {
                         secret.Ocultar();
