@@ -2720,7 +2720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 12546750}
+  m_AnchoredPosition: {x: 0, y: 12558075}
   m_SizeDelta: {x: 0, y: 51.3258}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &431706695
@@ -4971,7 +4971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09143203, y: 0}
   m_AnchorMax: {x: 0.53189325, y: 1}
-  m_AnchoredPosition: {x: 8.699997, y: 0}
+  m_AnchoredPosition: {x: 8.700012, y: 0}
   m_SizeDelta: {x: -51.6692, y: -23.107}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &731321616
@@ -6088,7 +6088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14256798, y: 0.41548488}
   m_AnchorMax: {x: 0.22862136, y: 1}
-  m_AnchoredPosition: {x: -0.30751038, y: 1.1122999}
+  m_AnchoredPosition: {x: -0.30749512, y: 1.1123009}
   m_SizeDelta: {x: -2.6149998, y: -2.2245998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911040134
@@ -11775,7 +11775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.085755676, y: 0.095000006}
   m_AnchorMax: {x: 0.90860635, y: 0.24939516}
-  m_AnchoredPosition: {x: 2.2176971, y: 0.5}
+  m_AnchoredPosition: {x: 2.217682, y: 0.5}
   m_SizeDelta: {x: -4.332, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658828315
@@ -13169,7 +13169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextSceneCamera
   idSpawnPoint: 0
-  nombre: dormitorioFinal
+  nombre: parte_superior
   dialogo: {fileID: 11400000, guid: d39bdac51523e274da1c5b7cbde68200, type: 2}
 --- !u!1 &1815254270
 GameObject:
