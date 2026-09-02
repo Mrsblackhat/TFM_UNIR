@@ -9,7 +9,7 @@ public class CameraItem : MonoBehaviour, Interactuable
         playerGameObject.GetComponent<PlayerController>().hasCamera = true;
         playerGameObject.GetComponent<PlayerController>().ActivateBattery();
 
-        tutorialMessage.GetComponent<Canvas>().enabled = true;
+        tutorialMessage.GetComponent<TutorialEnd>().MostrarCamara();
 
         Destroy(gameObject);
     }
