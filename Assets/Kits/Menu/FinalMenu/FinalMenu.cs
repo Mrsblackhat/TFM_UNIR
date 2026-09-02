@@ -11,6 +11,8 @@ public class FinalMenu : MonoBehaviour
 
     AudioSource source;
 
+    public bool activo { set; get; }
+
     public static FinalMenu instance;
 
     private void Awake()
@@ -25,6 +27,8 @@ public class FinalMenu : MonoBehaviour
 
     public void Win()
     {
+        activo = true;
+
         victoryCanvas.GetComponent<Canvas>().enabled = true;
         source.PlayOneShot(victory);
 
@@ -33,6 +37,8 @@ public class FinalMenu : MonoBehaviour
 
     public void Defeat()
     {
+        activo = true;
+
         defeatCanvas.GetComponent<Canvas>().enabled = true;
         source.PlayOneShot(defeat);
 
@@ -54,6 +60,8 @@ public class FinalMenu : MonoBehaviour
             //player.GetComponent<PlayerController>().RebuscarWendigos();
 
         }
+
+        activo = false;
     }
 
     public void VictoryRestart()
@@ -77,6 +85,8 @@ public class FinalMenu : MonoBehaviour
         victoryCanvas.GetComponent<Canvas>().enabled = false;
 
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().RestartBattery();
+        
+        activo = false;
     }
 
     public void Exit()
