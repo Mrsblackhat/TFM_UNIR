@@ -1,15 +1,20 @@
 using UnityEngine;
 
-public class FalsoArmario : MonoBehaviour, Interactuable
+public class ArmarioFalso : MonoBehaviour, Interactuable
 {
     [SerializeField] GameObject canvas;
     [SerializeField] private float dano;
-
     public void Interactuar(GameObject playerGameObject)
     {
         BateriaPlayer vida = playerGameObject.GetComponent<BateriaPlayer>();
 
-        vida.DanarJugador(dano);
+        Debug.Log("Player recibido: " + playerGameObject.name);
+        Debug.Log("encuentro " + vida);
+
+        if (vida != null)
+        { 
+            vida.DanarJugador(dano);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
