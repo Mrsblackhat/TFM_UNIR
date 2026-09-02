@@ -48,10 +48,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public bool pauseOpen { set; get; }
-    /// <summary>
-    /// //////
-    /// </summary>
-    /// <param name="ctx"></param>
+
     private void OnPause(InputAction.CallbackContext ctx)
     {
         pauseOpen = !pauseOpen;
@@ -116,6 +113,8 @@ public class PauseMenu : MonoBehaviour
 
         pauseOpen = true;
         Time.timeScale = 1;
+
+        canvasMenu.GetComponent<Canvas>().enabled = false;
 
         SceneManager.LoadScene("MainMenu");
     }

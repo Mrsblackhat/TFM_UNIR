@@ -12,9 +12,7 @@ public class FinalMenu : MonoBehaviour
     AudioSource source;
 
     public bool activo { set; get; }
-    /// <summary>
-    /// ///////
-    /// </summary>
+
     public static FinalMenu instance;
 
     private void Awake()
@@ -51,9 +49,9 @@ public class FinalMenu : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         defeatCanvas.GetComponent<Canvas>().enabled = false;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -82,9 +80,9 @@ public class FinalMenu : MonoBehaviour
             Destroy(indestructible.gameObject);
         }
 
-        SceneManager.LoadScene("dormitorio");
-
         victoryCanvas.GetComponent<Canvas>().enabled = false;
+
+        SceneManager.LoadScene("dormitorio");
 
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().RestartBattery();
         
