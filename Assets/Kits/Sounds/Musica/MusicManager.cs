@@ -38,12 +38,12 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if ((scene.name == "Armario" || scene.name == "pasilloPersecucion") && mode != LoadSceneMode.Additive)
+        if (scene.name == "Armario" || scene.name == "pasilloPersecucion")
         {
             musica.Stop();
             ambiente.Stop();
         }
-        else
+        else if (mode != LoadSceneMode.Additive)
         {
             Debug.Log(musica.isPlaying);
 
