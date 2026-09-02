@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 227156319}
   - component: {fileID: 227156321}
   - component: {fileID: 227156320}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3386,8 +3386,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1433271262}
   - component: {fileID: 1433271263}
-  - component: {fileID: 1433271264}
-  - component: {fileID: 1433271265}
   m_Layer: 3
   m_Name: decorations_BR_12
   m_TagString: Untagged
@@ -3407,8 +3405,7 @@ Transform:
   m_LocalPosition: {x: -16.925161, y: 0.91, z: 0}
   m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1703949866}
+  m_Children: []
   m_Father: {fileID: 431633661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1433271263
@@ -3470,66 +3467,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1433271264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433271261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc25dad5bcd32274ab4a3f854e74734b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogoObjetos
-  canvas: {fileID: 1703949865}
-  dialogoData: {fileID: 11400000, guid: 4e15117ee36bf1b44baf9022e2ddaaa3, type: 2}
---- !u!61 &1433271265
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433271261}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.185897}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 2.1875}
-    newSize: {x: 1.25, y: 2.1875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.25, y: 4.5592937}
-  m_EdgeRadius: 0
 --- !u!1 &1468998031
 GameObject:
   m_ObjectHideFlags: 0
@@ -9030,7 +8967,7 @@ GameObject:
   - component: {fileID: 1703949869}
   - component: {fileID: 1703949868}
   - component: {fileID: 1703949867}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9046,15 +8983,15 @@ RectTransform:
   m_GameObject: {fileID: 1703949865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.4285713, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 227156319}
-  m_Father: {fileID: 1433271262}
+  m_Father: {fileID: 1907092321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.01, y: -1.23}
+  m_AnchoredPosition: {x: -0.015161753, y: 0.7990001}
   m_SizeDelta: {x: 1.0751, y: 0.6317}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703949867
@@ -9951,7 +9888,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1907092321}
   - component: {fileID: 1907092322}
-  m_Layer: 0
+  - component: {fileID: 1907092324}
+  - component: {fileID: 1907092323}
+  m_Layer: 3
   m_Name: fixtures_BA_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9970,7 +9909,8 @@ Transform:
   m_LocalPosition: {x: -16.9, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1703949866}
   m_Father: {fileID: 431633661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1907092322
@@ -10032,6 +9972,57 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!70 &1907092323
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907092320}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.16460001}
+  m_Size: {x: 2.125, y: 2.4542}
+  m_Direction: 0
+--- !u!114 &1907092324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907092320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc25dad5bcd32274ab4a3f854e74734b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoObjetos
+  canvas: {fileID: 1703949865}
+  dialogoData: {fileID: 11400000, guid: 4e15117ee36bf1b44baf9022e2ddaaa3, type: 2}
 --- !u!1 &1960203179
 GameObject:
   m_ObjectHideFlags: 0
