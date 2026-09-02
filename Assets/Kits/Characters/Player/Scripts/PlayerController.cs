@@ -185,41 +185,44 @@ public class PlayerController : MonoBehaviour
     private void OnCamera(InputAction.CallbackContext context)
     {
         if (hasCamera)
-        { 
-            if(context.performed)
+        {
+            if (!FinalMenu.instance.activo && !PauseMenu.instance.pauseOpen)
             {
-                camara.gameObject.SetActive(true);
-                danarJugador = true;
-                AvisarAfectados(true);
-
-                PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
-                foreach (PauseEnemy enemigo in enemigos)
+                if (context.performed)
                 {
-                    enemigo.pause();
+                    camara.gameObject.SetActive(true);
+                    danarJugador = true;
+                    AvisarAfectados(true);
+
+                    PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                    foreach (PauseEnemy enemigo in enemigos)
+                    {
+                        enemigo.pause();
+                    }
+
+                    PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                    foreach (PauseSecrets secret in secretos)
+                    {
+                        secret.Mostrar();
+                    }
                 }
-
-                PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
-                foreach (PauseSecrets secret in secretos)
+                else
                 {
-                    secret.Mostrar();
-                }
-            }
-            else
-            {
-                camara.gameObject.SetActive(false);
-                danarJugador = false;
-                AvisarAfectados(false);
+                    camara.gameObject.SetActive(false);
+                    danarJugador = false;
+                    AvisarAfectados(false);
 
-                PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
-                foreach (PauseEnemy enemigo in enemigos)
-                {
-                    enemigo.move();
-                }
+                    PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                    foreach (PauseEnemy enemigo in enemigos)
+                    {
+                        enemigo.move();
+                    }
 
-                PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
-                foreach (PauseSecrets secret in secretos)
-                {
-                    secret.Ocultar();
+                    PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                    foreach (PauseSecrets secret in secretos)
+                    {
+                        secret.Ocultar();
+                    }
                 }
             }
         }
