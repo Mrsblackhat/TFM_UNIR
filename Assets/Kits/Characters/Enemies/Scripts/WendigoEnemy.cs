@@ -77,7 +77,7 @@ public class WendigoEnemy : EnemyBase, IAfectadoPorCamara
             if (Mathf.Clamp(target.position.x - transform.position.x, -1, 1) < 0) transform.localScale = new Vector2(-1, 1);
             else transform.localScale = new Vector2(1, 1);
 
-            if (agent.remainingDistance <= attackRange)
+            if (!desaparecido && agent.remainingDistance <= attackRange)
             {
                 Attack();
             }
