@@ -38,7 +38,7 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Armario" || scene.name == "pasilloPersecucion")
+        if (scene.name == "Armario" || scene.name == "pasilloPersecucion" || scene.name == "dormitorioFinal")
         {
             musica.Stop();
             ambiente.Stop();
