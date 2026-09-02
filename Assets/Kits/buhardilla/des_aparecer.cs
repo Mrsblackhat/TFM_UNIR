@@ -15,6 +15,9 @@ public class des_aparecer : MonoBehaviour
     [SerializeField] private GameObject cuadro;
     [SerializeField] private GameObject manta;
 
+    [Header("Música")]
+    [SerializeField] private AudioClip tensionOST;
+
     private void Start()
     {
         objetos.SetActive(false);
@@ -40,6 +43,12 @@ public class des_aparecer : MonoBehaviour
                 objetos.SetActive(true);
                 manta.SetActive(true);
                 cuadro.SetActive(false);
+
+                if (MusicManager.Instance != null)
+                {
+                    MusicManager.Instance.musica.clip = tensionOST;
+                    MusicManager.Instance.musica.PlayOneShot(tensionOST);
+                }
             }
 
             Debug.Log("Player ha entrado. Llave: " + player.hasLlave);
