@@ -8,7 +8,7 @@ public class CambiaMusicas : MonoBehaviour
     {
         if (MusicManager.Instance != null)
         {
-            //MusicManager.Instance.musica.clip = musica;
+            MusicManager.Instance.musica.clip = musica;
             MusicManager.Instance.musica.PlayOneShot(musica);
         }
     }

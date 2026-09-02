@@ -60,10 +60,16 @@ public class FinalMenu : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
+        //GameObject player = GameObject.FindGameObjectWithTag("Player");
+        //if (player != null)
+        //{
+        //    Destroy(player);
+        //}
+
+        Indestructible[] indestuctibles = GameObject.FindObjectsByType<Indestructible>(FindObjectsSortMode.None);
+        foreach (Indestructible indestructible in indestuctibles)
         {
-            Destroy(player);
+            Destroy(indestructible.gameObject);
         }
 
         SceneManager.LoadScene("dormitorio");

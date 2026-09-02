@@ -3366,7 +3366,7 @@ GameObject:
   - component: {fileID: 687080112}
   - component: {fileID: 687080114}
   - component: {fileID: 687080115}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinets_LRK_62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5168,7 +5168,7 @@ GameObject:
   - component: {fileID: 1089296231}
   - component: {fileID: 1089296233}
   - component: {fileID: 1089296234}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinets_LRK_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18660,7 +18660,7 @@ GameObject:
   - component: {fileID: 2021945417}
   - component: {fileID: 2021945419}
   - component: {fileID: 2021945420}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinets_LRK_39 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19042,7 +19042,7 @@ GameObject:
   - component: {fileID: 2068588676}
   - component: {fileID: 2068588678}
   - component: {fileID: 2068588679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinets_LRK_39 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,9 +8,6 @@ public class ArmarioFalso : MonoBehaviour, Interactuable
     {
         BateriaPlayer vida = playerGameObject.GetComponent<BateriaPlayer>();
 
-        Debug.Log("Player recibido: " + playerGameObject.name);
-        Debug.Log("encuentro " + vida);
-
         if (vida != null)
         { 
             vida.DanarJugador(dano);
