@@ -10483,7 +10483,7 @@ GameObject:
   - component: {fileID: 1912242820}
   - component: {fileID: 1912242819}
   m_Layer: 0
-  m_Name: IvanEsElMejor
+  m_Name: Sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
