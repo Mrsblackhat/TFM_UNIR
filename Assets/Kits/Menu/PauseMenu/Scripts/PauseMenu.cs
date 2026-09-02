@@ -48,6 +48,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public bool pauseOpen { set; get; }
+
     private void OnPause(InputAction.CallbackContext ctx)
     {
         pauseOpen = !pauseOpen;
