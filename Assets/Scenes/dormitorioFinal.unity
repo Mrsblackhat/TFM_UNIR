@@ -2470,7 +2470,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.7150943, g: 0.9207047, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000775d332bd5450a0aa72a5b30d5df5d55
@@ -2889,8 +2889,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 168445397
-  m_SortingOrder: 0
+  m_SortingLayerID: 811281063
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1273126487
 RectTransform:
@@ -2909,7 +2909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0, y: 1}
+  m_AnchoredPosition: {x: -0, y: 0.852}
   m_SizeDelta: {x: 0.6314, y: 0.4496}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1385583644
@@ -11121,7 +11121,6 @@ GameObject:
   - component: {fileID: 2129078051}
   - component: {fileID: 2129078050}
   - component: {fileID: 2129078055}
-  - component: {fileID: 2129078054}
   m_Layer: 3
   m_Name: espejo_0
   m_TagString: Untagged
@@ -11185,7 +11184,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.008610964, y: -0.19324577}
+  m_Offset: {x: -0.008610964, y: -0.0401147}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11195,7 +11194,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0452781, y: 3.3239915}
+  m_Size: {x: 1.0452781, y: 3.0177293}
   m_EdgeRadius: 0
 --- !u!212 &2129078052
 SpriteRenderer:
@@ -11273,20 +11272,6 @@ Transform:
   - {fileID: 1273126487}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2129078054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129078049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc25dad5bcd32274ab4a3f854e74734b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogoObjetos
-  canvas: {fileID: 1273126483}
-  dialogoData: {fileID: 0}
 --- !u!114 &2129078055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11301,6 +11286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BrokenMirror
   finalTrigger: {fileID: 332930526}
   particles: {fileID: 1637134869}
+  canvas: {fileID: 1273126483}
 --- !u!1001 &3630751169970182222
 PrefabInstance:
   m_ObjectHideFlags: 0
