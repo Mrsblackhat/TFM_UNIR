@@ -24,8 +24,12 @@ public class PauseMenu : MonoBehaviour
 
     AudioSource source;
 
+    public static PauseMenu instance;
+
     private void Awake()
     {
+        if (instance == null) instance = this;
+
         source = GetComponent<AudioSource>();
 
         canvasMenu.GetComponent<Canvas>().enabled = false;
@@ -43,7 +47,8 @@ public class PauseMenu : MonoBehaviour
         inputReference.action.started -= OnPause;
     }
 
-    bool pauseOpen = false;
+    public bool pauseOpen { set; get; }
+
     private void OnPause(InputAction.CallbackContext ctx)
     {
         pauseOpen = !pauseOpen;
