@@ -19,8 +19,7 @@ public class DialogoManager : MonoBehaviour
     [SerializeField] private float letrasPorSegundo = 40f;
 
     [Header("Cerrar al alaejarse")]
-    [SerializeField] private float distanciaCierre = 3.5f;
-
+    [SerializeField] private float distanciaCierre = 4f;
 
     private readonly Queue<string> frases = new Queue<string>();
 

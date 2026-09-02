@@ -338,7 +338,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 168445397
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 426502428822762834, guid: f68356ac04a8c21499f6d576d47bbf26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 180689552}
   - component: {fileID: 180689554}
   - component: {fileID: 180689553}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -942,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.02, y: -1.12}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 0.7544, y: 0.4287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242961057
@@ -1965,7 +1965,7 @@ GameObject:
   - component: {fileID: 816584693}
   - component: {fileID: 816584692}
   - component: {fileID: 816584691}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1989,7 +1989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -1.12}
+  m_AnchoredPosition: {x: 0, y: 1.8}
   m_SizeDelta: {x: 0.7544, y: 0.4287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816584691
@@ -2110,9 +2110,9 @@ GameObject:
   m_Component:
   - component: {fileID: 933384503}
   - component: {fileID: 933384505}
-  - component: {fileID: 933384504}
+  - component: {fileID: 933384507}
   - component: {fileID: 933384506}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: items dormitorio_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2135,52 +2135,6 @@ Transform:
   - {fileID: 1556131908}
   m_Father: {fileID: 743236022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &933384504
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933384502}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.1653701, y: 0.19524789}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.125, y: 1.8125}
-    newSize: {x: 3.125, y: 1.8125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 3.5056298, y: 2.2029958}
-  m_EdgeRadius: 0
 --- !u!212 &933384505
 SpriteRenderer:
   serializedVersion: 2
@@ -2228,7 +2182,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 168445397
   m_SortingLayer: 2
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1549530859812404789, guid: f9486645fcd739d40bf1110efcaeaa7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2240,7 +2194,53 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &933384506
+--- !u!61 &933384506
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933384502}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.125, y: 1.8125}
+    newSize: {x: 3.125, y: 1.8125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.125, y: 1.8125}
+  m_EdgeRadius: 0
+--- !u!114 &933384507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2825,7 +2825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0, y: -0.137}
+  m_AnchoredPosition: {x: -0, y: 1}
   m_SizeDelta: {x: 0.6314, y: 0.4496}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1385583644
@@ -3681,9 +3681,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1555605907}
   - component: {fileID: 1555605908}
-  - component: {fileID: 1555605909}
   - component: {fileID: 1555605910}
-  m_Layer: 0
+  - component: {fileID: 1555605909}
+  m_Layer: 3
   m_Name: beds_BR 1_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3765,7 +3765,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &1555605909
+--- !u!114 &1555605909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555605906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc25dad5bcd32274ab4a3f854e74734b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoObjetos
+  canvas: {fileID: 816584689}
+  dialogoData: {fileID: 11400000, guid: 170e4dcd904caca40b8d4101a477a093, type: 2}
+--- !u!61 &1555605910
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3811,20 +3825,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.125, y: 3.625}
   m_EdgeRadius: 0
---- !u!114 &1555605910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555605906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc25dad5bcd32274ab4a3f854e74734b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogoObjetos
-  canvas: {fileID: 816584689}
-  dialogoData: {fileID: 11400000, guid: 170e4dcd904caca40b8d4101a477a093, type: 2}
 --- !u!1 &1556131907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,7 +3837,7 @@ GameObject:
   - component: {fileID: 1556131911}
   - component: {fileID: 1556131910}
   - component: {fileID: 1556131909}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3861,7 +3861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.66}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 0.7544, y: 0.4287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556131909
@@ -10948,7 +10948,7 @@ GameObject:
   - component: {fileID: 2089113665}
   - component: {fileID: 2089113667}
   - component: {fileID: 2089113666}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
