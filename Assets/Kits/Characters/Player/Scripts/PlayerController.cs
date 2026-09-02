@@ -192,13 +192,13 @@ public class PlayerController : MonoBehaviour
                 danarJugador = true;
                 AvisarAfectados(true);
 
-                PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
                 foreach (PauseEnemy enemigo in enemigos)
                 {
                     enemigo.pause();
                 }
 
-                PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
                 foreach (PauseSecrets secret in secretos)
                 {
                     secret.Mostrar();
@@ -210,13 +210,13 @@ public class PlayerController : MonoBehaviour
                 danarJugador = false;
                 AvisarAfectados(false);
 
-                PauseEnemy[] enemigos = FindObjectsOfType<PauseEnemy>();
+                PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
                 foreach (PauseEnemy enemigo in enemigos)
                 {
                     enemigo.move();
                 }
 
-                PauseSecrets[] secretos = FindObjectsOfType<PauseSecrets>();
+                PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
                 foreach (PauseSecrets secret in secretos)
                 {
                     secret.Ocultar();

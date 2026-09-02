@@ -56,7 +56,6 @@ public class TutorialEnd : MonoBehaviour
 
     public void MostrarCamara()
     {
-        Debug.Log("AbroCamara");
         canvas.enabled = true;
 
         panelMovimiento.SetActive(false);

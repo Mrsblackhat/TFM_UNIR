@@ -10,13 +10,13 @@ public class StartTimeline : MonoBehaviour
     [SerializeField] GameObject enemy;
 
     [SerializeField] string animationScene;
-    bool activated = false;
+    //bool activated = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            activated = true;
+            //activated = true;
             StartCoroutine(AnimationSequence(collision.gameObject));
         }
     }
