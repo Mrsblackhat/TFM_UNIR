@@ -5187,7 +5187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextsceneLlave
   idSpawnPoint: 1
   nombre: parte_superior
-  dialogo: {fileID: 11400000, guid: 12c41da87d022e04abce60fc240ea5f6, type: 2}
+  dialogo: {fileID: 11400000, guid: 266f83452e5bc77448cee0beda2a2067, type: 2}
 --- !u!61 &1093932564
 BoxCollider2D:
   m_ObjectHideFlags: 0
