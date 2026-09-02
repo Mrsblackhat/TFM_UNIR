@@ -60,6 +60,12 @@ public class FinalMenu : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            Destroy(player);
+        }
+
         SceneManager.LoadScene("dormitorio");
 
         victoryCanvas.GetComponent<Canvas>().enabled = false;
