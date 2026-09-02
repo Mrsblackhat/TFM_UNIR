@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private float deadZone = 0.1f;
 
-    [Header("Batería")]
+    [Header("Baterï¿½a")]
     public bool hasCamera = false;
     private BateriaPlayer player;
     [SerializeField] private float danoPorSegundo = 1f; //Hay que ajustarlo
@@ -185,46 +185,49 @@ public class PlayerController : MonoBehaviour
     private void OnCamera(InputAction.CallbackContext context)
     {
         if (hasCamera)
-        { 
-            if(context.performed)
+        {
+            if (!FinalMenu.instance.activo && !PauseMenu.instance.pauseOpen)
             {
-                camara.gameObject.SetActive(true);
-                danarJugador = true;
-                AvisarAfectados(true);
-
-                PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
-                foreach (PauseEnemy enemigo in enemigos)
+                if (context.performed)
                 {
-                    enemigo.pause();
+                    camara.gameObject.SetActive(true);
+                    danarJugador = true;
+                    AvisarAfectados(true);
+
+                    PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
+                    foreach (PauseEnemy enemigo in enemigos)
+                    {
+                        enemigo.pause();
+                    }
+
+                    PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
+                    foreach (PauseSecrets secret in secretos)
+                    {
+                        secret.Mostrar();
+                    }
                 }
-
-                PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
-                foreach (PauseSecrets secret in secretos)
+                else
                 {
-                    secret.Mostrar();
-                }
-            }
-            else
-            {
-                camara.gameObject.SetActive(false);
-                danarJugador = false;
-                AvisarAfectados(false);
+                    camara.gameObject.SetActive(false);
+                    danarJugador = false;
+                    AvisarAfectados(false);
 
-                PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
-                foreach (PauseEnemy enemigo in enemigos)
-                {
-                    enemigo.move();
-                }
+                    PauseEnemy[] enemigos = FindObjectsByType<PauseEnemy>(FindObjectsSortMode.None);
+                    foreach (PauseEnemy enemigo in enemigos)
+                    {
+                        enemigo.move();
+                    }
 
-                PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
-                foreach (PauseSecrets secret in secretos)
-                {
-                    secret.Ocultar();
+                    PauseSecrets[] secretos = FindObjectsByType<PauseSecrets>(FindObjectsSortMode.None);
+                    foreach (PauseSecrets secret in secretos)
+                    {
+                        secret.Ocultar();
+                    }
                 }
             }
         }
     }
-    
+
     private void AvisarAfectados(bool camaraActiva)
     {
         MonoBehaviour[] scripts = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include,FindObjectsSortMode.None);
