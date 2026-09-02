@@ -50,17 +50,17 @@ public class BateriaPlayer : MonoBehaviour, Danable
 
     public void curarJugador(float bateria)
     {
-        vida += bateria;
-        if (vida >= 100)
+        vidaActual += bateria;
+        if (vidaActual >= vida)
         {
-            vida = 100;
+            vidaActual = vida;
         }
 
-        Debug.Log(vida);
+        Debug.Log(vidaActual);
 
         bateriaUI.ActualizarBateriaHUD(vidaActual);
 
-        if (vida <= 0)
+        if (vidaActual <= 0)
         {
             Morir();
         }
