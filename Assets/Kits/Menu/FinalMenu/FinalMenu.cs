@@ -52,7 +52,6 @@ public class FinalMenu : MonoBehaviour
         {
             player.GetComponent<PlayerController>().RestartBattery();
             //player.GetComponent<PlayerController>().RebuscarWendigos();
-
         }
     }
 
