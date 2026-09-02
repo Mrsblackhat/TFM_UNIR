@@ -5,7 +5,7 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
 
-    [SerializeField] private AudioSource musica;
+    [SerializeField] public AudioSource musica;
     [SerializeField] private AudioSource ambiente;
 
     private void Awake()
@@ -38,9 +38,19 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Armario")
+        if ((scene.name == "Armario" || scene.name == "pasilloPersecucion") && mode != LoadSceneMode.Additive)
         {
-            Destroy(gameObject);
+            musica.Stop();
+            ambiente.Stop();
+        }
+        else
+        {
+            Debug.Log(musica.isPlaying);
+
+            if (!musica.isPlaying)
+            {
+                musica.Play();
+            }
         }
     }
 }
