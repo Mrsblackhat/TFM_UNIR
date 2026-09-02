@@ -1493,6 +1493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 1233859284}
+  malo: 0
+  dano: 10
 --- !u!61 &200316100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6132,6 +6134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 2089311199}
+  malo: 0
+  dano: 10
 --- !u!61 &1101484595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19219,6 +19223,51 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1971215644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971215646}
+  - component: {fileID: 1971215645}
+  m_Layer: 0
+  m_Name: CambiaMusicas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1971215645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971215644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b68de2451edb840b63404273678dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CambiaMusicas
+  musica: {fileID: 8300000, guid: fdcc9e3200ec7cd45bced678982bf6e4, type: 3}
+--- !u!4 &1971215646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971215644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.02738, y: -10.77508, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977605612
 GameObject:
   m_ObjectHideFlags: 0
@@ -20099,6 +20148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 1295235160}
+  malo: 0
+  dano: 10
 --- !u!212 &2055330845
 SpriteRenderer:
   serializedVersion: 2
@@ -21030,3 +21081,4 @@ SceneRoots:
   - {fileID: 1567220306}
   - {fileID: 351413349}
   - {fileID: 1101385491}
+  - {fileID: 1971215646}
