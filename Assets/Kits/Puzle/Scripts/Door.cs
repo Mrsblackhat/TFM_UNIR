@@ -3,6 +3,9 @@ using UnityEngine;
 public class Door : LoadNextScene
 {
     [SerializeField] ItemPosition[] itemPositions;
+    [SerializeField] private Sprite puertaAbierta;
+    private AudioSource audioSource;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
@@ -12,6 +15,9 @@ public class Door : LoadNextScene
         }
 
         canChange = false;
+
+        audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     int nCorrectItems = 0;
@@ -21,6 +27,8 @@ public class Door : LoadNextScene
 
         if (nCorrectItems == itemPositions.Length)
         {
+            audioSource.Play();
+            spriteRenderer.sprite = puertaAbierta;
             canChange = true;
         }
     }
