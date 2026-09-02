@@ -1493,8 +1493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 1233859284}
-  malo: 0
-  dano: 10
 --- !u!61 &200316100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6134,8 +6132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 2089311199}
-  malo: 0
-  dano: 10
 --- !u!61 &1101484595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7196,7 +7192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Door
   idSpawnPoint: 0
   nombre: dormitorioFinal
-  dialogo: {fileID: 0}
+  dialogo: {fileID: 11400000, guid: b1a307e2be52f7e4c9889c57301a18a8, type: 2}
   itemPositions:
   - {fileID: 58144906}
   - {fileID: 2030722536}
@@ -20148,8 +20144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 1295235160}
-  malo: 0
-  dano: 10
 --- !u!212 &2055330845
 SpriteRenderer:
   serializedVersion: 2
