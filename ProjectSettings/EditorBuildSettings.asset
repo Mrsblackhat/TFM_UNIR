@@ -11,15 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PantallaCarga.unity
     guid: 2c54603db4b7f734f9a3f5e681ce4920
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/sala.unity
     guid: 165d4ec11d0ba694fbb145d7209db228
   - enabled: 1
     path: Assets/Scenes/pasilloPersecucion.unity
-    guid: bbd4be6bbdfbf3a4cb87c66c69e3e0db
+    guid: 89b73d5b6de57d14fb284f44aff160dd
   - enabled: 1
     path: Assets/Scenes/dormitorio.unity
     guid: ebc3d4abc8faba4439835b1a9f832d80
