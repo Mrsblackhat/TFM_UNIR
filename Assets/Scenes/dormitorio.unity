@@ -925,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.085755676, y: 0.3192675}
   m_AnchorMax: {x: 0.90860635, y: 0.47400004}
-  m_AnchoredPosition: {x: 1.164093, y: -0.099998474}
+  m_AnchoredPosition: {x: 1.164093, y: -0.099990845}
   m_SizeDelta: {x: -2.1080017, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127101398
@@ -2720,7 +2720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 12945150}
+  m_AnchoredPosition: {x: 0, y: 13182150}
   m_SizeDelta: {x: 0, y: 51.3258}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &431706695
@@ -3769,7 +3769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.031595644, y: 0.036212992}
   m_AnchorMax: {x: 0.964674, y: 0.96385205}
-  m_AnchoredPosition: {x: 1.0000305, y: 0}
+  m_AnchoredPosition: {x: 1.000061, y: 0}
   m_SizeDelta: {x: -1.4892998, y: -2.8379993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &560588230
@@ -7522,7 +7522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.031595644, y: 0.036212992}
   m_AnchorMax: {x: 0.964674, y: 0.96385205}
-  m_AnchoredPosition: {x: 1.0000305, y: 0}
+  m_AnchoredPosition: {x: 1.000061, y: 0}
   m_SizeDelta: {x: -1.4892998, y: -2.8379993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135859212
@@ -12344,7 +12344,7 @@ MonoBehaviour:
   inputReference: {fileID: -250269663766313543, guid: 6af1842b982ed534e9d15c6d0030c1b0, type: 3}
   interactInputReference: {fileID: 1600738475524259222, guid: 6af1842b982ed534e9d15c6d0030c1b0, type: 3}
   cameraInputReference: {fileID: -2130798947711579711, guid: 6af1842b982ed534e9d15c6d0030c1b0, type: 3}
-  radioDeteccion: 0.2
+  radioDeteccion: 0.5
   distanciaInteraccion: 1
   queEsInteractuable:
     serializedVersion: 2
