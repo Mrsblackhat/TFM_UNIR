@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private float deadZone = 0.1f;
 
-    [Header("Bater�a")]
+    [Header("Batería")]
     public bool hasCamera = false;
     private BateriaPlayer player;
     [SerializeField] private float danoPorSegundo = 1f; //Hay que ajustarlo
