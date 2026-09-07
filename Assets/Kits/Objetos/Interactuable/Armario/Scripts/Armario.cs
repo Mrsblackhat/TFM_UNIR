@@ -4,6 +4,10 @@ public class Armario : MonoBehaviour, Interactuable
 {
     [SerializeField] GameObject canvas;
 
+    [Header("Escondite")]
+    [SerializeField] private Transform posEscondido;
+    public Vector2 PosEscondido => posEscondido.position;
+
     public void Interactuar(GameObject playerGameObject)
     {
         PlayerHide playerHide = playerGameObject.GetComponent<PlayerHide>();
