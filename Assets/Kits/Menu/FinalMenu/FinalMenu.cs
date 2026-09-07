@@ -58,7 +58,8 @@ public class FinalMenu : MonoBehaviour
         {
             player.GetComponent<PlayerController>().RestartBattery();
             //player.GetComponent<PlayerController>().RebuscarWendigos();
-
+            Destroy(player.GetComponent<PlayerController>().currentItem.gameObject);
+            player.GetComponent<PlayerController>().currentItem = null;
         }
 
         activo = false;

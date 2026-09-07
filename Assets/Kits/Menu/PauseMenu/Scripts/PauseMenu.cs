@@ -116,6 +116,13 @@ public class PauseMenu : MonoBehaviour
 
         canvasMenu.GetComponent<Canvas>().enabled = false;
 
+
+        Indestructible[] indestuctibles = GameObject.FindObjectsByType<Indestructible>(FindObjectsSortMode.None);
+        foreach (Indestructible indestructible in indestuctibles)
+        {
+            Destroy(indestructible.gameObject);
+        }
+
         SceneManager.LoadScene("MainMenu");
     }
 
