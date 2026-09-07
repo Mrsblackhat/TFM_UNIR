@@ -8,7 +8,7 @@ public class LoadNextScene : MonoBehaviour
     [SerializeField] protected string nombre;
     [SerializeField] DialogoData dialogo;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
