@@ -40,7 +40,7 @@ public class FinalMenu : MonoBehaviour
         activo = true;
 
         defeatCanvas.GetComponent<Canvas>().enabled = true;
-        source.PlayOneShot(defeat);
+        source.PlayOneShot(defeat, 0.5f);
 
         Time.timeScale = 0;
     }
