@@ -8,6 +8,15 @@ public class Item : MonoBehaviour, Interactuable
     public bool canBePicked = true;
     public bool pickedUp = false;
 
+    private SpriteRenderer spriteRenderer;
+
+    public Sprite Sprite => spriteRenderer.sprite;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     public void Interactuar(GameObject playerGameObject)
     {
         PlayerController player = playerGameObject.GetComponent<PlayerController>();
@@ -15,13 +24,13 @@ public class Item : MonoBehaviour, Interactuable
         if (!pickedUp && canBePicked && player.GetItem() == null)
         {
             pickedUp = true;
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            spriteRenderer.enabled = false;
             player.PickUpItem(this);
         }
         else if (pickedUp)
         {
             pickedUp = false;
-            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            spriteRenderer.enabled = true;
             player.DropItem();
         }
     }

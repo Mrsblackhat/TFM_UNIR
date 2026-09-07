@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [Header("Items pickup")]
     [SerializeField] Transform pickUpPoint;
     public Item currentItem;
+    [SerializeField] private Image objetos;
 
     [Header("Animation")]
     [SerializeField] private Animator anim;
@@ -288,6 +290,9 @@ public class PlayerController : MonoBehaviour
         {
             currentItem = newItem;
             currentItem.SetParent(pickUpPoint);
+
+            objetos.enabled = true;
+            objetos.sprite = newItem.Sprite;
         }
     }
 
@@ -297,6 +302,9 @@ public class PlayerController : MonoBehaviour
         {
             currentItem.DropDown();
             currentItem = null;
+
+            objetos.enabled = false;
+            objetos.sprite = null;
         }
     }
 
