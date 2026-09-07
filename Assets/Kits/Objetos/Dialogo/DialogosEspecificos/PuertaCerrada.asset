@@ -16,5 +16,5 @@ MonoBehaviour:
   frases:
   - "Qu\xE9 raro..."
   - "Est\xE1 cerrada"
-  - "Quiz\xE1 la llave est\xE9 por aqu\xED"
+  - "Quiz\xE1 la llave est\xE9 en la buhardilla"
   imagenPersonaje: {fileID: 21300000, guid: 876081ce9298c41498acbeb36e5108e4, type: 3}

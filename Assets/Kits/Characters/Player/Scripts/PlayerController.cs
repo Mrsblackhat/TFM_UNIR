@@ -353,7 +353,7 @@ public class PlayerController : MonoBehaviour
 
     public void ActivateBattery()
     {
-        batteryUI.GetComponent<Canvas>().enabled = true;
+        batteryUI.SetActive(true);
     }
 
     public Item GetItem()
