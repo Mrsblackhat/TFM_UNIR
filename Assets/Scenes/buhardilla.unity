@@ -1821,6 +1821,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6627458327089906178, guid: 0316e5477ce602d46a3840c47f98b1c9, type: 3}
   m_PrefabInstance: {fileID: 177829553}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &201823531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201823532}
+  m_Layer: 3
+  m_Name: posEscondido
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201823532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201823531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1581322300}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227143326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +2022,37 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &255422282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255422283}
+  m_Layer: 3
+  m_Name: posEscondido
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &255422283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255422282}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1368470959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &256273957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,6 +4825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1564969158}
   - {fileID: 1362636438}
   - {fileID: 810829101}
   - {fileID: 1468075483}
@@ -6665,6 +6728,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 902723254}
+  - {fileID: 255422283}
   m_Father: {fileID: 1216582053}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1368470960
@@ -6701,7 +6765,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.89912415}
+  m_Offset: {x: 0, y: -0.97991323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6711,7 +6775,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.125, y: 1.3267517}
+  m_Size: {x: 1.3096609, y: 1.7653208}
   m_EdgeRadius: 0
 --- !u!212 &1368470961
 SpriteRenderer:
@@ -6785,6 +6849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 902723255}
+  posEscondido: {fileID: 255422283}
 --- !u!114 &1368470963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7873,7 +7938,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 992799774}
     m_Modifications:
     - target: {fileID: 5629804065322678253, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: cura
@@ -7885,15 +7950,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.27
+      value: 12.199696
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.21
+      value: -8.108919
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7901,15 +7966,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7928,6 +7993,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
+--- !u!4 &1564969158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8934841144685722163, guid: 782c572f0cf1c214aa9f343f2d144c95, type: 3}
+  m_PrefabInstance: {fileID: 1564969157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1581322299
 GameObject:
   m_ObjectHideFlags: 0
@@ -7962,6 +8032,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1350737749}
+  - {fileID: 201823532}
   m_Father: {fileID: 1216582053}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1581322301
@@ -8082,6 +8153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Armario
   canvas: {fileID: 1350737750}
+  posEscondido: {fileID: 201823532}
 --- !u!114 &1581322304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14710,4 +14782,3 @@ SceneRoots:
   - {fileID: 1093932566}
   - {fileID: 1369348176}
   - {fileID: 439000615}
-  - {fileID: 1564969157}
