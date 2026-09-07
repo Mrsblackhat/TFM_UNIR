@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45c71d551f230164d8ae3abe1dd72790, type: 3}
-  m_Name: Armario
+  m_Name: ArmarioGrande
   m_EditorClassIdentifier: Assembly-CSharp::DialogoData
   nombrePersonaje: Iris
   frases:
-  - Esto definitivamente no es un armario...
-  - "Pero tengo la sensaci\xF3n de que la llave est\xE1 aqu\xED"
-  - "Deber\xEDa usar la c\xE1mara para asegurarme de d\xF3nde puedo esconderme"
+  - "Este armario est\xE1 demasiado lleno como para escondese dentro"
   imagenPersonaje: {fileID: 21300000, guid: f0eedd2813ded8a42a4367b1d7e94f01, type: 3}
