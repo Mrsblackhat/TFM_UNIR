@@ -37,6 +37,8 @@ public class DialogoManager : MonoBehaviour
     public static bool BloqueaJugador => Instance != null && Instance.DebeBloquearJugador;
 
 
+    public static event System.Action OnDialogoTerminado;
+
 
     private void Awake()
     {
@@ -120,6 +122,7 @@ public class DialogoManager : MonoBehaviour
         if (frases.Count == 0)
         {
             TerminarDialogo();
+            OnDialogoTerminado?.Invoke();
             return;
         }
 

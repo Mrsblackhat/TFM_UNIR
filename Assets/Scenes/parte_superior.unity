@@ -2194,6 +2194,7 @@ MonoBehaviour:
   idSpawnPoint: 2
   nombre: pasilloPersecucion
   dialogo: {fileID: 11400000, guid: 12c41da87d022e04abce60fc240ea5f6, type: 2}
+  requiereLlave: 1
 --- !u!114 &826663794
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,11 +2,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.Playables;
+using System.Linq;
 
 public class TutorialEnd : MonoBehaviour
 {
     [SerializeField] private GameObject panelMovimiento;
     [SerializeField] private GameObject panelCamara;
+
+    [SerializeField] private DialogoData dialogo;
+    private bool dialogoActivo;
+
+    [SerializeField] private PlayableDirector director;
 
     private Canvas canvas;
     private GameObject panelActivo;
@@ -40,6 +47,38 @@ public class TutorialEnd : MonoBehaviour
             puedeCerrar = false;
         }
     }
+
+    private void OnEnable()
+    {
+        DialogoManager.OnDialogoTerminado += ContinuarTimeline;
+    }
+
+    private void OnDisable()
+    {
+        DialogoManager.OnDialogoTerminado -= ContinuarTimeline;
+    }
+
+    public void MostrarDialogoTimeline()
+    {
+        if (DialogoManager.Instance == null)
+            return;
+
+        dialogoActivo = true;
+
+        director.Pause();
+
+        DialogoManager.Instance.IniciarDialogo(dialogo, null);
+    }
+
+
+    private void ContinuarTimeline()
+    {
+        if(!dialogoActivo) return;
+
+        dialogoActivo = false;
+        director.Resume();
+    }
+
 
     public void MostrarMovimiento()
     {

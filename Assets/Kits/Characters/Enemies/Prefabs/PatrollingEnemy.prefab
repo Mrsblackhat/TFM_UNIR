@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9de96ca4eac4a4a957c81bb6613c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damage
-  danho: 5
+  danho: 15
 --- !u!1 &2349204775457695368
 GameObject:
   m_ObjectHideFlags: 0

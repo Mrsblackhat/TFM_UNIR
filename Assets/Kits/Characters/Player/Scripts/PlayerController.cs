@@ -268,13 +268,22 @@ public class PlayerController : MonoBehaviour
 
             if (interactuable != null)
             {
-                float distanceToPlayer = Vector2.Distance(transform.position, col.transform.position);
-
-                if (distanceToPlayer < minDistance)
+                if(col.gameObject.TryGetComponent<Armario>(out Armario armario))
                 {
-                    minDistance = distanceToPlayer;
                     nearestInteractuable = interactuable;
                 }
+
+                else 
+                { 
+                    float distanceToPlayer = Vector2.Distance(transform.position, col.transform.position);
+
+                    if (distanceToPlayer < minDistance)
+                    {
+                        minDistance = distanceToPlayer;
+                        nearestInteractuable = interactuable;
+                    }
+                }
+                    
             }
         }
 
@@ -332,6 +341,9 @@ public class PlayerController : MonoBehaviour
     public void RestartBattery()
     {
         player.Reset();
+
+        objetos.enabled = false;
+        objetos.sprite = null;
     }
 
     public void RebuscarWendigos()

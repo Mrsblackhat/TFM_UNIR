@@ -3588,7 +3588,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.27573323}
+  m_Offset: {x: 0, y: 0.016385138}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3598,7 +3598,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 3.6764665}
+  m_Size: {x: 2, y: 3.0922298}
   m_EdgeRadius: 0
 --- !u!82 &742412055
 AudioSource:
@@ -5167,6 +5167,7 @@ MonoBehaviour:
   idSpawnPoint: 1
   nombre: parte_superior
   dialogo: {fileID: 11400000, guid: 266f83452e5bc77448cee0beda2a2067, type: 2}
+  requiereLlave: 0
 --- !u!61 &1093932564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5201,7 +5202,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.010263264}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5211,7 +5212,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.0205265}
   m_EdgeRadius: 0
 --- !u!212 &1093932565
 SpriteRenderer:
@@ -14176,7 +14177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88937ef2baa64be4dafe7de2ae9cb7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::des_aparecer
-  puerta: {fileID: 742412050}
+  puerta: {fileID: 1093932561}
   timeline: {fileID: 439000614}
   dialogo: {fileID: 11400000, guid: 4f4277e354f9d084ba9b5ecc00f778d1, type: 2}
   objetos: {fileID: 992799773}

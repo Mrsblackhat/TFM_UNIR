@@ -18,6 +18,13 @@ public class des_aparecer : MonoBehaviour
     [Header("Música")]
     [SerializeField] private AudioClip tensionOST;
 
+    private LoadNextsceneLlave llave;
+
+    private void Awake()
+    {
+        llave = puerta.GetComponent<LoadNextsceneLlave>();
+    }
+
     private void Start()
     {
         objetos.SetActive(false);
@@ -36,6 +43,7 @@ public class des_aparecer : MonoBehaviour
                 timeline.Play();
                 Debug.Log("Le doy al play");
                 player.buhardillaVisitada = true;
+                llave.CerrarPuerta();
             }
 
             else if (player.buhardillaVisitada && player.hasLlave)
