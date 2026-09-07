@@ -2720,7 +2720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 13182150}
+  m_AnchoredPosition: {x: 0, y: 13213425}
   m_SizeDelta: {x: 0, y: 51.3258}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &431706695
@@ -12354,7 +12354,7 @@ MonoBehaviour:
   anim: {fileID: 1745023103}
   deadZone: 0.1
   hasCamera: 0
-  danoPorSegundo: 5
+  danoPorSegundo: 3
   camara: {fileID: 946090481}
   batteryUI: {fileID: 1232254729}
   distPlayerWendMax: 6
