@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
     public bool buhardillaVisitada = false;
     public bool hasLlave = false;
 
+    [Header("Parte_superior")]
+    public bool parteSuperiorVisitada = false;
+
 
     private Rigidbody2D rb2D;
     AudioSource source;
