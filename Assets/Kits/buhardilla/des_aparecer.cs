@@ -8,7 +8,8 @@ public class des_aparecer : MonoBehaviour
     [SerializeField] GameObject puerta;
     [SerializeField] PlayableDirector timeline;
 
-    [SerializeField] private DialogoData dialogo;
+    [SerializeField] private DialogoData dialogo1;
+    [SerializeField] private DialogoData dialogo2;
 
     [Header("Objetos")]
     [SerializeField] private GameObject objetos;
@@ -19,6 +20,10 @@ public class des_aparecer : MonoBehaviour
     [SerializeField] private AudioClip tensionOST;
 
     private LoadNextsceneLlave llave;
+
+
+    private bool dialogoActivo;
+
 
     private void Awake()
     {
@@ -31,6 +36,17 @@ public class des_aparecer : MonoBehaviour
         manta.SetActive(false);
         cuadro.SetActive(true);
     }
+
+    private void OnEnable()
+    {
+        DialogoManager.OnDialogoTerminado += ContinuarTimeline;
+    }
+
+    private void OnDisable()
+    {
+        DialogoManager.OnDialogoTerminado -= ContinuarTimeline;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -64,16 +80,35 @@ public class des_aparecer : MonoBehaviour
         }
     }
 
+    public void PrimerDialogo()
+    {
+        if (DialogoManager.Instance == null)
+            return;
+
+        dialogoActivo = true;
+        timeline.Pause();
+
+        DialogoManager.Instance.IniciarDialogo(dialogo1, null);
+    }
+
     public void MostrarDialogoTimeline()
     {
         if (DialogoManager.Instance == null)
             return;
 
-        DialogoManager.Instance.IniciarDialogo(dialogo, null);
+        DialogoManager.Instance.IniciarDialogo(dialogo2, null);
     }
 
     public void OcultarDialogoTimeline()
     {
         DialogoManager.Instance.TerminarDialogo();
+    }
+
+    private void ContinuarTimeline()
+    {
+        if (!dialogoActivo) return;
+
+        dialogoActivo = false;
+        timeline.Resume();
     }
 }

@@ -14490,7 +14490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::des_aparecer
   puerta: {fileID: 1093932561}
   timeline: {fileID: 439000614}
-  dialogo: {fileID: 11400000, guid: 4f4277e354f9d084ba9b5ecc00f778d1, type: 2}
+  dialogo1: {fileID: 11400000, guid: 85671ef93a1f82348b266ec60436aebb, type: 2}
+  dialogo2: {fileID: 11400000, guid: 4f4277e354f9d084ba9b5ecc00f778d1, type: 2}
   objetos: {fileID: 992799773}
   cuadro: {fileID: 1275320869}
   manta: {fileID: 269618116}
@@ -14511,6 +14512,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 6e54a88df0f474144bd0aa8cb97791ee, type: 2}
     - {fileID: 11400000, guid: aac8502ccf6009b4eb2ec62083e12916, type: 2}
+    - {fileID: 11400000, guid: 1d9efe492a3410f4b89e35ac448a0906, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -14531,6 +14533,20 @@ MonoBehaviour:
         - m_Target: {fileID: 2052495978}
           m_TargetAssemblyTypeName: des_aparecer, Assembly-CSharp
           m_MethodName: OcultarDialogoTimeline
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2052495978}
+          m_TargetAssemblyTypeName: des_aparecer, Assembly-CSharp
+          m_MethodName: PrimerDialogo
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
