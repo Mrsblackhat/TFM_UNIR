@@ -260,38 +260,69 @@ public class PlayerController : MonoBehaviour
         Vector2 puntoInteraccion = (Vector2)transform.position + lastDirection.normalized * distanciaInteraccion;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(puntoInteraccion, radioDeteccion, queEsInteractuable);
+
         float minDistance = Mathf.Infinity;
-        Interactuable nearestInteractuable = null;
+
+        Interactuable item = null;
+        Interactuable itemPosition = null;
+        Interactuable armario = null;
 
         // Se interactuara con el mas cercano
         foreach (Collider2D col in colliders)
         {
             Interactuable interactuable = col.GetComponent<Interactuable>();
 
+            if (interactuable == null) continue;
+
             if (interactuable != null)
             {
-                if(col.gameObject.TryGetComponent<Armario>(out Armario armario))
+                if(col.TryGetComponent<ItemPosition>(out ItemPosition poscion))
                 {
-                    nearestInteractuable = interactuable;
+                    itemPosition = interactuable;
+                    continue;
                 }
 
-                else 
-                { 
-                    float distanceToPlayer = Vector2.Distance(transform.position, col.transform.position);
+                if(col.TryGetComponent<Armario>(out Armario armarioEscondite))
+                {
+                    armario = interactuable;
+                    continue;
+                }
 
-                    if (distanceToPlayer < minDistance)
-                    {
-                        minDistance = distanceToPlayer;
-                        nearestInteractuable = interactuable;
-                    }
+                //if(col.TryGetComponent<Item>(out Item objeto) && objeto == currentItem)
+                //{
+                //    item = interactuable;
+                //    continue;
+                //}
+
+                float distanceToPlayer = Vector2.Distance(transform.position, col.transform.position);
+
+                if (distanceToPlayer < minDistance)
+                {
+                    minDistance = distanceToPlayer;
+                    item = interactuable;
                 }
                     
             }
         }
 
-        if (nearestInteractuable != null)
+        Interactuable seleccionado = null;
+
+        if (itemPosition != null)
         {
-            nearestInteractuable.Interactuar(gameObject);
+            seleccionado = itemPosition;
+        }
+        else if (armario != null)
+        {
+            seleccionado = armario;
+        }
+        else if (item != null)
+        {
+            seleccionado = item;
+        }
+
+        if(seleccionado != null)
+        {
+            seleccionado.Interactuar(gameObject);
         }
     }
 
@@ -314,9 +345,14 @@ public class PlayerController : MonoBehaviour
             currentItem.DropDown();
             currentItem = null;
 
-            objetos.enabled = false;
-            objetos.sprite = null;
+            QuitarObjetosHUD();
         }
+    }
+
+    public void QuitarObjetosHUD()
+    {
+        objetos.enabled = false;
+        objetos.sprite = null;
     }
 
     public void SetCanMove(bool value)

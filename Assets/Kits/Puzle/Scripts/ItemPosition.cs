@@ -10,15 +10,24 @@ public class ItemPosition : MonoBehaviour, Interactuable
 
     public event Action OnCorrectPosition;
 
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     public void Interactuar(GameObject playerGameObject)
     {
         if(isColliding)
         {
             Destroy(itemPrefab);
-            playerGameObject.GetComponent<PlayerController>().currentItem = null;
+            PlayerController player = playerGameObject.GetComponent<PlayerController>();
+            player.currentItem = null;
+            player.QuitarObjetosHUD();
 
-            GetComponent<SpriteRenderer>().enabled = true;
-            GetComponent<SpriteRenderer>().color = Color.white;
+            spriteRenderer.enabled = true;
+            spriteRenderer.color = Color.white;
             GetComponent<PauseSecrets>().enabled = false;
 
             isCorrect = true;
