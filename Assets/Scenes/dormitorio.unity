@@ -1629,8 +1629,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 364679542}
   m_HandleRect: {fileID: 364679541}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.98666745
+  m_Value: 1
+  m_Size: 0.49847534
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2811,7 +2811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00012207031}
+  m_AnchoredPosition: {x: 0, y: 153468.02}
   m_SizeDelta: {x: 0, y: 51.3258}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &431706695
@@ -4718,6 +4718,7 @@ GameObject:
   - component: {fileID: 712440654}
   - component: {fileID: 712440655}
   - component: {fileID: 712440656}
+  - component: {fileID: 712440657}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4889,6 +4890,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c296c0eadd68d428cfc5d25d73aa6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Indestructible
+--- !u!320 &712440657
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712440650}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: f0a83d4edbbca18448a3013aa4fc4fa4, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &712628068
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,6 +5853,7 @@ GameObject:
   - component: {fileID: 851028138}
   - component: {fileID: 851028137}
   - component: {fileID: 851028136}
+  - component: {fileID: 851028139}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -5909,6 +5928,28 @@ Transform:
   - {fileID: 1573866605}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &851028139
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851028135}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &866978102
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,6 +5994,8 @@ PlayableDirector:
     value: {fileID: 808277149}
   - key: {fileID: -6480294967867834081, guid: 15990990d6a6e7c49a873225653392f0, type: 2}
     value: {fileID: 808277149}
+  - key: {fileID: -2292696481270648976, guid: 15990990d6a6e7c49a873225653392f0, type: 2}
+    value: {fileID: 851028139}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &866978104
@@ -11758,6 +11801,7 @@ GameObject:
   - component: {fileID: 1573866605}
   - component: {fileID: 1573866607}
   - component: {fileID: 1573866606}
+  - component: {fileID: 1573866608}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -11835,6 +11879,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePipeline
+--- !u!114 &1573866608
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573866604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineBasicMultiChannelPerlin
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1610336424
 GameObject:
   m_ObjectHideFlags: 0
