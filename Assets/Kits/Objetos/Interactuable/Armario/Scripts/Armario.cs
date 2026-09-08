@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Armario : MonoBehaviour, Interactuable
@@ -21,8 +22,14 @@ public class Armario : MonoBehaviour, Interactuable
             else
             {
                 playerHide.EntrarArmario(this);
+                MostrarCanvas();
             }
         }
+    }
+
+    private void MostrarCanvas()
+    {
+        canvas.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
