@@ -57,7 +57,6 @@ public class FinalMenu : MonoBehaviour
         if (player != null)
         {
             player.GetComponent<PlayerController>().RestartBattery();
-            //player.GetComponent<PlayerController>().RebuscarWendigos();
             Destroy(player.GetComponent<PlayerController>().currentItem.gameObject);
             player.GetComponent<PlayerController>().currentItem = null;
         }
@@ -69,19 +68,7 @@ public class FinalMenu : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        //GameObject player = GameObject.FindGameObjectWithTag("Player");
-        //if (player != null)
-        //{
-        //    Destroy(player);
-        //}
-
-        Indestructible[] indestuctibles = GameObject.FindObjectsByType<Indestructible>(FindObjectsSortMode.None);
-        foreach (Indestructible indestructible in indestuctibles)
-        {
-            Destroy(indestructible.gameObject);
-        }
-
-        victoryCanvas.GetComponent<Canvas>().enabled = false;
+        Destruir();
 
         SceneManager.LoadScene("dormitorio");
 
@@ -95,5 +82,19 @@ public class FinalMenu : MonoBehaviour
         Time.timeScale = 1;
 
         SceneManager.LoadScene("MainMenu");
+
+        Destruir();
+    }
+
+    private void Destruir()
+    {
+        Indestructible[] indestuctibles = GameObject.FindObjectsByType<Indestructible>(FindObjectsSortMode.None);
+        foreach (Indestructible indestructible in indestuctibles)
+        {
+            Destroy(indestructible.gameObject);
+        }
+
+        victoryCanvas.GetComponent<Canvas>().enabled = false;
+        defeatCanvas.GetComponent<Canvas>().enabled = false;
     }
 }
